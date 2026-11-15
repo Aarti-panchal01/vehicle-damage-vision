@@ -1,0 +1,87 @@
+{
+  "claim_id": "CLM-20261020-001",
+  "summary": "AI-generated draft for claim CLM-20261020-001. Contract A's user-described circumstances are: 'Scraped a parking pillar while turning out of the basement'. Contract A describes 2021 Maruti Suzuki Swift (petrol) and records: right_headlamp: moderate lamp_broken; front_bumper: moderate scratch; front_bumper: moderate dent. Contract B supplies front_bumper (repair); right_headlamp (replace). Its claimable estimate total is INR 10912.5 and is not an approval or payment commitment. Policy wording is summarized separately in cited evidence.",
+  "line_items": [
+    {
+      "part": "front_bumper",
+      "action": "repair",
+      "material": "plastic",
+      "part_cost": 0.0,
+      "labour_cost": 3000.0,
+      "paint_cost": 6500.0,
+      "depreciation_pct": 50.0,
+      "depreciation_amount": 812.5,
+      "claimable_amount": 8687.5,
+      "price_source": "Part: https://www.marutisuzuki.com/genuine-parts/front-bumper/71711m55r00-5pk, accessed 2026-10-09; Labour: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; front bumper dent ₹2,500 and scratch ₹3,500; midpoint used (accessed 2026-11-10); Painting: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; quoted 6500; midpoint used if range; paint material inclusion assumed provisionally (not confirmed) (accessed 2026-11-10)"
+    },
+    {
+      "part": "right_headlamp",
+      "action": "replace",
+      "material": "plastic",
+      "part_cost": 2250.0,
+      "labour_cost": 1100.0,
+      "paint_cost": 0.0,
+      "depreciation_pct": 50.0,
+      "depreciation_amount": 1125.0,
+      "claimable_amount": 2225.0,
+      "price_source": "Part: ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified, accessed 2026-11-10; Labour: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; quoted range/value 900-1300; midpoint used where range supplied (accessed 2026-11-10)"
+    }
+  ],
+  "totals": {
+    "gross": 12850.0,
+    "depreciation": 1937.5,
+    "claimable": 10912.5,
+    "currency": "INR",
+    "vehicle_age_years": 5,
+    "unpriced_parts": []
+  },
+  "policy_justification": [
+    {
+      "statement": "The retrieved policy wording states: AGE OF VEHICLE DEPRECIATION RATE Not exceeding 6 months Nil Over 6 months up to 1 year 5% Over 1 year up to 2 years 10% Over 2 years up to 3 years 15% Over 3 years up to 4 years 25% Over 4 years up to 5 years 35% Over 5 years up to 10 years 40% Over 10 years 50% 2. Painting: For painting claims, the rate of depreciation rate of 50% shall be applied only on the material cost of total painting charges. In case of a consolidated bill for painting charges, the material component shall be assumed as 25% of total painting charges for the purpose of applying the depreciation. 3. Non-OEM/OES Parts: We will apply rate of depreciation for Non-OEM (Original Equipment Manufacturer) / Non- OES (Original Equipment Supplier) parts used to repair the Insured Vehicle following loss or damage covered under this (A) (Section I) Own Damage unless You have opted Zero Depreciation Optional Cover and is...",
+      "source": "acko_car_package.pdf",
+      "page": 6
+    },
+    {
+      "statement": "The retrieved policy wording states: 8. Personal Belongings- Damage due to Accident (a) If You have opted for this Optional Cover as stated in the Policy Schedule, then We will reimburse You for the costs incurred towards the repair or replacement of Your Personal Belongings that were kept inside the Insured Vehicle and were damaged due to an Accident of the Insured Vehicle as covered under (A) (Section I) Own Damage of the Policy, subject to deduction for depreciation and the limit specified in the Policy Schedule. (b) Conditions applicable under this benefit: i) The claim is admissible under (A) (Section I) Own Damage of the underlying Policy in respect of the Insured Vehicle. ii) Any amount payable under this Optional Cover shall be subject to depreciation at the rates specified below, unless stated otherwise in the Policy Schedule: Age of the Personal Belongings Depreciation % (on Invoice Value) Not exceeding 1 year 20%",
+      "source": "acko_car_package.pdf",
+      "page": 12
+    },
+    {
+      "statement": "The retrieved policy wording states: 12. Roadside Assistance (a) If You have opted for this Optional Cover as stated in the Policy Schedule, then We will provide You the following emergency assistance services on Your request during the Policy Period: i) Flat Tyre: In the event the Insured Vehicle is immobilized due to a flat tyre, We will: i) arrange for a vehicle technician to replace the flat tyre with the spare tyre of the Insured Vehicle at the location of breakdown; or ii) arrange for the transportation of the flat tyre to the nearest place of repair and re-attaching the tyre to the Insured Vehicle if a spare tyre is unavailable or on-site repair is not possible. It is agreed and understood that under this assistance service , We will bear only the charges for the vehicle technician’s labour and the transportation of the flat tyre to the nearest repair facility. However, all other incidental expenses incurred in...",
+      "source": "acko_car_package.pdf",
+      "page": 15
+    },
+    {
+      "statement": "The retrieved policy wording states: 1. Any claim made solely for damage to the windshield, sunroof, or door glasses. 2. Any claim arising from theft or total loss of the Insured Vehicle, provided that You purchase a private car package policy from Us within three (3) years from the date of such theft or total loss.",
+      "source": "acko_car_package.pdf",
+      "page": 12
+    },
+    {
+      "statement": "The retrieved policy wording states: 6. Lease Agreement (a) If You have opted for this Optional Cover as stated in the Policy Schedule and the Insured Vehicle is owned by a person other than You (“Lessor”) and was given to You under a Lease Agreement, then all payments due from Us under this Policy in respect of To tal Loss / CTL shall be made to the Lessor (instead of You), and such payment shall constitute a full and final discharge of Our liability under the Policy. However, You shall continue to be treated as the Owner -Driver for the purposes of (A) (Section III) Personal Accident of the Policy. (b) Specific condition applicable under this benefit: i) It is agreed and understood that, notwithstanding any provision in the Lease Agreement to the contrary, this Policy is issued to You in an individual capacity and not as an agent or trustee of the Lessor. ii) Nothing contained in the Policy shall be construed as: (a)...",
+      "source": "acko_car_package.pdf",
+      "page": 20
+    },
+    {
+      "statement": "The retrieved policy wording states: 1. Engine Protect – Flood (a) If You have opted for this Optional Cover as stated in the Policy Schedule, then We will reimburse You for expenses incurred towards the repair and/or replacement of the internal parts of the engine, gearbox, differential assembly, and their associated components of the Insured Vehicle, resulting from aggravated damage caused by water ingression or hydrostatic lock due to any peril covered under (A) (Section I ) Own Damage of the Policy , provided there is evidence of the Insured Vehicle being submerged or stopped in a water logged area and subject to the limits specified in the Policy Schedule. (b) Specific Exclusions applicable under this benefit: We shall not be liable to reimburse You in following cases:",
+      "source": "acko_car_package.pdf",
+      "page": 9
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text (1) We may, at Our sole discretion, arrange legal representation for You at any inquiry or defend legal proceedings arising from an Accident covered under this benefit. Alternatively, We may reimburse legal costs and expenses incurred by You, provided these costs have Our prior written consent. (2) We reserve the exclusive right to assume full control and conduct the defense or settlement of any claim or legal proceeding in Your name, without Your prior consent, if We deem it appropriate. Furthermore, We may settle any claim or proceeding at Our sole discretion. v) Duty to Repay Us: Nothing in this Policy shall limit the right of any person, whether indemnified under this benefit or otherwise, to claim under the Act. However, You shall repay Us any amount that We are legally required to pay under the said Act but would not have been liable to pay under this...",
+      "source": "acko_car_package.pdf",
+      "page": 8
+    },
+    {
+      "statement": "The retrieved policy wording states: AGE OF VEHICLE DEPRECIATION RATE (a) Original proof of cancellation of the Insured Vehicle’s registration with the appropriate transport authority; or (b) Original documentary evidence of a valid statutory Motor Third-Party Liability policy covering the wreck/salvage, effective from the loss date. iv. Deductible: This Policy does not impose any mandatory deductible. Only voluntary deductibles, if selected by You, will apply and shall be as stated in Your Policy Schedule. v. No Claim Bonus (NCB): If no claim has been made or is pending under (A) (Section I) Own Damage of the Policy, then You will be entitled to a discount on the premium payable on the renewal of Your cover under (A) (Section I) Own Damage, depending on the number of consecutive claim-free Policy Years, as set out below and subject to the conditions specified:",
+      "source": "acko_car_package.pdf",
+      "page": 6
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text i) If the Policy Period is up to 1 year , then We will refund the proportionate premium for the unexpired Policy Period, provided no claim has been made during the Policy Period. ii) If the Policy Period exceeds 1 year, then We will refund the premium for the unexpired Policy Period, but only in respect of those Policy Years where risk coverage has not yet commenced. 6) Contribution: If, at the time of the occurrence of any event giving rise to a claim under this Policy, there exists any other valid and collectible insurance covering the same liability, Our liability shall be limited to Our ratable proportion of the compensation, costs, or expenses payable in respect of such claim. 7) Claim Procedure and Documentation for cashless and reimbursement of claim: a) Claim intimation: i) Call us on 1800 266 2256 or ii) Mail us on hello@acko.com or iii) Write to us at...",
+      "source": "acko_car_package.pdf",
+      "page": 25
+    }
+  ],
+  "exclusions_flagged": [],
+  "disclaimer": "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. Retrieved clauses are evidence only and do not guarantee coverage or settlement."
+}

@@ -1,0 +1,72 @@
+{
+  "claim_id": "CLM-20261020-002",
+  "summary": "AI-generated draft for claim CLM-20261020-002. Contract A's user-described circumstances are: 'Heard a thud from the front while parking at the mall, not sure if anything is damaged'. Contract A describes 2022 Hyundai Creta (diesel) and records: Contract A reports no visible damage. Contract B supplies no priced repair line items. Its claimable estimate total is INR 0 and is not an approval or payment commitment. Policy wording is summarized separately in cited evidence.",
+  "line_items": [],
+  "totals": {
+    "gross": 0,
+    "depreciation": 0,
+    "claimable": 0,
+    "currency": "INR",
+    "vehicle_age_years": 4,
+    "unpriced_parts": []
+  },
+  "policy_justification": [
+    {
+      "statement": "The retrieved policy wording states: General Policy Text charges incurred during replacement/ repairs of damaged Tyre (s)/Rims of the insured vehicle. If damage to Tyre / tube and/ or Rim is due to Accidental damage to the insured vehicle covered under “Own Damage” section of the Policy, the Company's liability under this cover will be restricted to the difference of depreciation percentage applied under “Own Damage” section and as mentioned above basis the unused tread depth. Specific Exclusions applicable to this Add On 1) If vehicle is not repaired at Authorized Garage 2) If Tyres and Rims fitted by Non-Authorized Vehicle Manufacturer.",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 26
+    },
+    {
+      "statement": "The retrieved policy wording states: Schedule or in the cities falling under coverage network as listed b) Cost of parts or replacement charges or consumables and their transportation cost to the Repair shop/ Garage, in case the same is not available with them. c) Entire cost of Repair shop/Garage's bill, whether in part or full. d) Cost of towing the damaged vehicle beyond *** kms mentioned in the policy schedule from the spot of breakdown. e) Charges of the repairer, if the vehicle could be transferred on its own power on self-propelled basis to the nearest Repair shop/Garage without his intervention. f) Any payment to a third-party for on-spot repair/ towing/ storage/recovery by the Insured or on his behalf, unless specifically agreed by the Company. 2. Towing Assistance (Arising out of an Accident): In the event, that the insured vehicle cannot move or run on its own power on a public road due to any Accident...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 11
+    },
+    {
+      "statement": "The retrieved policy wording states: CHALLENGED PERSONS Notwithstanding anything to the contrary contained in the policy it is hereby understood and agreed that the vehicle insured being specially designed /modified for use of blind, handicapped and mentally challenged persons and suitable endorsement to this effect having been incorporated in the Registration Book by the Registering Authority, a discount of 50% on the Own Damage premium for the vehicle insured is hereby allowed to the insured. 10. USE OF VEHICLE CONFINED TO THE INSURED'S OWN PREMISES It is hereby understood and agreed that the Company shall not be liable in respect of the vehicle insured while the vehicle is being used elsewhere than in the insured's premises except where the vehicle is specifically required for a mission to fight a fire. For the purposes of this endorsement 'Use confined to own premises' shall mean use only on insured's premises to...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 7
+    },
+    {
+      "statement": "The retrieved policy wording states: 3. In the event of the vehicle being disabled by reason of accidental loss or damage covered under this policy the Company will bear the reasonable cost of protection and removal of the vehicle to the nearest repairer and for re-delivery of the vehicle to the insured but not exceeding in all Rs. 1500/- in respect of any one accident. The insured may authorize the repair of the vehicle necessitated by loss or damage covered under this policy for which the Company may be liable under this policy provided that: (a) the estimated cost of such repairs, including replacements, if any, does not exceed Rs. 500; (b) the Company is furnished forthwith with a detailed estimate of the cost of repairs; and (c) The insured shall give the Company every assistance to see that such repair is necessary, and the charges are reasonable.",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 3
+    },
+    {
+      "statement": "The retrieved policy wording states: 6. LOSS OF PERSONAL BELONGINGS In consideration of the payment of an additional premium and as mentioned in the Schedule, the Company will pay for the Insured's loss or damage of his personal belongings caused by perils mentioned under Section I of the Motor Policy, which were present in the vehicle at the time of loss or damage to the vehicle OR if the vehicle was broken into for the purpose of burglary or theft of those personal belongings. The coverage under this Add On Cover is subject always to the following: a) This Endorsement covers the personal belongings of the insured only",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 20
+    },
+    {
+      "statement": "The retrieved policy wording states: Section I – ACCIDENTAL LOSS OF OR DAMAGE TO THE • The coverage under Own Damage Section of the base policy will be available maximum till the kilometers as per plan opted (i.e. kilometers as at the time of inception of the policy + kilometers plan (Top Up) opted to drive during the Policy Year) or the Policy Period end date of the base cover (mentioned in the Policy Schedule) or Policy Cancellation date, whichever is earlier. • Claim incurred during the Grace Period will be payable only if the Company receives the Top Up premium within the Grace Period (specified in Policy Schedule) or the vehicle has not run for 100kms beyond the opted limit, whichever is earlier. • Grace kilometers allowed during the Policy Year is limited to maximum upto100 kms, from declared kilometer. • In case Insured vehicle meets with an accident, the claim under Own Damage section of this policy will only be...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 21
+    },
+    {
+      "statement": "The retrieved policy wording states: 4. Repatriation of Vehicle: In the event that the insured vehicle cannot move or run on its own power, at least 100 kms away from the address of the Insured as mentioned in the Schedule, on-the-spot repairs could not be carried out and had to be towed away to a Repair shop/Garage for repairs, and the vehicle cannot be repaired within 72 hours , the Company will repatriate the repaired vehicle to the address of the Insured as mentioned in the Schedule. This benefit is also available to any insured vehicle immobilized after an accident, at least 100 kms away from the address of the Insured as appearing in the Policy Schedule, and no Company's authorized Repair shop/Garage is available. What is Not Covered: i) Any Repatriation expense incurred by the Insured, without prior consent of the Company. ii) This benefit will not be available, if the Insured is availing of the benefit of Local...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 19
+    },
+    {
+      "statement": "The retrieved policy wording states: 20. FIRE AND/OR THEFT RISKS ONLY Notwithstanding anything to the contrary contained in the policy it is hereby understood and agreed that Section II of the policy is deemed to be cancelled and under Section I thereof the Company shall only be liable to indemnify the insured against loss or damage by fire, explosion, self ignition, lightning and/or burglary, housebreaking, theft and riot strike, malicious damage, terrorism, storm, tempest, flood, inundation and earthquake perils whilst the vehicle is laid up in garage and not in use. NB. (i) In case of Fire Risk only, the words “burglary housebreaking theft” is to be deleted. NB. (ii) In case of Theft Risk only, the words “fire explosion self ignition lightning riot strike malicious damage terrorism storm tempest flood inundation and earthquake perils” are to be deleted.",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 9
+    },
+    {
+      "statement": "The retrieved policy wording states: Section I – ACCIDENTAL LOSS OF OR DAMAGE TO THE • Any act of tempering with Vehicle devices or Odometer readings, or any application being used for the purpose of determining the data /information or any repair/ replacement of speedo-meter/Cluster found at the time of claim and not informed, policy cover will stand forfeited. • If the insured vehicle is sold the un-used kilo meter will be transferred to the new vehicle owner subject to recovery of No Claim Bonus from new owner. • The Company shall not be liable for any claim where the subject matter of the claim is covered under any other type of insurance policy with any other insurer or manufactures' warranty including manufacturer's recall campaign or under any such package at the same time. Building, 9th Floor, A & B Wing, Sahar Road, Andheri (East), Mumbai - 400099. | CIN: | Private Car Long Term Package Policy, UIN:...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 21
+    },
+    {
+      "statement": "The retrieved policy wording states: 24. RELIABILITY TRIALS AND RALLIES In consideration of the payment of an additional premium by the insured as mentioned in the schedule and realization thereof by the Company, it is hereby understood and agreed that in the indemnity granted by this policy is extended to apply whilst the vehicle insured is engaged in ……………………….* to be held at …………………** on or about the date of ../../…. under the auspices of ……………………………. # Provided that – (a) No indemnity shall be granted by this Endorsement to ………………………………. # (b) This policy does not cover use for organized racing, pace making, or speed testing. (c) During the course of the ……….*, the Company shall not be liable in respect of death of or bodily injury to any person being carried in or upon or entering or getting on to or alighting from the vehicle insured at the time of the occurrence of the event out of which any claim arises. ## It...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 10
+    },
+    {
+      "statement": "The retrieved policy wording states: ACCIDENTAL LOSS OF OR DAMAGE TO THE VEHICLE INSURED 1. The Company will indemnify the insured against accidental loss or damage to the vehicle insured hereunder and / or its accessories whilst thereon i. by fire, explosion, self-ignition or lightning; ii. by burglary, housebreaking or theft ; iii. by riot and strike; iv. by earthquake (fire and shock damage); v. by flood, typhoon, hurricane, storm, tempest, inundation, cyclone, hailstorm and frost; vi. by accidental external means; vii. by malicious act; viii. by terrorist activity; ix. whilst in transit by road, rail, inland-waterway, lift, elevator or air; x. By landslide and rockslide Subject to a deduction for depreciation at the rates mentioned below in respect of parts of the vehicle replaced: (1) For all rubber/ nylon / plastic parts, tyres and tubes, batteries and air bags- 50% (2) For fibre glass components – 30% (3) For all...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 2
+    }
+  ],
+  "exclusions_flagged": [],
+  "disclaimer": "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. Retrieved clauses are evidence only and do not guarantee coverage or settlement."
+}
