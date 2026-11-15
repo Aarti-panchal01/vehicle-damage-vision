@@ -258,8 +258,6 @@ def test_gemini_client_uses_single_attempt_timeout_and_closes(monkeypatch, contr
 
 
 def test_evidence_ranking_limits_unique_chunks_and_covers_each_query(contract_a, contract_b):
-    from src.rag.claim_writer import retrieve_policy_evidence
-
     base_meta = MockRetriever().metadata
 
     def candidate(chunk_id):
