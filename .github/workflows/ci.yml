@@ -1,33 +1,14 @@
-name: Role 1 vision CI
+name: Project CI
 
 on:
   push:
-    paths:
-      - "src/vision/**"
-      - "eval/**"
-      - "tests/**"
-      - "prompts/**"
-      - "schemas/**"
-      - "scripts/**"
-      - "requirements*.txt"
-      - ".github/workflows/role1-vision-ci.yml"
   pull_request:
-    paths:
-      - "src/vision/**"
-      - "eval/**"
-      - "tests/**"
-      - "prompts/**"
-      - "schemas/**"
-      - "scripts/**"
-      - "requirements*.txt"
-      - ".github/workflows/role1-vision-ci.yml"
 
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
-    env:
-      GEMINI_API_KEY: ""
-      GROQ_API_KEY: ""
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -35,7 +16,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - name: Install dependencies
-        run: pip install -r requirements-dev.txt
+        run: pip install -r requirements.txt -r requirements-dev.txt
       - name: Lint
         run: ruff check --line-length 120 src/vision eval scripts tests
       - name: Check Contract A schema file is up to date
