@@ -1,0 +1,344 @@
+running groq_v0 on 20 eval images
+  groq_v0 eval_01: ok (cached)
+  groq_v0 eval_02: ok (cached)
+  groq_v0 eval_03: ok (cached)
+  groq_v0 eval_04: ok (cached)
+  groq_v0 eval_05: ok (cached)
+  groq_v0 eval_06: ok (cached)
+  groq_v0 eval_07: ok (cached)
+  groq_v0 eval_08: ok (cached)
+  groq_v0 eval_09: ok (cached)
+  groq_v0 eval_10: ok (cached)
+  groq_v0 eval_11: ok (cached)
+  groq_v0 eval_12: ok (cached)
+  groq_v0 eval_13: ok (cached)
+  groq_v0 eval_14: ok
+  groq_v0 eval_15: ok
+  groq_v0 eval_16: ok
+  groq_v0 eval_17: ok
+  groq_v0 eval_18: ok
+groq returned 429, retrying in 9s (attempt 1)
+  groq_v0 eval_19: ok
+  groq_v0 eval_20: ok
+running groq_v1 on 20 eval images
+  groq_v1 eval_01: ok (cached)
+  groq_v1 eval_02: ok (cached)
+  groq_v1 eval_03: ok (cached)
+  groq_v1 eval_04: ok
+  groq_v1 eval_05: provider_error
+  groq_v1 eval_06: ok
+  groq_v1 eval_07: ok
+  groq_v1 eval_08: ok
+  groq_v1 eval_09: ok
+  groq_v1 eval_10: ok
+  groq_v1 eval_11: ok
+  groq_v1 eval_12: ok
+  groq_v1 eval_13: ok
+  groq_v1 eval_14: ok
+  groq_v1 eval_15: ok
+  groq_v1 eval_16: ok
+  groq_v1 eval_17: ok
+  groq_v1 eval_18: ok
+  groq_v1 eval_19: ok
+  groq_v1 eval_20: ok
+running groq_v1_schema on 20 eval images
+  groq_v1_schema eval_01: ok
+  groq_v1_schema eval_02: ok
+  groq_v1_schema eval_03: ok
+  groq_v1_schema eval_04: ok
+  groq_v1_schema eval_05: ok
+  groq_v1_schema eval_06: ok
+  groq_v1_schema eval_07: ok
+  groq_v1_schema eval_08: ok
+  groq_v1_schema eval_09: ok
+  groq_v1_schema eval_10: ok
+  groq_v1_schema eval_11: ok
+  quota exhausted on groq at eval_12; stopping this provider
+  groq_v1_schema incomplete (11/20), left out of summary.csv
+skipping groq_v2: groq quota exhausted
+skipping groq_v3: groq quota exhausted
+skipping groq_v4: groq quota exhausted
+wrote 2 configuration summaries to C:\Users\Aarti Panchal\vehicle-claim-genai\eval\results
+=== attempt 1 Fri 09:26
+running groq_v0 on 20 eval images
+  groq_v0 eval_01: ok (cached)
+  groq_v0 eval_02: ok (cached)
+  groq_v0 eval_03: ok (cached)
+  groq_v0 eval_04: ok (cached)
+  groq_v0 eval_05: ok (cached)
+  groq_v0 eval_06: ok (cached)
+  groq_v0 eval_07: ok (cached)
+  groq_v0 eval_08: ok (cached)
+  groq_v0 eval_09: ok (cached)
+  groq_v0 eval_10: ok (cached)
+  groq_v0 eval_11: ok (cached)
+  groq_v0 eval_12: ok (cached)
+  groq_v0 eval_13: ok (cached)
+  groq_v0 eval_14: ok (cached)
+  groq_v0 eval_15: ok (cached)
+  groq_v0 eval_16: ok (cached)
+  groq_v0 eval_17: ok (cached)
+  groq_v0 eval_18: ok (cached)
+  groq_v0 eval_19: ok (cached)
+  groq_v0 eval_20: ok (cached)
+running groq_v1 on 20 eval images
+  groq_v1 eval_01: ok (cached)
+  groq_v1 eval_02: ok (cached)
+  groq_v1 eval_03: ok (cached)
+  groq_v1 eval_04: ok (cached)
+  quota exhausted on groq at eval_05; stopping this provider
+  groq_v1 incomplete (4/20), left out of summary.csv
+skipping groq_v1_schema: groq quota exhausted
+skipping groq_v2: groq quota exhausted
+skipping groq_v3: groq quota exhausted
+skipping groq_v4: groq quota exhausted
+wrote 1 configuration summaries to C:\Users\Aarti Panchal\vehicle-claim-genai\eval\results
+=== attempt 2 Fri 09:47
+running groq_v0 on 20 eval images
+  groq_v0 eval_01: ok (cached)
+  groq_v0 eval_02: ok (cached)
+  groq_v0 eval_03: ok (cached)
+  groq_v0 eval_04: ok (cached)
+  groq_v0 eval_05: ok (cached)
+  groq_v0 eval_06: ok (cached)
+  groq_v0 eval_07: ok (cached)
+  groq_v0 eval_08: ok (cached)
+  groq_v0 eval_09: ok (cached)
+  groq_v0 eval_10: ok (cached)
+  groq_v0 eval_11: ok (cached)
+  groq_v0 eval_12: ok (cached)
+  groq_v0 eval_13: ok (cached)
+  groq_v0 eval_14: ok (cached)
+  groq_v0 eval_15: ok (cached)
+  groq_v0 eval_16: ok (cached)
+  groq_v0 eval_17: ok (cached)
+  groq_v0 eval_18: ok (cached)
+  groq_v0 eval_19: ok (cached)
+  groq_v0 eval_20: ok (cached)
+running groq_v1 on 20 eval images
+  groq_v1 eval_01: ok (cached)
+  groq_v1 eval_02: ok (cached)
+  groq_v1 eval_03: ok (cached)
+  groq_v1 eval_04: ok (cached)
+  groq_v1 eval_05: ok
+  groq_v1 eval_06: ok (cached)
+  groq_v1 eval_07: ok (cached)
+  groq_v1 eval_08: ok (cached)
+  groq_v1 eval_09: ok (cached)
+  groq_v1 eval_10: ok (cached)
+  groq_v1 eval_11: ok (cached)
+  groq_v1 eval_12: ok (cached)
+  groq_v1 eval_13: ok (cached)
+  groq_v1 eval_14: ok (cached)
+  groq_v1 eval_15: ok (cached)
+  groq_v1 eval_16: ok (cached)
+  groq_v1 eval_17: ok (cached)
+  groq_v1 eval_18: ok (cached)
+  groq_v1 eval_19: ok (cached)
+  groq_v1 eval_20: ok (cached)
+running groq_v1_schema on 20 eval images
+  groq_v1_schema eval_01: ok (cached)
+  groq_v1_schema eval_02: ok (cached)
+  groq_v1_schema eval_03: ok (cached)
+  groq_v1_schema eval_04: ok (cached)
+  groq_v1_schema eval_05: ok (cached)
+  groq_v1_schema eval_06: ok (cached)
+  groq_v1_schema eval_07: ok (cached)
+  groq_v1_schema eval_08: ok (cached)
+  groq_v1_schema eval_09: ok (cached)
+  groq_v1_schema eval_10: ok (cached)
+  groq_v1_schema eval_11: ok (cached)
+  quota exhausted on groq at eval_12; stopping this provider
+  groq_v1_schema incomplete (11/20), left out of summary.csv
+skipping groq_v2: groq quota exhausted
+skipping groq_v3: groq quota exhausted
+skipping groq_v4: groq quota exhausted
+wrote 2 configuration summaries to C:\Users\Aarti Panchal\vehicle-claim-genai\eval\results
+=== attempt 3 Fri 10:07
+running groq_v0 on 20 eval images
+  groq_v0 eval_01: ok (cached)
+  groq_v0 eval_02: ok (cached)
+  groq_v0 eval_03: ok (cached)
+  groq_v0 eval_04: ok (cached)
+  groq_v0 eval_05: ok (cached)
+  groq_v0 eval_06: ok (cached)
+  groq_v0 eval_07: ok (cached)
+  groq_v0 eval_08: ok (cached)
+  groq_v0 eval_09: ok (cached)
+  groq_v0 eval_10: ok (cached)
+  groq_v0 eval_11: ok (cached)
+  groq_v0 eval_12: ok (cached)
+  groq_v0 eval_13: ok (cached)
+  groq_v0 eval_14: ok (cached)
+  groq_v0 eval_15: ok (cached)
+  groq_v0 eval_16: ok (cached)
+  groq_v0 eval_17: ok (cached)
+  groq_v0 eval_18: ok (cached)
+  groq_v0 eval_19: ok (cached)
+  groq_v0 eval_20: ok (cached)
+running groq_v1 on 20 eval images
+  groq_v1 eval_01: ok (cached)
+  groq_v1 eval_02: ok (cached)
+  groq_v1 eval_03: ok (cached)
+  groq_v1 eval_04: ok (cached)
+  groq_v1 eval_05: ok (cached)
+  groq_v1 eval_06: ok (cached)
+  groq_v1 eval_07: ok (cached)
+  groq_v1 eval_08: ok (cached)
+  groq_v1 eval_09: ok (cached)
+  groq_v1 eval_10: ok (cached)
+  groq_v1 eval_11: ok (cached)
+  groq_v1 eval_12: ok (cached)
+  groq_v1 eval_13: ok (cached)
+  groq_v1 eval_14: ok (cached)
+  groq_v1 eval_15: ok (cached)
+  groq_v1 eval_16: ok (cached)
+  groq_v1 eval_17: ok (cached)
+  groq_v1 eval_18: ok (cached)
+  groq_v1 eval_19: ok (cached)
+  groq_v1 eval_20: ok (cached)
+running groq_v1_schema on 20 eval images
+  groq_v1_schema eval_01: ok (cached)
+  groq_v1_schema eval_02: ok (cached)
+  groq_v1_schema eval_03: ok (cached)
+  groq_v1_schema eval_04: ok (cached)
+  groq_v1_schema eval_05: ok (cached)
+  groq_v1_schema eval_06: ok (cached)
+  groq_v1_schema eval_07: ok (cached)
+  groq_v1_schema eval_08: ok (cached)
+  groq_v1_schema eval_09: ok (cached)
+  groq_v1_schema eval_10: ok (cached)
+  groq_v1_schema eval_11: ok (cached)
+  groq_v1_schema eval_12: ok
+  quota exhausted on groq at eval_13; stopping this provider
+  groq_v1_schema incomplete (12/20), left out of summary.csv
+skipping groq_v2: groq quota exhausted
+skipping groq_v3: groq quota exhausted
+skipping groq_v4: groq quota exhausted
+wrote 2 configuration summaries to C:\Users\Aarti Panchal\vehicle-claim-genai\eval\results
+=== attempt 4 Fri 10:29
+running groq_v0 on 20 eval images
+  groq_v0 eval_01: ok (cached)
+  groq_v0 eval_02: ok (cached)
+  groq_v0 eval_03: ok (cached)
+  groq_v0 eval_04: ok (cached)
+  groq_v0 eval_05: ok (cached)
+  groq_v0 eval_06: ok (cached)
+  groq_v0 eval_07: ok (cached)
+  groq_v0 eval_08: ok (cached)
+  groq_v0 eval_09: ok (cached)
+  groq_v0 eval_10: ok (cached)
+  groq_v0 eval_11: ok (cached)
+  groq_v0 eval_12: ok (cached)
+  groq_v0 eval_13: ok (cached)
+  groq_v0 eval_14: ok (cached)
+  groq_v0 eval_15: ok (cached)
+  groq_v0 eval_16: ok (cached)
+  groq_v0 eval_17: ok (cached)
+  groq_v0 eval_18: ok (cached)
+  groq_v0 eval_19: ok (cached)
+  groq_v0 eval_20: ok (cached)
+running groq_v1 on 20 eval images
+  groq_v1 eval_01: ok (cached)
+  groq_v1 eval_02: ok (cached)
+  groq_v1 eval_03: ok (cached)
+  groq_v1 eval_04: ok (cached)
+  groq_v1 eval_05: ok (cached)
+  groq_v1 eval_06: ok (cached)
+  groq_v1 eval_07: ok (cached)
+  groq_v1 eval_08: ok (cached)
+  groq_v1 eval_09: ok (cached)
+  groq_v1 eval_10: ok (cached)
+  groq_v1 eval_11: ok (cached)
+  groq_v1 eval_12: ok (cached)
+  groq_v1 eval_13: ok (cached)
+  groq_v1 eval_14: ok (cached)
+  groq_v1 eval_15: ok (cached)
+  groq_v1 eval_16: ok (cached)
+  groq_v1 eval_17: ok (cached)
+  groq_v1 eval_18: ok (cached)
+  groq_v1 eval_19: ok (cached)
+  groq_v1 eval_20: ok (cached)
+running groq_v1_schema on 20 eval images
+  groq_v1_schema eval_01: ok (cached)
+  groq_v1_schema eval_02: ok (cached)
+  groq_v1_schema eval_03: ok (cached)
+  groq_v1_schema eval_04: ok (cached)
+  groq_v1_schema eval_05: ok (cached)
+  groq_v1_schema eval_06: ok (cached)
+  groq_v1_schema eval_07: ok (cached)
+  groq_v1_schema eval_08: ok (cached)
+  groq_v1_schema eval_09: ok (cached)
+  groq_v1_schema eval_10: ok (cached)
+  groq_v1_schema eval_11: ok (cached)
+  groq_v1_schema eval_12: ok (cached)
+  groq_v1_schema eval_13: ok
+  quota exhausted on groq at eval_14; stopping this provider
+  groq_v1_schema incomplete (13/20), left out of summary.csv
+skipping groq_v2: groq quota exhausted
+skipping groq_v3: groq quota exhausted
+skipping groq_v4: groq quota exhausted
+wrote 2 configuration summaries to C:\Users\Aarti Panchal\vehicle-claim-genai\eval\results
+=== attempt 5 Fri 10:49
+running groq_v0 on 20 eval images
+  groq_v0 eval_01: ok (cached)
+  groq_v0 eval_02: ok (cached)
+  groq_v0 eval_03: ok (cached)
+  groq_v0 eval_04: ok (cached)
+  groq_v0 eval_05: ok (cached)
+  groq_v0 eval_06: ok (cached)
+  groq_v0 eval_07: ok (cached)
+  groq_v0 eval_08: ok (cached)
+  groq_v0 eval_09: ok (cached)
+  groq_v0 eval_10: ok (cached)
+  groq_v0 eval_11: ok (cached)
+  groq_v0 eval_12: ok (cached)
+  groq_v0 eval_13: ok (cached)
+  groq_v0 eval_14: ok (cached)
+  groq_v0 eval_15: ok (cached)
+  groq_v0 eval_16: ok (cached)
+  groq_v0 eval_17: ok (cached)
+  groq_v0 eval_18: ok (cached)
+  groq_v0 eval_19: ok (cached)
+  groq_v0 eval_20: ok (cached)
+running groq_v1 on 20 eval images
+  groq_v1 eval_01: ok (cached)
+  groq_v1 eval_02: ok (cached)
+  groq_v1 eval_03: ok (cached)
+  groq_v1 eval_04: ok (cached)
+  groq_v1 eval_05: ok (cached)
+  groq_v1 eval_06: ok (cached)
+  groq_v1 eval_07: ok (cached)
+  groq_v1 eval_08: ok (cached)
+  groq_v1 eval_09: ok (cached)
+  groq_v1 eval_10: ok (cached)
+  groq_v1 eval_11: ok (cached)
+  groq_v1 eval_12: ok (cached)
+  groq_v1 eval_13: ok (cached)
+  groq_v1 eval_14: ok (cached)
+  groq_v1 eval_15: ok (cached)
+  groq_v1 eval_16: ok (cached)
+  groq_v1 eval_17: ok (cached)
+  groq_v1 eval_18: ok (cached)
+  groq_v1 eval_19: ok (cached)
+  groq_v1 eval_20: ok (cached)
+running groq_v1_schema on 20 eval images
+  groq_v1_schema eval_01: ok (cached)
+  groq_v1_schema eval_02: ok (cached)
+  groq_v1_schema eval_03: ok (cached)
+  groq_v1_schema eval_04: ok (cached)
+  groq_v1_schema eval_05: ok (cached)
+  groq_v1_schema eval_06: ok (cached)
+  groq_v1_schema eval_07: ok (cached)
+  groq_v1_schema eval_08: ok (cached)
+  groq_v1_schema eval_09: ok (cached)
+  groq_v1_schema eval_10: ok (cached)
+  groq_v1_schema eval_11: ok (cached)
+  groq_v1_schema eval_12: ok (cached)
+  groq_v1_schema eval_13: ok (cached)
+  quota exhausted on groq at eval_14; stopping this provider
+  groq_v1_schema incomplete (13/20), left out of summary.csv
+skipping groq_v2: groq quota exhausted
+skipping groq_v3: groq quota exhausted
+skipping groq_v4: groq quota exhausted
+wrote 2 configuration summaries to C:\Users\Aarti Panchal\vehicle-claim-genai\eval\results

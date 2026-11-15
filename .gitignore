@@ -1,0 +1,13 @@
+.env
+.env.*.local
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.gstack/
+eval/cache/
+data/cardd_eval/images/
+*.zip

@@ -1,0 +1,886 @@
+{
+  "schema_version": "1.0",
+  "left_right_convention": "left and right are the vehicle's own sides, as seen by a driver sitting inside facing forward",
+  "items": [
+    {
+      "image_id": "eval_01",
+      "file": "images/eval_01.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "001493.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "right_taillamp",
+          "damage_type": "lamp_broken",
+          "severity": "severe"
+        },
+        {
+          "part": "right_quarter_panel",
+          "damage_type": "dent",
+          "severity": "severe"
+        },
+        {
+          "part": "rear_bumper",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "rear_right_tyre",
+          "damage_type": "tire_flat",
+          "severity": "severe"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent",
+        "scratch",
+        "lamp_broken",
+        "tire_flat"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Rear-right three-quarter view; rear wheel knocked inward."
+    },
+    {
+      "image_id": "eval_02",
+      "file": "images/eval_02.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "001358.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "front_bumper",
+          "damage_type": "crack",
+          "severity": "severe"
+        },
+        {
+          "part": "front_bumper",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "front_left_fender",
+          "damage_type": "dent",
+          "severity": "severe"
+        },
+        {
+          "part": "front_left_fender",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "front_left_door",
+          "damage_type": "dent",
+          "severity": "minor"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent",
+        "scratch",
+        "crack"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Front-left view. CarDD marks the crumpled fender as scratch; drafted as dent+scratch."
+    },
+    {
+      "image_id": "eval_03",
+      "file": "images/eval_03.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "002326.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "front_left_fender",
+          "damage_type": "dent",
+          "severity": "moderate"
+        },
+        {
+          "part": "front_bumper",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "front_bumper",
+          "damage_type": "crack",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent",
+        "scratch",
+        "crack"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Front-left corner; dent sits on the fender just behind the headlamp."
+    },
+    {
+      "image_id": "eval_04",
+      "file": "images/eval_04.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "003734.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "front_bumper",
+          "damage_type": "dent",
+          "severity": "severe"
+        },
+        {
+          "part": "right_headlamp",
+          "damage_type": "lamp_broken",
+          "severity": "severe"
+        },
+        {
+          "part": "front_right_fender",
+          "damage_type": "dent",
+          "severity": "severe"
+        },
+        {
+          "part": "front_right_fender",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "bonnet",
+          "damage_type": "crack",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent",
+        "scratch",
+        "crack",
+        "lamp_broken"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Front-right of an SUV on a tow truck. CarDD crack box is at the bonnet/fender seam; bonnet assignment is a guess."
+    },
+    {
+      "image_id": "eval_05",
+      "file": "images/eval_05.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "000611.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "left_taillamp",
+          "damage_type": "lamp_broken",
+          "severity": "severe"
+        },
+        {
+          "part": "rear_bumper",
+          "damage_type": "dent",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent",
+        "lamp_broken"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Rear close-up; the broken lamp is the outer cluster on the image-left, so the vehicle's left."
+    },
+    {
+      "image_id": "eval_06",
+      "file": "images/eval_06.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "001039.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "left_taillamp",
+          "damage_type": "lamp_broken",
+          "severity": "moderate"
+        },
+        {
+          "part": "rear_bumper",
+          "damage_type": "crack",
+          "severity": "severe"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "crack",
+        "lamp_broken"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Rear-left corner; bumper torn open below the lamp, lamp lens cracked but in place."
+    },
+    {
+      "image_id": "eval_07",
+      "file": "images/eval_07.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "000340.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "windshield",
+          "damage_type": "glass_shatter",
+          "severity": "severe"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "glass_shatter"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Van windshield, cracked across both halves."
+    },
+    {
+      "image_id": "eval_08",
+      "file": "images/eval_08.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "003099.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "rear_windshield",
+          "damage_type": "glass_shatter",
+          "severity": "severe"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "glass_shatter"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Glass with a hole, seat headrests seen from behind; drafted as rear windshield, could be the front one."
+    },
+    {
+      "image_id": "eval_09",
+      "file": "images/eval_09.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "001944.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "rear_right_door",
+          "damage_type": "dent",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent"
+      ],
+      "side_uncertain": true,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Side close-up; door order inferred from handle position. Front/rear door and side need checking."
+    },
+    {
+      "image_id": "eval_10",
+      "file": "images/eval_10.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "002741.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "left_quarter_panel",
+          "damage_type": "dent",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Quarter panel between rear door and tail lamp."
+    },
+    {
+      "image_id": "eval_11",
+      "file": "images/eval_11.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "001993.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "front_bumper",
+          "damage_type": "dent",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Dent under the fog lamp."
+    },
+    {
+      "image_id": "eval_12",
+      "file": "images/eval_12.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "001665.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "right_headlamp",
+          "damage_type": "lamp_broken",
+          "severity": "severe"
+        },
+        {
+          "part": "front_bumper",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "bonnet",
+          "damage_type": "dent",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent",
+        "scratch",
+        "lamp_broken"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Same scene as CarDD 003283, which was left out to avoid a near-duplicate."
+    },
+    {
+      "image_id": "eval_13",
+      "file": "images/eval_13.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "000848.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "rear_left_door",
+          "damage_type": "dent",
+          "severity": "moderate"
+        },
+        {
+          "part": "rear_left_door",
+          "damage_type": "scratch",
+          "severity": "minor"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent",
+        "scratch"
+      ],
+      "side_uncertain": true,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Several dents on one door; front/rear and side inferred from handle positions."
+    },
+    {
+      "image_id": "eval_14",
+      "file": "images/eval_14.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "002601.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "front_bumper",
+          "damage_type": "scratch",
+          "severity": "severe"
+        },
+        {
+          "part": "front_bumper",
+          "damage_type": "crack",
+          "severity": "moderate"
+        },
+        {
+          "part": "bonnet",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "front_left_fender",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "left_headlamp",
+          "damage_type": "lamp_broken",
+          "severity": "severe"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "scratch",
+        "crack"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "CarDD does not mark the headlamp, but the lens is gone and the bulb is exposed, so lamp_broken was added."
+    },
+    {
+      "image_id": "eval_15",
+      "file": "images/eval_15.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "000603.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "rear_left_tyre",
+          "damage_type": "tire_flat",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "tire_flat"
+      ],
+      "side_uncertain": true,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Single-wheel close-up; which corner is a guess from the door line."
+    },
+    {
+      "image_id": "eval_16",
+      "file": "images/eval_16.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "001587.jpg",
+      "category": "degraded",
+      "degradation": "gaussian_blur_r6",
+      "damages": [
+        {
+          "part": "front_bumper",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [
+        "image_0_blurry"
+      ],
+      "cardd_classes": [
+        "scratch"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Synthetic blur applied to a clear photo; damages are those of the clear original."
+    },
+    {
+      "image_id": "eval_17",
+      "file": "images/eval_17.jpg",
+      "split": "eval",
+      "source": "cardd",
+      "source_file": "000320.jpg",
+      "category": "degraded",
+      "degradation": "darken_0.18",
+      "damages": [
+        {
+          "part": "windshield",
+          "damage_type": "glass_shatter",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [
+        "image_0_too_dark"
+      ],
+      "cardd_classes": [
+        "glass_shatter"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Synthetic darkening applied to a clear photo; damages are those of the clear original."
+    },
+    {
+      "image_id": "eval_18",
+      "file": "images/eval_18.jpg",
+      "split": "eval",
+      "source": "car_damage_assessment",
+      "source_file": "430.jpeg",
+      "category": "no_damage",
+      "degradation": null,
+      "damages": [],
+      "image_quality_flags": [
+        "image_0_blurry"
+      ],
+      "cardd_classes": [],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Undamaged white SUV, front three-quarter, 224 px."
+    },
+    {
+      "image_id": "eval_19",
+      "file": "images/eval_19.jpg",
+      "split": "eval",
+      "source": "car_damage_assessment",
+      "source_file": "1003.jpeg",
+      "category": "no_damage",
+      "degradation": null,
+      "damages": [],
+      "image_quality_flags": [],
+      "cardd_classes": [],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Undamaged black SUV, front three-quarter, 224 px."
+    },
+    {
+      "image_id": "eval_20",
+      "file": "images/eval_20.jpg",
+      "split": "eval",
+      "source": "car_damage_assessment",
+      "source_file": "73.jpeg",
+      "category": "no_damage",
+      "degradation": null,
+      "damages": [],
+      "image_quality_flags": [
+        "image_0_blurry"
+      ],
+      "cardd_classes": [],
+      "side_uncertain": false,
+      "labeled_by": "aarti_verified",
+      "verified_by_human": true,
+      "label_notes": "Undamaged black sedan with a vinyl decal on the bonnet (the decal is not damage)."
+    },
+    {
+      "image_id": "dev_01",
+      "file": "images/dev_01.jpg",
+      "split": "dev",
+      "source": "cardd",
+      "source_file": "000040.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "right_headlamp",
+          "damage_type": "lamp_broken",
+          "severity": "moderate"
+        },
+        {
+          "part": "front_bumper",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "scratch",
+        "lamp_broken"
+      ],
+      "side_uncertain": true,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": "Front corner close-up."
+    },
+    {
+      "image_id": "dev_02",
+      "file": "images/dev_02.jpg",
+      "split": "dev",
+      "source": "cardd",
+      "source_file": "001900.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "left_headlamp",
+          "damage_type": "lamp_broken",
+          "severity": "severe"
+        },
+        {
+          "part": "front_left_fender",
+          "damage_type": "crack",
+          "severity": "severe"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "crack",
+        "lamp_broken"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": "Cracked panel between headlamp and wheel arch, drafted as fender."
+    },
+    {
+      "image_id": "dev_03",
+      "file": "images/dev_03.jpg",
+      "split": "dev",
+      "source": "cardd",
+      "source_file": "002314.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "right_taillamp",
+          "damage_type": "lamp_broken",
+          "severity": "severe"
+        },
+        {
+          "part": "right_quarter_panel",
+          "damage_type": "dent",
+          "severity": "severe"
+        },
+        {
+          "part": "rear_bumper",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent",
+        "scratch",
+        "lamp_broken"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": "Rear-right corner of an SUV. Few-shot example."
+    },
+    {
+      "image_id": "dev_04",
+      "file": "images/dev_04.jpg",
+      "split": "dev",
+      "source": "cardd",
+      "source_file": "000914.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "windshield",
+          "damage_type": "glass_shatter",
+          "severity": "severe"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "glass_shatter"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": ""
+    },
+    {
+      "image_id": "dev_05",
+      "file": "images/dev_05.jpg",
+      "split": "dev",
+      "source": "cardd",
+      "source_file": "000875.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "front_left_door",
+          "damage_type": "dent",
+          "severity": "severe"
+        },
+        {
+          "part": "front_left_door",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "rear_left_door",
+          "damage_type": "dent",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": "Side impact, mirror at image-left."
+    },
+    {
+      "image_id": "dev_06",
+      "file": "images/dev_06.jpg",
+      "split": "dev",
+      "source": "cardd",
+      "source_file": "001617.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "left_headlamp",
+          "damage_type": "lamp_broken",
+          "severity": "severe"
+        },
+        {
+          "part": "front_bumper",
+          "damage_type": "scratch",
+          "severity": "severe"
+        },
+        {
+          "part": "front_left_fender",
+          "damage_type": "dent",
+          "severity": "severe"
+        },
+        {
+          "part": "bonnet",
+          "damage_type": "dent",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "dent",
+        "scratch",
+        "lamp_broken"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": ""
+    },
+    {
+      "image_id": "dev_07",
+      "file": "images/dev_07.jpg",
+      "split": "dev",
+      "source": "cardd",
+      "source_file": "000869.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "front_left_tyre",
+          "damage_type": "tire_flat",
+          "severity": "severe"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "tire_flat"
+      ],
+      "side_uncertain": true,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": "Tyre off the bead on a bent rim; corner is a guess. Body damage beside it is not in CarDD and was left out."
+    },
+    {
+      "image_id": "dev_08",
+      "file": "images/dev_08.jpg",
+      "split": "dev",
+      "source": "cardd",
+      "source_file": "003683.jpg",
+      "category": "damaged",
+      "degradation": null,
+      "damages": [
+        {
+          "part": "front_right_fender",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        },
+        {
+          "part": "front_bumper",
+          "damage_type": "scratch",
+          "severity": "minor"
+        }
+      ],
+      "image_quality_flags": [],
+      "cardd_classes": [
+        "scratch"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": ""
+    },
+    {
+      "image_id": "dev_09",
+      "file": "images/dev_09.jpg",
+      "split": "dev",
+      "source": "cardd",
+      "source_file": "002045.jpg",
+      "category": "degraded",
+      "degradation": "lowres_160_jpeg10",
+      "damages": [
+        {
+          "part": "front_bumper",
+          "damage_type": "scratch",
+          "severity": "moderate"
+        }
+      ],
+      "image_quality_flags": [
+        "image_0_low_resolution"
+      ],
+      "cardd_classes": [
+        "scratch"
+      ],
+      "side_uncertain": false,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": "Synthetic down-scale plus heavy JPEG compression."
+    },
+    {
+      "image_id": "dev_10",
+      "file": "images/dev_10.jpg",
+      "split": "dev",
+      "source": "car_damage_assessment",
+      "source_file": "990.jpeg",
+      "category": "no_damage",
+      "degradation": null,
+      "damages": [],
+      "image_quality_flags": [],
+      "cardd_classes": [],
+      "side_uncertain": false,
+      "labeled_by": "claude_draft",
+      "verified_by_human": false,
+      "label_notes": "Undamaged grey SUV, side view. Few-shot example."
+    }
+  ]
+}

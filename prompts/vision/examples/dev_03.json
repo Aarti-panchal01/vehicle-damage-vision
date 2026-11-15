@@ -1,0 +1,8 @@
+{
+  "damages": [
+    {"part": "right_taillamp", "damage_type": "lamp_broken", "severity": "severe", "confidence": 0.9, "image_index": 0, "notes": "Tail lamp lens cracked and pushed in at its outer edge"},
+    {"part": "right_quarter_panel", "damage_type": "dent", "severity": "severe", "confidence": 0.85, "image_index": 0, "notes": "Panel between the tail lamp and rear wheel crushed inward, roughly 40 cm across"},
+    {"part": "rear_bumper", "damage_type": "scratch", "severity": "moderate", "confidence": 0.8, "image_index": 0, "notes": "Paint scraped through on the right corner of the bumper, about 30 cm long"}
+  ],
+  "image_quality_flags": []
+}
