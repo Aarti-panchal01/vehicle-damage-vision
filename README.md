@@ -113,4 +113,4 @@ scripts/                    dataset builder and schema/mock helpers
 
 ## Team
 
-The repository is owned by Aarti Panchal (`@Aarti-panchal01`). Team collaborators are `@gaganaraj`, `@nakshathira200-svg`, and `@jyothika-aiml`. Please document each person's actual contributions in the final report rather than inferring them from repository access.
+The repository is owned by Aarti Panchal (`@Aarti-panchal01`). Invitations with push access have been sent to `@gaganaraj`, `@nakshathira200-svg`, and `@jyothika-aiml`; each person must accept their invitation before pushing. Please document actual contributions in the final report rather than inferring them from repository access.
