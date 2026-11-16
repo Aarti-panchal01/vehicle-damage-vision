@@ -32,12 +32,5 @@ Role 2 accepts Role 1 Contract A JSON and generates Contract B JSON. See `README
 - Baleno bumper sample remains incomplete because the required painting rate is unavailable.
 - A schema-valid Contract B with non-empty `unpriced_parts` is not a complete estimate.
 
-## Pending limitations
-1. Obtain and record a second independent garage quotation.
-2. Obtain Honda City door replacement labour rates and Baleno painting rates if those sample claims must be fully priced.
-3. Verify outstanding part/material classifications and source compatibility flags documented in `MATERIAL_AND_DEPRECIATION_AUDIT.md` and `DATA_QUALITY_AUDIT.md`.
-4. Confirm depreciation applicability against the policy applicable to each claim; current values are transcribed from one Shriram policy and are not universal.
-5. Confirm with LUSTRO whether painting rates include primer/material and record the exact garage address and GST treatment if available.
-
 ## Role 3 integration rule
 Consume Contract B as-is. Do not alter its monetary values. If `unpriced_parts` is non-empty, clearly flag the estimate as incomplete and do not present zero totals as a payable claim amount.
