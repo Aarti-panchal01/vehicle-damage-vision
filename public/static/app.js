@@ -79,14 +79,11 @@ async function checkHealth() {
       return;
     }
 
-    const missing = [];
-    if (!config.gemini_configured) missing.push("GEMINI_API_KEY");
-    if (!config.model_configured) missing.push("GEMINI_MODEL");
-    healthBanner.textContent = `Deployment setup incomplete. The app owner must configure: ${missing.join(", ")}.`;
+    healthBanner.textContent = "Claim drafting is temporarily unavailable. Please try again later.";
     healthBanner.classList.remove("hidden");
     healthBanner.classList.add("warning");
   } catch {
-    healthBanner.textContent = "Could not check server configuration. You can still submit; the app will report setup errors.";
+    healthBanner.textContent = "Unable to check service availability. Please try again later.";
     healthBanner.classList.remove("hidden");
     healthBanner.classList.add("warning");
   }

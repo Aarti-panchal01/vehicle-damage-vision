@@ -284,6 +284,34 @@ def test_vercel_claim_endpoint_passes_valid_uploads_to_workflow(monkeypatch):
     assert captured["policy_uin"] == "TEST-UIN-001"
 
 
+def test_missing_model_configuration_returns_generic_service_error(monkeypatch):
+    monkeypatch.setenv("VERCEL", "1")
+    monkeypatch.setenv("GEMINI_API_KEY", "configured-key")
+    monkeypatch.delenv("GEMINI_MODEL", raising=False)
+    client = TestClient(vercel_app.app)
+
+    response = client.post(
+        "/api/claims",
+        data={
+            "vehicle_make": "Maruti Suzuki",
+            "vehicle_model": "Swift",
+            "vehicle_year": "2021",
+            "vehicle_fuel": "petrol",
+            "description": "A parking collision",
+            "insurer": "Test Insurer",
+            "policy_uin": "TEST-UIN-001",
+            "confirm_external_processing": "true",
+        },
+        files=[
+            ("photos", ("photo.jpg", _jpeg_bytes(), "image/jpeg")),
+            ("policy_pdf", ("policy.pdf", _text_policy_pdf(), "application/pdf")),
+        ],
+    )
+
+    assert response.status_code == 503
+    assert response.json()["detail"] == "Claim drafting is temporarily unavailable. Please try again later."
+
+
 def test_claim_endpoint_completes_full_pipeline_with_stubbed_providers(monkeypatch):
     monkeypatch.setenv("VERCEL", "1")
     monkeypatch.setenv("GEMINI_API_KEY", "test-key")
