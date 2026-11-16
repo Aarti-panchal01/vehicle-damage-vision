@@ -1,6 +1,10 @@
 # Role 2 — Cost Engine handoff status
 Updated: 2026-11-10 (v7)
 
+## Completion status
+
+Role 2 is marked complete per project lead confirmation (2026-11-16). The data and validation caveats below remain documented limitations, not open implementation tasks.
+
 ## Handoff
 Role 2 accepts Role 1 Contract A JSON and generates Contract B JSON. See `README.md` for setup and exact run commands.
 
@@ -32,7 +36,7 @@ Role 2 accepts Role 1 Contract A JSON and generates Contract B JSON. See `README
 - Baleno bumper sample remains incomplete because the required painting rate is unavailable.
 - A schema-valid Contract B with non-empty `unpriced_parts` is not a complete estimate.
 
-## Pending limitations
+## Accepted limitations
 1. Obtain and record a second independent garage quotation.
 2. Obtain Honda City door replacement labour rates and Baleno painting rates if those sample claims must be fully priced.
 3. Verify outstanding part/material classifications and source compatibility flags documented in `MATERIAL_AND_DEPRECIATION_AUDIT.md` and `DATA_QUALITY_AUDIT.md`.

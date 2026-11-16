@@ -386,7 +386,8 @@ def generate_claim_draft(contract_a, contract_b, insurer, uin, retriever=None, t
         estimate = build_contract_c_estimate_fields(contract_a, contract_b)
         required_disclaimer = (
             "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. "
-            "Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. "
+            "Role 2 depreciation uses a Shriram policy reference, not a verified rate for the selected policy. "
+            "After-deduction figures are illustrative and must not be treated as claimable or payable amounts. "
             "Retrieved clauses are evidence only and do not guarantee coverage or settlement."
         )
         if contract_b["unpriced_parts"]:

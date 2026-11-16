@@ -91,7 +91,7 @@ def create_claim(
     if not os.getenv("GEMINI_API_KEY") or not os.getenv("GEMINI_MODEL"):
         raise HTTPException(
             503,
-            "The server is missing GEMINI_API_KEY or GEMINI_MODEL configuration.",
+            "Claim drafting is temporarily unavailable. Please try again later.",
         )
 
     content_length = request.headers.get("content-length")

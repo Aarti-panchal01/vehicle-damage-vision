@@ -1,3 +1,5 @@
+import json
+
 import numpy as np
 import pytest
 
@@ -53,21 +55,6 @@ class FakeModel:
         return np.array([[0.1, 0.2]])
 
 
-class FakeCollection:
-    def __init__(self, ids, metadata):
-        self.ids = ids
-        self.metadata = metadata
-        self.last_where = None
-
-    def query(self, query_embeddings, n_results, where, include):
-        self.last_where = where
-        candidates = [
-            chunk_id for chunk_id, metadata in zip(self.ids, self.metadata)
-            if not where or metadata["insurer"] == where.get("insurer")
-        ]
-        return {"ids": [candidates[:n_results]]}
-
-
 def make_retriever():
     retriever = object.__new__(HybridPolicyRetriever)
     retriever.initialized = True
@@ -81,7 +68,14 @@ def make_retriever():
     retriever.ids = ["a1", "a2", "h1", "s1"]
     retriever.bm25 = FakeBM25()
     retriever.model = FakeModel()
-    retriever.collection = FakeCollection(retriever.ids, retriever.metadatas)
+    retriever.embeddings = HybridPolicyRetriever.normalize_embeddings(
+        np.array([
+            [-0.1, -0.2],
+            [-0.2, -0.1],
+            [0.1, 0.2],
+            [0.2, 0.1],
+        ])
+    )
     return retriever
 
 
@@ -102,7 +96,6 @@ def test_hdfc_scope_returns_only_hdfc():
 def test_vector_and_bm25_candidates_both_use_insurer_filter():
     retriever = make_retriever()
     results = retriever.retrieve("coverage", insurer="ACKO")
-    assert retriever.collection.last_where == {"insurer": "ACKO"}
     assert insurers(results) == {"ACKO"}
     assert {result["chunk_id"] for result in results} == {"a1", "a2"}
 
@@ -120,3 +113,69 @@ def test_omitting_insurer_preserves_cross_insurer_search():
 def test_existing_positional_retrieve_call_remains_compatible():
     results = make_retriever().retrieve("coverage", None, None, 2)
     assert len(results) == 2
+
+
+def write_chunks(path, chunk_ids):
+    chunks = [
+        {
+            "text": "Coverage includes accidental damage.",
+            "metadata": {
+                "chunk_id": chunk_id,
+                "insurer": "ACKO",
+                "file_name": "policy.pdf",
+                "page": page,
+                "policy_scope": "own_damage",
+            },
+        }
+        for page, chunk_id in enumerate(chunk_ids, start=1)
+    ]
+    path.write_text(
+        "\n".join(json.dumps(chunk) for chunk in chunks) + "\n",
+        encoding="utf-8",
+    )
+
+
+def make_cache_reader(tmp_path, chunk_ids):
+    chunk_path = tmp_path / "chunks.jsonl"
+    write_chunks(chunk_path, chunk_ids)
+    retriever = object.__new__(HybridPolicyRetriever)
+    retriever.chunk_path = chunk_path
+    retriever.db_path = tmp_path / "vectors"
+    retriever.initialized = False
+    retriever.documents = []
+    retriever.metadatas = []
+    retriever.ids = []
+    retriever.embeddings = None
+    retriever.bm25 = None
+    retriever.bm25_tokens = []
+    return retriever
+
+
+def test_vector_cache_round_trip_uses_canonical_chunk_ids(tmp_path):
+    chunk_ids = ["chunk-1", "chunk-2"]
+    writer = make_cache_reader(tmp_path, chunk_ids)
+    writer.ids = chunk_ids
+    writer.embeddings = HybridPolicyRetriever.normalize_embeddings(
+        np.array([[1.0, 0.0], [0.0, 1.0]])
+    )
+    writer.save_vector_index()
+
+    reader = make_cache_reader(tmp_path, chunk_ids)
+    assert reader.load_existing_index()
+    assert reader.ids == chunk_ids
+    assert reader.initialized
+    np.testing.assert_allclose(reader.embeddings, writer.embeddings)
+
+
+def test_vector_cache_rejects_pickled_object_arrays(tmp_path):
+    chunk_ids = ["chunk-1"]
+    retriever = make_cache_reader(tmp_path, chunk_ids)
+    retriever.db_path.mkdir()
+    np.savez_compressed(
+        retriever.vector_index_path,
+        ids=np.asarray(chunk_ids, dtype=object),
+        embeddings=np.array([[1.0, 0.0]]),
+    )
+
+    assert not retriever.load_existing_index()
+    assert not retriever.initialized

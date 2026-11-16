@@ -14,4 +14,5 @@ data/cardd_eval/images/
 *.zip
 
 /data/policy_docs/*.pdf
+/data/vector_db/
 .venv311/

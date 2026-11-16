@@ -79,14 +79,11 @@ async function checkHealth() {
       return;
     }
 
-    const missing = [];
-    if (!config.gemini_configured) missing.push("GEMINI_API_KEY");
-    if (!config.model_configured) missing.push("GEMINI_MODEL");
-    healthBanner.textContent = `Deployment setup incomplete. The app owner must configure: ${missing.join(", ")}.`;
+    healthBanner.textContent = "Claim drafting is temporarily unavailable. Please try again later.";
     healthBanner.classList.remove("hidden");
     healthBanner.classList.add("warning");
   } catch {
-    healthBanner.textContent = "Could not check server configuration. You can still submit; the app will report setup errors.";
+    healthBanner.textContent = "Unable to check service availability. Please try again later.";
     healthBanner.classList.remove("hidden");
     healthBanner.classList.add("warning");
   }
@@ -144,7 +141,7 @@ function renderEstimate(payload) {
   const table = document.createElement("table");
   const head = document.createElement("thead");
   const headerRow = document.createElement("tr");
-  ["Part", "Action", "Material", "Part", "Labour", "Paint", "Claimable"].forEach((label) => {
+  ["Part", "Action", "Material", "Part", "Labour", "Paint", "After deduction*"].forEach((label) => {
     headerRow.append(textNode("th", label));
   });
   head.append(headerRow);
@@ -177,7 +174,7 @@ function renderEstimate(payload) {
   [
     ["Gross estimate", contractB.totals.gross],
     ["Depreciation", contractB.totals.depreciation],
-    ["Indicative claimable", contractB.totals.claimable],
+    ["After-deduction estimate", contractB.totals.claimable],
   ].forEach(([label, amount]) => {
     const item = document.createElement("div");
     item.className = "total-item";
@@ -185,6 +182,11 @@ function renderEstimate(payload) {
     totals.append(item);
   });
   card.append(totals);
+  card.append(textNode(
+    "p",
+    "The deductions use a Shriram policy reference, not a verified rate for the selected policy. Treat after-deduction figures as illustrative, not claimable or payable amounts.",
+    "estimate-assumption",
+  ));
 
   if (incomplete) {
     const note = document.createElement("p");
@@ -286,8 +288,10 @@ function renderResults(payload) {
     const link = document.createElement("a");
     link.href = url;
     link.download = `${payload.claim_id}_claim_draft.json`;
+    document.body.append(link);
     link.click();
-    URL.revokeObjectURL(url);
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
   const print = textNode("button", "Print / Save PDF", "button button-secondary");
   print.type = "button";

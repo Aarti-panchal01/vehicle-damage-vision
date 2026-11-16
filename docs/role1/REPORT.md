@@ -2,6 +2,8 @@
 
 *IEEE-style report input for integration into the team's final paper. Prepared for Aarti Panchal to hand to the report editor.*
 
+**Role status:** Complete per project lead confirmation (2026-11-16). The limitations below remain evaluation caveats, not unfinished implementation tasks.
+
 ## Contribution record
 
 This record describes work represented by the checked-in project artifacts. It does not assign an effort percentage or hours because the team has not supplied an agreed allocation.
