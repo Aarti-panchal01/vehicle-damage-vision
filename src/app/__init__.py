@@ -1,0 +1,1 @@
+"""Vercel-compatible claims application."""

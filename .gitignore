@@ -8,6 +8,7 @@ venv/
 .ruff_cache/
 .mypy_cache/
 .gstack/
+.vercel/
 eval/cache/
 data/cardd_eval/images/
 *.zip
