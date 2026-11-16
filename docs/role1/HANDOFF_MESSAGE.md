@@ -2,7 +2,7 @@
 
 Hi team — Role 1 has the Contract A pipeline, provider adapters, validation/repair flow, prompts, mocks, and evaluation outputs ready for integration. The JSON Schema check passes; the vision tests are included in the repo.
 
-The eight planned model/strategy runs have seven complete 20-image passes. Qwen v2 reached 6/20 and stopped at `eval_07` on Groq quota. To resume tomorrow, run this from the repo root; the first six replies are cached:
+All eight planned model/strategy runs have complete 20-image passes. Qwen v2 completed after the Groq quota recovered. To rerun it from the repo root, use:
 
 ```powershell
 python -m eval.run_eval --configs groq_v2
@@ -25,7 +25,7 @@ Known integration notes:
 - `load_image(path)` reads a disk path. The Streamlit app receives uploaded bytes and constructs `ImageInput` directly; `src/vision/adapter.py` now exposes `run_vision(...)` for byte input.
 - The original `assess_damage` can raise for invalid vehicle data or prompt-loading failures rather than returning `VisionError`. The adapter catches these and returns a structured error dict.
 - Python 3.9.6 is not installed here, so its environment has not been tested.
-- Qwen v1 + schema and v3 completed their 20-image runs, but include provider-error responses; Qwen v2 remains partial. Qwen v4 is an extra configuration and has not been run.
+- Qwen v1 + schema and v3 completed their 20-image runs, but include provider-error responses. Qwen v2 completed its 20-image run with no provider errors. Qwen v4 is an extra configuration and has not been run.
 - All 10 dev labels, including the few-shot examples, remain unverified. The 20 eval labels are marked `aarti_verified`.
 
 The demo's current provider/prompt defaults are Gemini and `v4_best`. Since v4 was selected after reviewing the same 20 eval images, its score should be presented as exploratory, not as an unbiased final estimate.
