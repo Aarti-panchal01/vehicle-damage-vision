@@ -82,7 +82,7 @@ The v4 eval score is optimistic because v4 was selected after inspecting the sam
 
 ### Limitations
 
-The scored sample contains only 20 images, much smaller than the planned dataset scale. The dev labels, including both few-shot examples, are unverified. Qwen v2 is incomplete, and two full Qwen configurations include provider errors. Gemini v4 was selected using the eval set. The confidence intervals are wide, and the measurements do not establish generalization, insurance readiness, or a robust ranking between models. Any final paper should keep the 6/20 partial result and these limitations visible.
+The scored sample contains only 20 images, much smaller than the planned dataset scale. The dev labels, including both few-shot examples, are unverified. Qwen v2 is incomplete at 6/20, and two full Qwen configurations include provider errors. Gemini v4 was tuned after inspecting the same eval set used for its score. Left/right part errors persist across completed configurations. The confidence intervals are wide, and the measurements do not establish generalization, insurance readiness, or a robust ranking between models. Any final paper should keep the partial Qwen v2 result and these limitations visible.
 
 ## References
 
