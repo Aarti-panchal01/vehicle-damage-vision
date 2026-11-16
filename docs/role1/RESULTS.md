@@ -6,7 +6,7 @@ The evaluation uses `data/cardd_eval/labels.json` and the images in `data/cardd_
 
 The evaluated models are Gemini `gemini-3.5-flash-lite` and Qwen `qwen/qwen3.8-27b` through Groq. The planned strategies are `v1_structured` (zero-shot), `v1_structured` with API schema enforcement, `v2_fewshot`, and `v3_cot`, as mapped in `docs/role1/DECISIONS.md`. `v0_baseline` and `v4_best` are additional runs; v4 was written after reviewing earlier eval errors.
 
-The runner records predictions and per-image outcomes under `eval/results/`. Summary metrics are from `summary.csv`; bootstrap intervals and per-image exact-part-set matches are in `summary_with_ci.csv`. A confidence interval resamples images with replacement 1,000 times, with seed 42; intervals are percentile 95% intervals.
+The runner records predictions and per-image outcomes under `eval/results/`. The table below uses only the completed and partial rows in `eval/results/summary_with_ci.csv`; values are rounded for display, and blank CSV metrics remain unavailable. A confidence interval resamples images with replacement 1,000 times, with seed 42; intervals are percentile 95% intervals.
 
 ## Results
 
@@ -24,9 +24,9 @@ The runner records predictions and per-image outcomes under `eval/results/`. Sum
 | Qwen/Groq / v1 structured | 20 | .763 (.595–.891) | .450 (.250–.651) | 90% | 0.10 | 24.787 | 2,408 / 302 | .003133 |
 | Qwen/Groq / v1 + schema | 20 | .593 (.367–.772) | .400 (.200–.650) | 90% | 0.00 | 21.268 | 2,070 / 108 | .002086 |
 | Qwen/Groq / v3 CoT | 20 | .761 (.653–.849) | .350 (.150–.550) | 85% | 0.10 | 30.993 | 2,524 / 500 | .004018 |
-| Qwen/Groq / v2 few-shot | 6/20, partial | not run yet | not run yet | not run yet | not run yet | not run yet | not run yet | not run yet |
+| Qwen/Groq / v2 few-shot | 6/20, partial | — | — | — | — | — | — | — |
 
-The planned eight-way matrix has seven complete configurations. Qwen v2 stopped at `eval_07` when quota was exhausted; six predictions were recorded. It has no summary row, and partial-run tokens/cost are not available in the summary. Qwen v4 is an extra configuration and was not run.
+The planned eight-way matrix has seven complete configurations. Qwen v2 stopped at `eval_07` when quota was exhausted; six predictions were recorded. Its summary row marks the run partial and leaves its metrics blank, so no metrics are reported here. Qwen v4 is an extra configuration and was not run.
 
 ## Metrics and interpretation
 
@@ -58,3 +58,4 @@ Qwen is identified as a 27B model in `docs/role1/DECISIONS.md`; a Gemini paramet
 - All 10 dev labels are unverified, including both few-shot examples. The 20 eval labels are marked `aarti_verified`.
 - The dev check is small and uses unverified labels. Confidence intervals are wide and overlapping; they do not establish generalization.
 - Qwen v4 is an extra, not-run configuration.
+- Left/right part errors persist across completed configurations.
