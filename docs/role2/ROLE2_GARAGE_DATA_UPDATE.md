@@ -10,3 +10,7 @@ Source: user-supplied workbook `Garage_car report.xlsx`, garage named LUSTRO Aut
 
 ## Midpoint convention
 For any quoted range a–b, the calculation rate is (a+b)/2. This is a deterministic modelling convention, not a new quote from the garage.
+
+## Garage price variation note
+
+The garage owner indicated that prices at other garages may vary only slightly across spare parts, labour, painting and related service charges. This is qualitative information only and is not an independently collected second-garage quotation. The existing LUSTRO rates are retained as reference estimates.
