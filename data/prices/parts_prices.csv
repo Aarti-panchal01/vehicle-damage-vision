@@ -1,0 +1,131 @@
+make,model,year_range,part,material,part_price_inr,paint_cost_inr,source_url,date_accessed,price_status
+Maruti Suzuki,Swift,2021-2022,front_bumper,plastic,2250,,https://www.marutisuzuki.com/genuine-parts/front-bumper/71711m55r00-5pk,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,rear_bumper,plastic,2830,,https://www.marutisuzuki.com/genuine-parts/rear-bumper/71810m55r10-5pk,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,bonnet,metal,4070,,https://www.zigwheels.com/maruti-suzuki-cars/swift-2021-2024/spare-parts-price/,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,boot_lid,metal,5120,,https://www.cardekho.com/maruti/swift-2021-2024/spare-parts-price,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,grille,plastic,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,roof,metal,7920,,ESTIMATE ONLY — proxy from comparable model/part (bonnet); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,windshield,glass,4100,,https://www.marutisuzuki.com/genuine-parts/glass-windshield/84511m55r00,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,rear_windshield,glass,2487,,https://www.zigwheels.com/maruti-suzuki-cars/swift-2021-2024/spare-parts-price/,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,left_headlamp,plastic,2999,,https://www.marutisuzuki.com/genuine-parts/head-lamp-assembly-right/35100m55r10,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,right_headlamp,plastic,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,left_taillamp,plastic,5495,,https://www.marutisuzuki.com/genuine-parts/tail-lamp-left/35750m55ra0,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,right_taillamp,plastic,5495,,https://www.marutisuzuki.com/genuine-parts/tail-lamp-right/35650m55ra0,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,left_orvm,plastic,3470,,https://www.marutisuzuki.com/genuine-parts/outside-rear-view-mirror-left/84702m55r40-5pk,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,right_orvm,plastic,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,front_left_door,metal,5838,,https://www.zigwheels.com/maruti-suzuki-cars/swift-2021-2024/spare-parts-price/,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,front_right_door,metal,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,rear_left_door,metal,7365,,https://www.zigwheels.com/maruti-suzuki-cars/swift-2021-2024/spare-parts-price/,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,rear_right_door,metal,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,front_left_fender,metal,1565,,https://www.marutisuzuki.com/genuine-parts/front-fender-panel-right/57611m55r10,2026-10-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Swift,2021-2022,front_right_fender,metal,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,left_quarter_panel,metal,2120,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,right_quarter_panel,metal,2120,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,front_left_tyre,tyre,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,front_right_tyre,tyre,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,rear_left_tyre,tyre,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Swift,2021-2022,rear_right_tyre,tyre,2250,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,front_bumper,plastic,1820,,https://www.cardekho.com/hyundai/creta-2020-2024/spare-parts-price,2026-10-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,rear_bumper,plastic,3393,,https://www.cardekho.com/hyundai/creta-2020-2024/spare-parts-price,2026-10-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,bonnet,metal,7919,,https://www.cardekho.com/hyundai/creta-2020-2024/spare-parts-price,2026-10-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,boot_lid,metal,5890,,ESTIMATE ONLY — proxy from comparable model/part (boot_lid); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,grille,plastic,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,roof,metal,9110,,ESTIMATE ONLY — proxy from comparable model/part (bonnet); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,windshield,glass,5120,,https://www.cardekho.com/hyundai/creta-2020-2024/spare-parts-price,2026-10-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,rear_windshield,glass,3754,,https://www.cardekho.com/hyundai/creta-2020-2024/spare-parts-price,2026-10-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,left_headlamp,plastic,3200,,https://www.zigwheels.com/hyundai-cars/creta-2020-2024/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,right_headlamp,plastic,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,left_taillamp,plastic,2602,,https://www.zigwheels.com/hyundai-cars/creta-2020-2024/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,right_taillamp,plastic,2602,,https://www.zigwheels.com/hyundai-cars/creta-2020-2024/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,left_orvm,plastic,3990,,ESTIMATE ONLY — proxy from comparable model/part (left_orvm); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,right_orvm,plastic,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,front_left_door,metal,14517,,https://www.cardekho.com/hyundai/creta-2020-2024/spare-parts-price,2026-10-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,front_right_door,metal,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,rear_left_door,metal,13982,,https://www.cardekho.com/hyundai/creta-2020-2024/spare-parts-price,2026-10-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,rear_right_door,metal,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,front_left_fender,metal,2115,,https://www.zigwheels.com/hyundai-cars/creta-2020-2024/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Hyundai,Creta,2020-2023,front_right_fender,metal,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,left_quarter_panel,metal,2430,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,right_quarter_panel,metal,2430,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,front_left_tyre,tyre,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,front_right_tyre,tyre,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,rear_left_tyre,tyre,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Hyundai,Creta,2020-2023,rear_right_tyre,tyre,2590,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,front_bumper,plastic,1921,,https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/,2026-10-09,SOURCE_RECORDED_EXISTING
+Tata,Nexon,2020-2023,rear_bumper,plastic,2048,,https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/,2026-10-09,SOURCE_RECORDED_EXISTING
+Tata,Nexon,2020-2023,bonnet,metal,23000,,https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/,2026-10-09,SOURCE_RECORDED_EXISTING
+Tata,Nexon,2020-2023,boot_lid,metal,5630,,ESTIMATE ONLY — proxy from comparable model/part (boot_lid); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,grille,plastic,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,roof,metal,8710,,ESTIMATE ONLY — proxy from comparable model/part (bonnet); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,windshield,glass,11311,,https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/,2026-10-09,SOURCE_RECORDED_EXISTING
+Tata,Nexon,2020-2023,rear_windshield,glass,11311,,https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/,2026-10-09,SOURCE_RECORDED_EXISTING
+Tata,Nexon,2020-2023,left_headlamp,plastic,6871,,https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Tata,Nexon,2020-2023,right_headlamp,plastic,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,left_taillamp,plastic,2951,,https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Tata,Nexon,2020-2023,right_taillamp,plastic,2951,,https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Tata,Nexon,2020-2023,left_orvm,plastic,3820,,ESTIMATE ONLY — proxy from comparable model/part (left_orvm); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,right_orvm,plastic,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,front_left_door,metal,7240,,ESTIMATE ONLY — proxy from comparable model/part (front_left_door); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,front_right_door,metal,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,rear_left_door,metal,8100,,ESTIMATE ONLY — proxy from comparable model/part (rear_left_door); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,rear_right_door,metal,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,front_left_fender,metal,4278,,https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Tata,Nexon,2020-2023,front_right_fender,metal,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,left_quarter_panel,metal,2330,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,right_quarter_panel,metal,2330,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,front_left_tyre,tyre,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,front_right_tyre,tyre,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,rear_left_tyre,tyre,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Tata,Nexon,2020-2023,rear_right_tyre,tyre,2480,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,front_bumper,plastic,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,rear_bumper,plastic,3400,,ESTIMATE ONLY — proxy from comparable model/part (rear_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,bonnet,metal,9500,,ESTIMATE ONLY — proxy from comparable model/part (bonnet); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,boot_lid,metal,6140,,ESTIMATE ONLY — proxy from comparable model/part (boot_lid); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,grille,plastic,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,roof,metal,9500,,ESTIMATE ONLY — proxy from comparable model/part (bonnet); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,windshield,glass,6140,,ESTIMATE ONLY — proxy from comparable model/part (windshield); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,rear_windshield,glass,4500,,ESTIMATE ONLY — proxy from comparable model/part (rear_windshield); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,left_headlamp,plastic,3840,,ESTIMATE ONLY — proxy from comparable model/part (left_headlamp); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,right_headlamp,plastic,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,left_taillamp,plastic,3540,,ESTIMATE ONLY — proxy from comparable model/part (left_taillamp); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,right_taillamp,plastic,3540,,ESTIMATE ONLY — proxy from comparable model/part (right_taillamp); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,left_orvm,plastic,4160,,ESTIMATE ONLY — proxy from comparable model/part (left_orvm); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,right_orvm,plastic,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,front_left_door,metal,6578,,https://www.zigwheels.com/honda-cars/city-4th-generation/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Honda,City,2017-2023 - generation/variant fitment to verify,front_right_door,metal,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,rear_left_door,metal,6578,,https://www.zigwheels.com/honda-cars/city-4th-generation/spare-parts-price/,2026-11-09,SOURCE_RECORDED_EXISTING
+Honda,City,2017-2023 - generation/variant fitment to verify,rear_right_door,metal,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,front_left_fender,metal,2540,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,front_right_fender,metal,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,left_quarter_panel,metal,2540,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,right_quarter_panel,metal,2540,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,front_left_tyre,tyre,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,front_right_tyre,tyre,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,rear_left_tyre,tyre,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Honda,City,2017-2023 - generation/variant fitment to verify,rear_right_tyre,tyre,2700,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,front_bumper,plastic,2650,,https://www.partsinfo.in/catalog/suzuki/baleno/d13a-delta-o-yra-2015-d13a-delta-o/body-bumpers-and-grilles/,2026-11-09,SOURCE_RECORDED_EXISTING
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,rear_bumper,plastic,2600,,ESTIMATE ONLY — proxy from comparable model/part (rear_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,bonnet,metal,7290,,ESTIMATE ONLY — proxy from comparable model/part (bonnet); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,boot_lid,metal,4710,,ESTIMATE ONLY — proxy from comparable model/part (boot_lid); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,grille,plastic,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,roof,metal,7290,,ESTIMATE ONLY — proxy from comparable model/part (bonnet); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,windshield,glass,4710,,ESTIMATE ONLY — proxy from comparable model/part (windshield); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,rear_windshield,glass,3450,,ESTIMATE ONLY — proxy from comparable model/part (rear_windshield); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,left_headlamp,plastic,2940,,ESTIMATE ONLY — proxy from comparable model/part (left_headlamp); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,right_headlamp,plastic,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,left_taillamp,plastic,2710,,ESTIMATE ONLY — proxy from comparable model/part (left_taillamp); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,right_taillamp,plastic,2710,,ESTIMATE ONLY — proxy from comparable model/part (right_taillamp); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,left_orvm,plastic,3190,,ESTIMATE ONLY — proxy from comparable model/part (left_orvm); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,right_orvm,plastic,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,front_left_door,metal,6050,,ESTIMATE ONLY — proxy from comparable model/part (front_left_door); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,front_right_door,metal,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,rear_left_door,metal,6780,,ESTIMATE ONLY — proxy from comparable model/part (rear_left_door); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,rear_right_door,metal,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,front_left_fender,metal,1950,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,front_right_fender,metal,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,left_quarter_panel,metal,1950,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,right_quarter_panel,metal,1950,,ESTIMATE ONLY — proxy from comparable model/part (front_left_fender); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,front_left_tyre,tyre,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,front_right_tyre,tyre,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,rear_left_tyre,tyre,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED
+Maruti Suzuki,Baleno,2015-2022 - generation/variant fitment to verify,rear_right_tyre,tyre,2070,,ESTIMATE ONLY — proxy from comparable model/part (front_bumper); not OEM/garage verified,2026-11-10,ESTIMATED_PROXY_NOT_VERIFIED

@@ -1,0 +1,47 @@
+# Vehicle Damage Claim Generator — Role 2 progress evidence
+Updated: 2026-11-09
+
+## 1. Part-price database
+- File: `data/prices/parts_prices.csv`
+- Current rows: 34 of the 45-row team target.
+- Swift: 15/15; Creta: 9/15; Nexon: 10/15.
+- Sources are recorded per row; screenshots are retained in `data/prices/`.
+- Row-level material and model-year checks remain outstanding for the items listed in `DATA_QUALITY_AUDIT.md`.
+
+## 2. Labour and painting data
+- `labour_rates.csv` and `paint_rates.csv` are prepared but currently contain headers only.
+- The user will contact two garages and add the received rates with source/date details.
+- The engine uses the median of comparable garage rates. Painting quotes are used only when the quote explicitly includes paint material.
+- No garage rate has been invented.
+
+## 3. Depreciation
+- File: `data/prices/depreciation_rules.json`.
+- Rules are transcribed from the Shriram General Insurance Stand-Alone Motor Own Damage Private Car Policy, page 1.
+- The values are tied to that specific policy wording; applicability to a different insurer/policy must be confirmed before claim calculation.
+
+## 4. Cost Engine and contract integration
+- Engine: `src/cost/cost_engine.py`.
+- Role 1 Contract A schema and five real sample inputs are included.
+- Contract B schema is in `schemas/contract_b.schema.json`.
+- Five Contract A samples were accepted and five Contract B-shaped outputs were generated.
+- No-damage sample returns empty line items, empty `unpriced_parts`, and zero totals as expected.
+- Damaged samples currently remain unpriced where labour, paint, compatible part data or vehicle-model coverage is missing. Zero totals for those cases are not completed estimates.
+
+## 5. Automated verification
+- Command: `python -m pytest -q`
+- Latest result: **69 passed**.
+- Five Contract A inputs and five Contract B outputs also passed JSON Schema validation.
+- Sample output generator: `python scripts/run_role2_samples.py`.
+
+## 6. Published benchmark
+- Pitcrew Swift front-bumper dent repair + full-panel painting: ₹2,395 inclusive of GST.
+- Kept as a combined package benchmark; not split into fabricated labour/paint components.
+- Engine comparison remains pending until garage labour/paint rates are available.
+
+## 7. Remaining work
+1. Add two garages' labour and painting rates.
+2. Verify Swift right outside-mirror price conflict and right-headlamp compatibility.
+3. Add paint prices/material verification for existing part rows.
+4. Complete Creta and Nexon coverage to 15 records each using substantiated compatible parts.
+5. Add Honda City/Baleno coverage if all five Role 1 samples must produce estimates.
+6. Re-run sample claims and benchmark comparison once the missing data is collected.

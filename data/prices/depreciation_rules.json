@@ -1,0 +1,101 @@
+
+{
+  "currency": "INR",
+  "source_name": "Shriram General Insurance - Stand-Alone Motor Own Damage Private Car Policy",
+  "source_url": "https://cdn.shriramgi.com/webassets/download/policy-wordings/2e93f4c9-9dbb-4cb6-89e7-01b25676f95e_Policy%20Wording%20-%20Stand-Alone%20Motor%20Own%20Damage%20Private%20Car%20Policy.pdf",
+  "policy_uin": "IRDAN137RP0002V02201920",
+  "source_note": "Depreciation rules transcribed from Section 1, Loss of or Damage to the Vehicle Insured, PDF page 1. These rates are verified against this policy wording only and must not be assumed to apply to every insurer or policy.",
+  "source_page": 1,
+  "date_accessed": "2026-10-09",
+  "rules": [
+    {
+      "material": "plastic",
+      "depreciation_pct": 50,
+      "verification_status": "verified_in_source_policy_applicability_to_confirm"
+    },
+    {
+      "material": "rubber",
+      "depreciation_pct": 50,
+      "verification_status": "verified_in_source_policy_applicability_to_confirm"
+    },
+    {
+      "material": "nylon",
+      "depreciation_pct": 50,
+      "verification_status": "verified_in_source_policy_applicability_to_confirm"
+    },
+    {
+      "material": "tyre",
+      "depreciation_pct": 50,
+      "verification_status": "verified_in_source_policy_applicability_to_confirm"
+    },
+    {
+      "material": "battery",
+      "depreciation_pct": 50,
+      "verification_status": "verified_in_source_policy_applicability_to_confirm"
+    },
+    {
+      "material": "airbag",
+      "depreciation_pct": 50,
+      "verification_status": "verified_in_source_policy_applicability_to_confirm"
+    },
+    {
+      "material": "fibreglass",
+      "depreciation_pct": 30,
+      "verification_status": "verified_in_source_policy_applicability_to_confirm"
+    },
+    {
+      "material": "glass",
+      "depreciation_pct": 0,
+      "verification_status": "verified_in_source_policy_applicability_to_confirm"
+    }
+  ],
+  "metal_age_bands": [
+    {
+      "min_age_years": 0,
+      "max_age_years": 0.5,
+      "depreciation_pct": 0
+    },
+    {
+      "min_age_years": 0.5,
+      "max_age_years": 1,
+      "depreciation_pct": 5
+    },
+    {
+      "min_age_years": 1,
+      "max_age_years": 2,
+      "depreciation_pct": 10
+    },
+    {
+      "min_age_years": 2,
+      "max_age_years": 3,
+      "depreciation_pct": 15
+    },
+    {
+      "min_age_years": 3,
+      "max_age_years": 4,
+      "depreciation_pct": 25
+    },
+    {
+      "min_age_years": 4,
+      "max_age_years": 5,
+      "depreciation_pct": 35
+    },
+    {
+      "min_age_years": 5,
+      "max_age_years": 10,
+      "depreciation_pct": 40
+    },
+    {
+      "min_age_years": 10,
+      "max_age_years": null,
+      "depreciation_pct": 50
+    }
+  ],
+  "painting_rule": {
+    "depreciation_pct": 50,
+    "applies_to": "paint_material_cost_only",
+    "consolidated_paint_bill_material_fraction": 0.25,
+    "verification_status": "verified_in_source_policy_applicability_to_confirm",
+    "source_page": 1
+  }
+}

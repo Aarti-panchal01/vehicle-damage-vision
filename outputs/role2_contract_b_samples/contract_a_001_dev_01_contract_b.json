@@ -1,0 +1,37 @@
+{
+  "claim_id": "CLM-20261020-001",
+  "currency": "INR",
+  "vehicle_age_years": 5,
+  "line_items": [
+    {
+      "part": "front_bumper",
+      "action": "repair",
+      "material": "plastic",
+      "part_cost": 0.0,
+      "labour_cost": 3000.0,
+      "paint_cost": 6500.0,
+      "depreciation_pct": 50.0,
+      "depreciation_amount": 812.5,
+      "claimable_amount": 8687.5,
+      "price_source": "Part: https://www.marutisuzuki.com/genuine-parts/front-bumper/71711m55r00-5pk, accessed 2026-10-09; Labour: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; front bumper dent \u20b92,500 and scratch \u20b93,500; midpoint used (accessed 2026-11-10); Painting: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; quoted 6500; midpoint used if range; paint material inclusion assumed provisionally (not confirmed) (accessed 2026-11-10)"
+    },
+    {
+      "part": "right_headlamp",
+      "action": "replace",
+      "material": "plastic",
+      "part_cost": 2250.0,
+      "labour_cost": 1100.0,
+      "paint_cost": 0.0,
+      "depreciation_pct": 50.0,
+      "depreciation_amount": 1125.0,
+      "claimable_amount": 2225.0,
+      "price_source": "Part: ESTIMATE ONLY \u2014 proxy from comparable model/part (front_bumper); not OEM/garage verified, accessed 2026-11-10; Labour: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; quoted range/value 900-1300; midpoint used where range supplied (accessed 2026-11-10)"
+    }
+  ],
+  "totals": {
+    "gross": 12850.0,
+    "depreciation": 1937.5,
+    "claimable": 10912.5
+  },
+  "unpriced_parts": []
+}
