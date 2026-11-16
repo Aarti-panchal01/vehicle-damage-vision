@@ -1,116 +1,185 @@
-# Vehicle Damage Claim Generator
 
-[![Project CI](https://github.com/Aarti-panchal01/vehicle-damage-vision/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Aarti-panchal01/vehicle-damage-vision/actions/workflows/ci.yml)
+# Vehicle Damage Vision
+### AI-Powered Vehicle Damage Assessment and Insurance Claim Generation
 
-This is the shared project repository for a four-person team building a vehicle-damage claim workflow. It accepts vehicle photos and claim context, produces a validated damage report, and provides an integration point for the team's remaining claim-processing components. The checked-in implementation currently contains the vision and prompting pipeline, its Contract A interface, and evaluation artifacts; teammate modules are being integrated here.
+Vehicle Damage Vision is an AI-powered application that automates key stages of vehicle damage assessment and insurance claim preparation.
 
-## Project flow
+The system accepts vehicle damage images and claim information, identifies visible damage, estimates repair costs, retrieves relevant insurance policy information, and generates a structured claim report.
+
+The project is developed by a four-member team, with each member responsible for a dedicated module.
+
+## Project Workflow
 
 ```text
-Vehicle photos + claim details
+Vehicle Image + Claim Details
               |
               v
-Vision damage assessment -> Contract A -> claim-processing components -> reviewed claim
+     Role 1: Vision Analysis
+              |
+              v
+     Role 2: Repair Cost Estimation
+              |
+              v
+     Role 3: Policy Retrieval and Claim Writing
+              |
+              v
+     Role 4: System Integration
+              |
+              v
+      Final Claim Assessment
+              |
+              v
+        PDF Report
 ```
 
-The vision component reports visible exterior damage only. It does not infer hidden damage, estimate repair prices, or determine policy coverage. Those outputs must come from the corresponding team components.
+## Main Modules
 
-## What is in this repository
+### Role 1 – Vehicle Damage Detection
+- Analyses uploaded vehicle images.
+- Identifies visible damaged vehicle parts.
+- Classifies damage type and severity.
+- Uses Gemini-based vision analysis.
+- Produces structured output through Contract A.
 
-- **Vision pipeline** (`src/vision/`): image handling, Gemini and Qwen/Groq providers, versioned prompts, output validation, bounded repair retries, damage merging, and a byte-oriented adapter.
-- **Contract A** (`schemas/contract_a.schema.json`, `src/vision/schema.py`): the machine-readable handoff between the vision component and the rest of the application.
-- **Prompt evaluation** (`eval/`): cached evaluation records, metrics, charts, and the evaluation runner.
-- **Examples and fixtures** (`mocks/`): Contract A and structured error examples.
-- **Team documents** (`docs/`): project plan, interface notes, evaluation findings, and report input.
+### Role 2 – Repair Cost Estimation
+- Processes the detected damage information.
+- Estimates repair and replacement costs.
+- Calculates depreciation and estimated claimable amounts.
+- Produces structured cost assessment through Contract B.
 
-See [`docs/role1/OUTPUT_CONTRACT.md`](docs/role1/OUTPUT_CONTRACT.md) for the existing interface details and [`docs/role1/RESULTS.md`](docs/role1/RESULTS.md) for the full evaluation and limitations.
+### Role 3 – Insurance Policy Analysis
+- Retrieves relevant information from insurance policy documents.
+- Uses Retrieval-Augmented Generation (RAG).
+- Uses ChromaDB for policy document retrieval.
+- Generates policy-based claim explanations.
+- Produces claim narrative through Contract C.
 
-## Quick start
+### Role 4 – Integration and Dashboard
+- Connects all four modules.
+- Provides a Streamlit-based user interface.
+- Accepts vehicle details, claim information and uploaded images.
+- Displays damage assessment, cost estimation and policy analysis.
+- Generates downloadable claim reports.
 
-Use Python 3.13 or a compatible version supported by the pinned packages. Python 3.9.6 has not been runtime-tested.
+## Technology Stack
+
+| Component | Technology |
+|---|---|
+| Programming Language | Python |
+| User Interface | Streamlit |
+| AI Vision | Google Gemini |
+| Retrieval-Augmented Generation | RAG |
+| Vector Database | ChromaDB |
+| Policy Processing | PDF-based document retrieval |
+| Testing | Pytest |
+| Version Control | Git and GitHub |
+| Report Generation | PDF |
+
+## Project Structure
+
+```text
+vehicle-damage-vision/
+│
+├── src/
+│   ├── vision/             # Role 1 - Damage detection
+│   ├── cost/               # Role 2 - Cost estimation
+│   ├── rag/                # Role 3 - Policy analysis
+│   └── integration/        # Role 4 - Integrated application
+│
+├── schemas/                # Shared data contracts
+├── mocks/                  # Sample contract data
+├── tests/                  # Automated tests
+├── prompts/                # AI prompt templates
+├── eval/                   # Vision model evaluation
+├── data/                   # Project data
+├── docs/                   # Project documentation
+│
+├── requirements.txt
+├── requirements-dev.txt
+├── .env.example
+└── README.md
+```
+
+## Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Aarti-panchal01/vehicle-damage-vision.git
+cd vehicle-damage-vision
+```
+
+### 2. Create a virtual environment
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+```
+
+### 3. Activate the environment
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### 4. Install dependencies
+
+```powershell
 python -m pip install -r requirements.txt -r requirements-dev.txt
 ```
 
-Create a local `.env` file and configure `GEMINI_API_KEY` and/or `GROQ_API_KEY` for live providers. Do not commit credentials. A Gemini key can be created in [Google AI Studio](https://aistudio.google.com/app/apikey). The `.env.example` contains blank values.
+### 5. Configure API keys
 
-The few-shot prompts, including the default `v4_best` adapter prompt, use local `dev_03.jpg` and `dev_10.jpg` images. Images are not included in this repository. Rebuild the permitted dataset files as described in [`data/cardd_eval/README.md`](data/cardd_eval/README.md) before using those prompts.
+Create a `.env` file in the project root and configure the required API credentials.
 
-## Use the vision interface
+Refer to `.env.example` for the expected variable names.
 
-For uploaded photo bytes, use the adapter. It returns either a Contract A dictionary or a `VisionError` dictionary:
+Never upload API keys or credentials to GitHub.
 
-```python
-from src.vision.adapter import run_vision
+## Running the Application
 
-result = run_vision(
-    photo_bytes_list=[uploaded_bytes],
-    vehicle={"make": "Maruti Suzuki", "model": "Swift", "year": 2021, "fuel": "petrol"},
-    description="Scraped a parking pillar while turning out of the basement",
-    claim_id="CLM-20261020-001",
-)
-
-if "error_code" not in result:
-    contract_a = result
-else:
-    error = result
-```
-
-For photos on disk, `load_image` accepts a file path and `assess_damage` returns an assessment result object. See [`src/vision/__init__.py`](src/vision/__init__.py) and [`docs/role1/OUTPUT_CONTRACT.md`](docs/role1/OUTPUT_CONTRACT.md).
-
-Run the demo from the repository root:
+Run the following command from the project root:
 
 ```powershell
-python -m streamlit run src/vision/demo_app.py
+python -m streamlit run src/integration/app.py --server.fileWatcherType none
 ```
 
-## Evaluation snapshot
+The Streamlit application will open in your browser.
 
-The table below is copied from [`docs/role1/RESULTS.md`](docs/role1/RESULTS.md). Scores are exploratory, not a claim of general model superiority.
+## Running Tests
 
-| Model / prompt | Images | Damage-type F1 (95% CI) | Part exact (95% CI) | First-try JSON | Avg. retries | Latency (s) | Avg. tokens in/out | Cost (USD/image) |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Gemini / v0 baseline | 20 | .781 (.688–.871) | .450 (.250–.700) | 0% | 1.00 | 4.900 | 1,588 / 285 | .001189 |
-| Gemini / v1 structured | 20 | .800 (.691–.892) | .650 (.450–.850) | 100% | 0.00 | 3.702 | 1,705 / 194 | .000996 |
-| Gemini / v1 + schema | 20 | .831 (.712–.931) | .550 (.350–.750) | 100% | 0.00 | 2.019 | 1,705 / 189 | .000983 |
-| Gemini / v2 few-shot | 20 | .750 (.612–.871) | .700 (.500–.900) | 100% | 0.00 | 2.735 | 4,130 / 207 | .001756 |
-| Gemini / v3 CoT | 20 | .781 (.656–.893) | .600 (.400–.800) | 95% | 0.05 | 2.350 | 1,961 / 360 | .001489 |
-| Gemini / v4 best (extra) | 20 | .925 (.866–.984) | .700 (.500–.900) | 90% | 0.10 | 3.328 | 4,979 / 378 | .002439 |
-| Qwen/Groq / v0 baseline (extra) | 20 | .658 (.535–.753) | .300 (.100–.500) | 0% | 1.05 | 35.591 | 2,576 / 747 | .005048 |
-| Qwen/Groq / v1 structured | 20 | .763 (.595–.891) | .450 (.250–.651) | 90% | 0.10 | 24.787 | 2,408 / 302 | .003133 |
-| Qwen/Groq / v1 + schema | 20 | .593 (.367–.772) | .400 (.200–.650) | 90% | 0.00 | 21.268 | 2,070 / 108 | .002086 |
-| Qwen/Groq / v3 CoT | 20 | .761 (.653–.849) | .350 (.150–.550) | 85% | 0.10 | 30.993 | 2,524 / 500 | .004018 |
-| Qwen/Groq / v2 few-shot | 6/20, partial | not run yet | not run yet | not run yet | not run yet | not run yet | not run yet | not run yet |
+Execute the automated test suite:
 
-### Limitations
-
-- The scored evaluation set contains 20 images; a larger set has not been run.
-- The v4 prompt was selected after inspecting the same evaluation set, so its score is optimistic.
-- Qwen v2 is partial at 6/20 after quota exhaustion. Qwen v1 + schema and v3 include provider-error outputs.
-- All 10 dev labels are unverified. The 20 eval labels are marked `aarti_verified`.
-- Left/right part confusion remains a failure mode. Dataset images are not distributed with this repository.
-
-## Contributing
-
-This is the shared repository for the team. Add your component in a focused branch, document its interface, include tests, and open a pull request against `main`. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before changing shared contracts or evaluation data.
-
-## Repository layout
-
-```text
-src/vision/                 image-to-Contract-A pipeline and providers
-tests/                      automated unit tests
-prompts/vision/             versioned prompt templates and examples
-schemas/                    shared JSON Schema
-mocks/                      interface examples
-eval/                       runner, metrics, charts, and result records
-data/cardd_eval/            labels and data notes; images are not included
-docs/role1/                 existing interface, evaluation, and report notes
-scripts/                    dataset builder and schema/mock helpers
+```powershell
+python -m pytest -q
 ```
+
+The project has successfully completed **291 automated tests** in the tested environment.
+
+## Sample Output
+
+The integrated application produces:
+
+- Vehicle damage identification.
+- Damage severity and confidence information.
+- Estimated repair cost and depreciation.
+- Relevant insurance policy evidence.
+- AI-generated claim summary.
+- Downloadable claim report.
+
+## Important Limitations
+
+- The system identifies visible damage and cannot reliably determine hidden structural damage from images alone.
+- Repair cost estimates are preliminary estimates, not confirmed workshop quotations.
+- Policy interpretations depend on the uploaded policy documents and retrieved evidence.
+- Depreciation assumptions must be checked against the applicable insurer policy before relying on the claimable estimate.
+- Final claim approval and settlement remain the responsibility of the insurance company.
 
 ## Team
 
-The repository is owned by Aarti Panchal (`@Aarti-panchal01`). Invitations with push access have been sent to `@gaganaraj`, `@nakshathira200-svg`, and `@jyothika-aiml`; each person must accept their invitation before pushing. Please document actual contributions in the final report rather than inferring them from repository access.
+This project is developed collaboratively by a four-member team.
+
+Each member contributes to a dedicated module, and Role 4 integrates the individual components into a unified application.
+
+## Repository
+
+GitHub: https://github.com/Aarti-panchal01/vehicle-damage-vision
