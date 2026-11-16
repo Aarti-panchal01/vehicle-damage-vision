@@ -16,7 +16,6 @@ import json
 import re
 from pathlib import Path
 from typing import Optional, List, Dict, Any
-from collections import defaultdict
 
 import chromadb
 from rank_bm25 import BM25Okapi
