@@ -1,7 +1,7 @@
 import json
 
-from src.vision import adapter
 import src.vision.assess as assessment
+from src.vision import adapter
 from src.vision.prompts import build_request_parts as build_prompt_parts
 from src.vision.providers import MockProvider
 

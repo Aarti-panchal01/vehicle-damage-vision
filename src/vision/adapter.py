@@ -43,7 +43,7 @@ def run_vision(
         if result.error is not None:
             return result.error.model_dump(mode="json")
         raise RuntimeError("Vision assessment returned neither a report nor an error.")
-    except Exception as error:
+    except Exception as error: # noqa: BLE001
         return _error(
             resolved_claim_id,
             "provider_error",

@@ -361,6 +361,7 @@ def test_engine_uses_all_in_paint_rate_when_part_table_has_no_paint_price(
 def test_existing_role1_sample_outputs_validate_contract_b_schema():
     import json
     from pathlib import Path
+
     from jsonschema import Draft202012Validator
 
     root = Path(__file__).resolve().parents[1]

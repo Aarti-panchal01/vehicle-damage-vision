@@ -16,7 +16,6 @@ from src.rag.claim_writer import (
 )
 from src.rag.pipeline import run_role3_pipeline
 
-
 ROOT = Path(__file__).resolve().parents[2]
 SAMPLE_DIR = ROOT / "tests" / "fixtures" / "contract_b"
 CONTRACT_A_DIR = ROOT / "mocks"
@@ -263,7 +262,7 @@ def test_evidence_ranking_limits_unique_chunks_and_covers_each_query(contract_a,
     def candidate(chunk_id):
         return {
             "metadata": dict(base_meta),
-            "text": "Policy evidence for {}.".format(chunk_id),
+            "text": f"Policy evidence for {chunk_id}.",
             "chunk_id": chunk_id,
         }
 
@@ -305,6 +304,7 @@ def test_model_response_only_contributes_narrative_fields(contract_a, contract_b
 
 def test_old_sdk_fails_before_model_call_when_thinking_level_is_unsupported(monkeypatch):
     from google.genai import types
+
     from src.rag.claim_writer import _gemini_client
 
     monkeypatch.setenv("GEMINI_API_KEY", "test-key")
