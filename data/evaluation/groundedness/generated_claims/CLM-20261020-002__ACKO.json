@@ -1,0 +1,67 @@
+{
+  "claim_id": "CLM-20261020-002",
+  "summary": "AI-generated draft for claim CLM-20261020-002. Contract A's user-described circumstances are: 'Heard a thud from the front while parking at the mall, not sure if anything is damaged'. Contract A describes 2022 Hyundai Creta (diesel) and records: Contract A reports no visible damage. Contract B supplies no priced repair line items. Its claimable estimate total is INR 0 and is not an approval or payment commitment. Policy wording is summarized separately in cited evidence.",
+  "line_items": [],
+  "totals": {
+    "gross": 0,
+    "depreciation": 0,
+    "claimable": 0,
+    "currency": "INR",
+    "vehicle_age_years": 4,
+    "unpriced_parts": []
+  },
+  "policy_justification": [
+    {
+      "statement": "The retrieved policy wording states: 8. Personal Belongings- Damage due to Accident (a) If You have opted for this Optional Cover as stated in the Policy Schedule, then We will reimburse You for the costs incurred towards the repair or replacement of Your Personal Belongings that were kept inside the Insured Vehicle and were damaged due to an Accident of the Insured Vehicle as covered under (A) (Section I) Own Damage of the Policy, subject to deduction for depreciation and the limit specified in the Policy Schedule. (b) Conditions applicable under this benefit: i) The claim is admissible under (A) (Section I) Own Damage of the underlying Policy in respect of the Insured Vehicle. ii) Any amount payable under this Optional Cover shall be subject to depreciation at the rates specified below, unless stated otherwise in the Policy Schedule: Age of the Personal Belongings Depreciation % (on Invoice Value) Not exceeding 1 year 20%",
+      "source": "acko_car_package.pdf",
+      "page": 12
+    },
+    {
+      "statement": "The retrieved policy wording states: 5 consecutive Policy Years 50% i) Any consequential loss (subsequent loss or damage that occurs as a consequence of the initial event or damage, and not directly caused by it), including damage that arises indirectly from a covered event, unless specifically covered under another benefit. ii) Depreciation, wear and tear, mechanical or electrical breakdown, failures or breakages not caused by an insured peril. iii) Any damage to tyres and tubes unless the Insured Vehicle is damaged simultaneously, in which case Our liability is limited to 50% of the replacement cost subject to terms and conditions of Zero Depreciation Optional Cover and Tyre Protect Optional Cover, as applicable. iv) Any loss or damage arising when You or any person driving the Insured Vehicle is under the influence of intoxicating liquor or drugs. v) Any claim for which the subject matter is covered under another...",
+      "source": "acko_car_package.pdf",
+      "page": 7
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text i) Any cost of repairing the puncture or tyre. ii) Any damage resulting from poor workmanship during repair (whether authorised or not) or damage resulting from manufacturing defects iii) Damage due to violation of the vehicle manufacturer’s operating instructions, including but not limited to overloading, incorrect tyre pressure, exceeding passenger capacity, racing, rallies, or unapproved modifications iv) Minor issues such as scratches, cuts, noises, vibrations, or sensations that do not impair the performance of the tyre. v) Damage due to improper storage or transportation of the tyre. vi) Routine maintenance such as alignment, balancing, or rotation of wheels/tyres/tubes vii) More than four (4) tyre or tube replacements during the Policy Period viii) Replacements carried out at non-authorised garages or service providers not approved by Us ix) Claims where We...",
+      "source": "acko_car_package.pdf",
+      "page": 18
+    },
+    {
+      "statement": "The retrieved policy wording states: 2. Engine Protect – Accidental Leakage We will indemnify You for damage to the internal parts of the engine, gearbox or transmission parts resulting from coolant or lubricating oil leakage resulting solely from an insured peril covered under (A) (Section I) (a) (i) above. We will also pay the reasonable cost of protection, removal of the Insured Vehicle to the nearest repairer and redelivery to You subject to a maximum limit, as specified in the Policy Schedule, applied per each claim admitted by Us. Note: For loss or damage caused by flooding resulting in hydrostatic lock, coverage is excluded here and may only be provided if the Engine Protect – Flood is opted and shown in the Policy Schedule. (a) Conditions applicable under this Built-In Additional Cover: i. There is visible evidence of damage to the internal parts of the engine, gearbox or transmission parts resulting from...",
+      "source": "acko_car_package.pdf",
+      "page": 5
+    },
+    {
+      "statement": "The retrieved policy wording states: 11. Discount for Specially Designed/Modified Vehicles for the Blind, Handicapped and Mentally Challenged Persons (a) If You have opted for this Optional Cover as stated in the Policy Schedule and the Insured Vehicle is specially designed or modified for use by blind, handicapped, or mentally challenged persons, and a suitable endorsement to this effect has been incorporated in the Registration Book by the Registering Authority, then We will provide a discount of the amount specified in the Policy Schedule on the premium payable under this Policy for the cover under (A) (Section I) Own Damage of the Policy. 12. Personal Accident Cover to the Named Person other than Paid Driver or Cleaner {Applicable to private cars including three wheelers rated as private cars (not for hire or reward)} (a) If You have opted for this Optional Cover as stated in the Policy Schedule, and a person other...",
+      "source": "acko_car_package.pdf",
+      "page": 21
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text (1) We may, at Our sole discretion, arrange legal representation for You at any inquiry or defend legal proceedings arising from an Accident covered under this benefit. Alternatively, We may reimburse legal costs and expenses incurred by You, provided these costs have Our prior written consent. (2) We reserve the exclusive right to assume full control and conduct the defense or settlement of any claim or legal proceeding in Your name, without Your prior consent, if We deem it appropriate. Furthermore, We may settle any claim or proceeding at Our sole discretion. v) Duty to Repay Us: Nothing in this Policy shall limit the right of any person, whether indemnified under this benefit or otherwise, to claim under the Act. However, You shall repay Us any amount that We are legally required to pay under the said Act but would not have been liable to pay under this...",
+      "source": "acko_car_package.pdf",
+      "page": 8
+    },
+    {
+      "statement": "The retrieved policy wording states: 2. Conditions Applicable i) The bodily injury arising from the Accident should result in death or disability within 6 calendar months. ii) We will pay the compensation under this benefit only if You are the registered owner of the Insured Vehicle and hold a valid and effective driving license at the time of the Accident in accordance with Rule 3 of the Central Motor Vehicles Rules 1989. iii) We will pay compensation under only one of the items (i) to (iv) listed in the above schedule for each instance of an Accident during the Policy Period. However, Our total liability for the entire Policy Period shall not exceed the amount as specified in the Policy Schedule. 3. What Is Not Covered (PA Exclusions) We will not pay in respect of death or bodily injury that is directly or indirectly, wholly or partly, arising from, resulting from, or traceable to: i) intentional self-injury, suicide...",
+      "source": "acko_car_package.pdf",
+      "page": 9
+    },
+    {
+      "statement": "The retrieved policy wording states: 9. Personal Belongings – Loss due to Theft (a) If You have opted for this Optional Cover as stated in the Policy Schedule, then We will pay You for the loss of Your Personal Belongings that were kept inside the Insured Vehicle and were lost or stolen due to theft or burglary of the Insured Vehicle as covered under (A) (Section I) Own Damage of the Policy, subject to deduction for depreciation and the limit specified in the Policy Schedule (b) Conditions applicable under this benefit: i) The benefits provided under this optional cover are subject to the following conditions: ii) The claim is admissible under (A) (Section I) Own Damage of the underlying Policy in respect of the Insured Vehicle iii) A claim under this Optional Cover arising out of theft or burglary must be supported by a First Information Report (FIR) with the Police. iv) Any amount payable under this Optional Cover...",
+      "source": "acko_car_package.pdf",
+      "page": 13
+    },
+    {
+      "statement": "The retrieved policy wording states: AGE OF VEHICLE DEPRECIATION RATE (a) Original proof of cancellation of the Insured Vehicle’s registration with the appropriate transport authority; or (b) Original documentary evidence of a valid statutory Motor Third-Party Liability policy covering the wreck/salvage, effective from the loss date. iv. Deductible: This Policy does not impose any mandatory deductible. Only voluntary deductibles, if selected by You, will apply and shall be as stated in Your Policy Schedule. v. No Claim Bonus (NCB): If no claim has been made or is pending under (A) (Section I) Own Damage of the Policy, then You will be entitled to a discount on the premium payable on the renewal of Your cover under (A) (Section I) Own Damage, depending on the number of consecutive claim-free Policy Years, as set out below and subject to the conditions specified:",
+      "source": "acko_car_package.pdf",
+      "page": 6
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text i) If the Policy Period is up to 1 year , then We will refund the proportionate premium for the unexpired Policy Period, provided no claim has been made during the Policy Period. ii) If the Policy Period exceeds 1 year, then We will refund the premium for the unexpired Policy Period, but only in respect of those Policy Years where risk coverage has not yet commenced. 6) Contribution: If, at the time of the occurrence of any event giving rise to a claim under this Policy, there exists any other valid and collectible insurance covering the same liability, Our liability shall be limited to Our ratable proportion of the compensation, costs, or expenses payable in respect of such claim. 7) Claim Procedure and Documentation for cashless and reimbursement of claim: a) Claim intimation: i) Call us on 1800 266 2256 or ii) Mail us on hello@acko.com or iii) Write to us at...",
+      "source": "acko_car_package.pdf",
+      "page": 25
+    }
+  ],
+  "exclusions_flagged": [],
+  "disclaimer": "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. Retrieved clauses are evidence only and do not guarantee coverage or settlement."
+}

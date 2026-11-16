@@ -1,0 +1,95 @@
+{
+  "claim_id": "CLM-20261020-005",
+  "summary": "AI-generated draft for claim CLM-20261020-005. Contract A's user-described circumstances are: 'Bumper scraped in traffic, photo taken at night on my phone'. Contract A describes 2020 Maruti Suzuki Baleno (cng) and records: front_bumper: minor scratch. Contract B supplies front_bumper (repair). Its claimable estimate total is INR 8425.0 and is not an approval or payment commitment. Policy wording is summarized separately in cited evidence.",
+  "line_items": [
+    {
+      "part": "front_bumper",
+      "action": "repair",
+      "material": "plastic",
+      "part_cost": 0.0,
+      "labour_cost": 3000.0,
+      "paint_cost": 6200.0,
+      "depreciation_pct": 50.0,
+      "depreciation_amount": 775.0,
+      "claimable_amount": 8425.0,
+      "price_source": "Part: https://www.partsinfo.in/catalog/suzuki/baleno/d13a-delta-o-yra-2015-d13a-delta-o/body-bumpers-and-grilles/, accessed 2026-11-09; Labour: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; front bumper dent ₹2,500 and scratch ₹3,500; midpoint used (accessed 2026-11-10); Painting: ESTIMATED PROXY: Swift garage panel-paint midpoint adjusted by -5% for Baleno; paint-material inclusion remains unconfirmed; not independently quoted or verified. Original proxy: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; quoted 6500; midpoint used if range; paint material inclusion assumed provisionally (not confirmed) (accessed 2026-11-10)"
+    }
+  ],
+  "totals": {
+    "gross": 9200.0,
+    "depreciation": 775.0,
+    "claimable": 8425.0,
+    "currency": "INR",
+    "vehicle_age_years": 6,
+    "unpriced_parts": []
+  },
+  "policy_justification": [
+    {
+      "statement": "The retrieved policy wording states: Definitions: • Panel: It is the external body part of the vehicle which forms the outer shell of a vehicle like Bumpers, Fenders, Hood, Doors, Roof & Deck lid/Tailgate. What is Covered: We will pay you for the cost of repair to any one Panel of your vehicle provided that, • The accidental damage to the Panel has occurred during the Policy Period caused by perils specified under Section 1 of the Base Policy but could not be reported as per Base Policy condition immediately after the damage to the Panel for any reason. • Such earlier damage to the Panel is being reported later along with the subsequent Own damage claim under Section 1 of the base Policy which is admissible under the base Policy. • Such damage to the Panel can be repaired without replacement of any part. • Our liability is restricted to repair of one Panel only and upto the Sum Insured of this Add-On Cover. Special...",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 36
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text Auto Secure - Private Car Package Policy Repair on the Spot: In the event Insured Vehicle breaks down due to a minor mechanical / electrical fault making it immobile and immediate repair on the spot is deemed possible, you will get the assistance of a vehicle technician for repairing the breakdown at the location of breakdown. Cost of Material & Spare Parts, if required, to repair the vehicle on the spot and any other incidental conveyance to obtain such material & spare parts will be borne by you. Spare Key Retrieval / Service for Keys Locked Inside: If the keys of the Insured Vehicle are locked inside the vehicle, lost, or misplaced, and in case you need and request to arrange for another set from your place of residence or office by courier to the location of the vehicle, the same will be arranged after receiving the requisite authorisations from you with...",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 29
+    },
+    {
+      "statement": "The retrieved policy wording states: 16. Loss or damage resulting from poor workmanship while repair. 17. Loss or damage arising out of any manufacturing defect or design including manufacturerʼs recall. 18. Minor damage or scratch not affecting the functioning. 19. Tyre which has been used for its full specified life as per manufacturerʼs guideline or where unused tread depth is less than 3 mm. Important Conditions: 1. If you make a fraudulent claim which is declined as per para 10 of “What We will not coverˮ, coverage under this Section shall cease with immediate effect. 2. If during the Period of Insurance any tyre is replaced for any reason for which claim is not preferred under the coverage, cover on new tyre would not be available unless details of new tyre are informed to us. 3. In case of replacement of tyre for which a claim is preferred under the coverage replaced tyre can be included by way of endorsement by...",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 27
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text Auto Secure - Private Car Package Policy 5. Grace Limit: Additional Kilometers beyond Maximum Kilometer Limit, as mentioned in the Policy Schedule, within which claim may be honored. 6. Base Policy: Policy to which this Add-On is attached. Coverage: If you have opted this Add-On, You are declaring and agreeing that the Insured Vehicle shall be driven up to Maximum Kilometer limit during the Period of Insurance as mentioned in the Policy Schedule. This Add-On covers loss of or damaged to Insured Vehicle under Section I - Loss of or Damage to the Vehicle Insured of the Base Policy provided that the kilometer usage at the time of claim is within the Maximum Kilometer Limit as mentioned in the schedule, subject to grace limit. Based on the Kilometers Opted, you shall be eligible for a discount on premium of Section I - Loss of or Damage to the Vehicle Insured of the...",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 37
+    },
+    {
+      "statement": "The retrieved policy wording states: (UIN: IRDAN108RP0002V01200001/ A0001V01202021) This cover is applicable if it is shown on Your Schedule. If Insured Vehicle is damaged by the covered peril mentioned in Section 1 (Own damage) of the Policy, We will allow compensation in the form of: A. Daily Allowance & B. Courtesy Hire/Car Insured will have an option to choose the compensation option at the time of claim in accordance with the plan selected as per Policy Schedule",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 34
+    },
+    {
+      "statement": "The retrieved policy wording states: (UIN: IRDAN108RPMT0002V02200001/A0007V01202526) This cover is applicable if it is shown on Your Schedule. What is covered: We will provide a cash benefit of ₹2,000 per incident during the Policy Year in case the Insuredʼs physical wallet gets lost due to an accident to the Insured Vehicle, subject to the following: i. This shall be provided only if the accident has taken place at a minimum distance of 100 kms from the Insuredʼs address mentioned in the Schedule. ii. Maximum of 2 incidents shall be covered during the Policy Year. iii. The Insured must submit to Us, a copy of the First Information Report filed with the local Police authority. iv. There shall be a valid and admissible claim under Section 1 of the Policy. Subject otherwise to the terms exceptions condition & limitations of the Policy Registered office: Peninsula Business Park, Tower A, 15th Floor, G.K Marg, Lower Parel,...",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 43
+    },
+    {
+      "statement": "The retrieved policy wording states: (UIN: IRDAN108RP0002V01200001/A0003V01202021) This cover is applicable if it is shown on Your Schedule. We will pay for damage to property other than the property belonging to You or held in Your trust, custody and control up to the limit specified in Your Schedule provided that damage to property is solely and directly caused by accident by the Insured Vehicle. The above limit is in respect of any one claim or series of claims arising out of one event/occurrence in excessof maximum limit of liability covered under Section II of the Policy. Subject otherwise to the terms, exceptions, condition & limitations of the Policy.",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 31
+    },
+    {
+      "statement": "The retrieved policy wording states: (UIN: IRDAN108RPMT0002V02200001/A0006V01202526) This cover is applicable if it is shown on Your Schedule. What is covered: We will pay the cost up to ₹4,000/- for obtaining duplicate driving license (DL) and/or Registration certificate (RC) and/or vehicle fitness certificate and/or permit, in case Insured suffers a loss of any of these valid documents during the Policy Year, due to an accident of the Insured Vehicle, subject to the following: i. This shall be provided only if the accident has taken place at a minimum distance of 100 kms from the Insuredʼs address mentioned in the Schedule. ii. The Insured must submit to Us, a copy of the First Information Report filed with the local Police authority. iii. There shall be a valid and admissible claim under Section 1 of the Policy Subject otherwise to the terms exceptions condition & limitations of the Policy",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 43
+    },
+    {
+      "statement": "The retrieved policy wording states: (UIN: IRDAN108RPMT0002V02200001/A0009V01202526) This cover is applicable if it is shown on Your Schedule. What is covered: We will pay up to ₹10,000 to the Insured in case of missed train and/or Bus of a scheduled provider during the Policy Year due to the accident of the Insured Vehicle immediately prior to reaching the railway station or Bus stand, subject to the following: i. The reimbursement shall relate the non-refundable portion of Insuredʼs pre-paid train or bus ticket of a Scheduled Provider. ii. The scheduled travel should have been booked at least 24 hrs prior to the Scheduled Departure. iii. There shall be a valid and admissible claim under Section 1 of the Policy. Subject otherwise to the terms exceptions condition & limitations of the Policy. Add-Ons can only be opted along with the base Policy and cannot be opted in isolation or as a separate product. This Add-On is...",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 44
+    },
+    {
+      "statement": "The retrieved policy wording states: B. Courtesy Hire/Car: We will arrange for the Courtesy/Hire car to reduce Your inconvenience if Insured Vehicle is damaged by a covered peril mentioned in Section 1 (Own damage) of the Policy. A Courtesy/Hire car is not intended to be an exact replacement of the Insured Vehicle in terms of its size, segment, type, value or status. Courtesy/Hire car will be made available within 24 hours of the Insured Vehicle reaching the garage or the time of intimation of claim to us, whichever is later excluding weekends/national holidays, provided time required for repair of vehicle is greater than 24 hrs. If it is a claim for theft of entire vehicle/Constructive total loss/total loss. Company will pay for the Courtesy/Hire car for a maximum period of days as mentioned in Policy Schedule in case of repair claim and 15 days in case of theft of entire vehicle/total loss claim during the Period of...",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 35
+    },
+    {
+      "statement": "The retrieved policy wording states: A. Daily Allowance: The claim under Daily allowance Plus will not be payable if any or all of the following condition applies: 1. If You are only claiming for windscreen or any other glass damage under Section 1 (Own damage) of the Policy. 2. If Vehicle is not repaired at our Authorised Garage/Authorised workshop/Authorised service station. 3. If claim under Section 1 (Own damage) is not valid and admissible. 4. If time taken for repair is in respect of damages not admissible under Section 1 (Own damage) of the Policy. 5. Period for which vehicle is stuck for repair for non availability of any part and/or material at garage would be excluded for the purpose of computation of duration for the claim. 6. Time excess if any voluntarily selected by you. Registered office: Peninsula Business Park, Tower A, 15th Floor, G.K Marg, Lower Parel, Mumbai - 400013, Maharashtra, India 24*7 Customer...",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 35
+    },
+    {
+      "statement": "The retrieved policy wording states: (UIN: IRDAN108RPMT0002V02200001/A0001V02200910) This cover is applicable if it is shown on your Schedule. What is Covered: We will pay you the amount of depreciation deducted on the value of parts replaced under own damage claim, lodged under Section 1 (own damage) of the Policy. We will pay up to number of claims as mentioned in the Policy Schedule during the Period of Insurance. Special Conditions applicable to this cover in addition to the General Conditions: • A claim where replacement of any part is not involved and no depreciation is deducted under own damage claim, will not be considered as claim under this Cover. • Vehicle is repaired at any of our Authorised Garage/Authorised workshop/Authorised service station.",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 22
+    },
+    {
+      "statement": "The retrieved policy wording states: (UIN: IRDAN108RP0002V01200001/ A0010V01202223) This Cover is applicable if it is shown on your Policy Schedule. We will pay you the amount of depreciation deducted on the value of the Battery replaced under Own Damage claim, lodged under Section 1 (Loss of or Damage to the Vehicle Insured) of the Policy. We will pay for the first <> claims during the Period of Insurance as mentioned in the Policy Schedule. Deductible: First ₹________ for each and every claim as mentioned in Policy Schedule. What is not Covered: • We shall not indemnify You in respect of, loss or damage to the battery fitted in the vehicle unless cost of the battery is included in IDV or endorsed in the Policy Special Conditions applicable to this cover in addition to the General Conditions: • Vehicle is repaired at any of our Authorised Garage/Authorised workshop/Authorised service station. Subject otherwise to...",
+      "source": "tata_aig_private_car_package.pdf",
+      "page": 33
+    }
+  ],
+  "exclusions_flagged": [],
+  "disclaimer": "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. Retrieved clauses are evidence only and do not guarantee coverage or settlement."
+}

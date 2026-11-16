@@ -1,0 +1,70 @@
+{
+  "claim_id": "CLM-20261020-003",
+  "summary": "AI-generated draft for claim CLM-20261020-003. Contract A's user-described circumstances are: 'Windshield smashed by a falling branch during the storm'. Contract A describes 2023 Tata Nexon (petrol) and records: windshield: severe glass_shatter. Contract B supplies windshield (replace). Its claimable estimate total is INR 12561.0 and is not an approval or payment commitment. Policy wording is summarized separately in cited evidence.",
+  "line_items": [
+    {
+      "part": "windshield",
+      "action": "replace",
+      "material": "glass",
+      "part_cost": 11311.0,
+      "labour_cost": 1250.0,
+      "paint_cost": 0.0,
+      "depreciation_pct": 0.0,
+      "depreciation_amount": 0.0,
+      "claimable_amount": 12561.0,
+      "price_source": "Part: https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/, accessed 2026-10-09; Labour: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; quoted range/value 1000-1500; midpoint used where range supplied (accessed 2026-11-10)"
+    }
+  ],
+  "totals": {
+    "gross": 12561.0,
+    "depreciation": 0.0,
+    "claimable": 12561.0,
+    "currency": "INR",
+    "vehicle_age_years": 3,
+    "unpriced_parts": []
+  },
+  "policy_justification": [
+    {
+      "statement": "The retrieved policy wording states: IMT.26. FIRE AND/OR THEFT RISKS ONLY (Not applicable for Miscellaneous and Special Types of vehicles rateable under Class -D and Motor Trade Policies under Classes- E, F and G of the Commercial Vehicles Tariff) Notwithstanding anything to the contrary contained in the Policy it is hereby understood and agreed that Section III of the Policy is deemed to be cancelled and under Section I thereof the Company shall only be liable to indemnify the Insured against loss or damage by fire explosion self ignition lightning and/or burglary housebreaking theft and riot strike malicious damage terrorism storm tempest flood inundation and earthquake perils whilst the vehicle is laid up in garage and not in use. Subject otherwise to the terms conditions limitations and exceptions of this Policy. NB. (i) In case of Fire Risk only, the words “burglary housebreaking theft” is to be deleted. NB. (ii)...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 20
+    },
+    {
+      "statement": "The retrieved policy wording states: HOUSEBREAKING, THEFT OR RIOT STRIKE MALICIOUS DAMAGE TERRORISM OR STORM TEMPEST FLOOD INUNDATION OR EARTHQUAKE PERILS, in consideration whereof c. # the insurer will deduct from the next renewal premium the sum of Rs………* and the No Claim Bonus (if any) shall be calculated on the next renewal premium after deduction of such sum. d. # the period of insurance by this policy is extended to .…./…../……. In view of the payment of an additional premium of Rs ……….** Subject otherwise to the terms exceptions conditions and limitations of this policy. NB.1. # To delete (a) or (b) as per option exercised by the insured. NB.2. *The proportionate full policy premium for the period of lay up less the proportionate premium for the Fire and /or Theft risks for the lay up periods is to be inserted. NB.3. ** The proportionate premium required for Fire and / or Theft cover for the vehicle for the laid –...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 35
+    },
+    {
+      "statement": "The retrieved policy wording states: SECTION I : LOSS OF OR DAMAGE TO THE VEHICLE INSURED The Company will indemnify the insured against loss or damage to the vehicle insured hereunder and/or its accessories whilst thereon i. by fire explosion self ignition or lightning; ii. by burglary housebreaking or theft; iii. by riot and strike; iv. by earthquake (fire and shock damage); v. by flood typhoon hurricane storm tempest inundation cyclone hailstorm frost; vi. by accidental external means; vii. by malicious act; viii. by terrorist activity; ix. whilst in transit by road rail inland- waterway lift elevator or air; x. by landslide rockslide. Subject to a deduction for depreciation at the rates mentioned below in respect of parts replaced; 1. For all rubber/ nylon/ plastic parts, tyres, tubes and batteries and air bags - 50%",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 1
+    },
+    {
+      "statement": "The retrieved policy wording states: IMT.7. VEHICLES SUBJECT TO HYPOTHECATION AGREEMENT It is hereby declared and agreed that the vehicle insured is pledged to / hypothecated with ……(hereinafter referred to as the \"Pledgee\") and it is further understood and agreed that the “Pledgee” is interested in any monies which but for this Endorsement would be payable to the Insured under this Policy in respect of such loss or damage to the vehicle insured as cannot be made good by repair and / or replacement of parts and such monies shall be paid to the Pledgee as long as they are the Pledgee of the vehicle insured and their receipt shall be a full and final discharge to the Company in respect of such loss or damage. It is further declared and agreed that for the purpose of the Personal Accident Cover for the owner- driver granted under this Policy, the insured named in the Policy will continue to be deemed as the owner-driver...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 12
+    },
+    {
+      "statement": "The retrieved policy wording states: IMT.7. VEHICLES SUBJECT TO HYPOTHECATION AGREEMENT It is hereby declared and agreed that the vehicle insured is pledged to / hypothecated with ……(hereinafter referred to as the \"Pledgee\") and it is further understood and agreed that the “Pledgee” is interested in any monies which but for this Endorsement would be payable to the Insured under this Policy in respect of such loss or damage to the vehicle insured as cannot be made good by repair and / or replacement of parts and such monies shall be paid to the Pledgee as long as they are the Pledgee of the vehicle insured and their receipt shall be a full and final discharge to the Company in respect of such loss or damage. It is further declared and agreed that for the purpose of the Personal Accident Cover for the owner- driver granted under this Policy, the insured named in the Policy will continue to be deemed as the owner-driver...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 34
+    },
+    {
+      "statement": "The retrieved policy wording states: IMT.27. LIBILITY AND FIRE AND / OR THEFT (Not applicable for Miscellaneous and Special Types of vehicles rateable under Class –D of the Tariff for Commercial Vehicles) Notwithstanding anything to the contrary contained in the Policy it is hereby understood and agreed that Section I of the Policy the Company shall not be liable thereunder except in respect of loss or damage by fire explosion self ignition lightning and/or burglary housebreaking theft and riot strike malicious damage terrorism storm tempest flood inundation and earthquake perils. Subject otherwise to the terms conditions limitations and exceptions of the Policy. NB. (i) In case of Liability and Fire Risks only, the words “burglary housebreaking theft” is to be deleted. NB. (ii) In case of Liability and Theft Risks only, the words “fire explosion self ignition lightning riot strike malicious damage terrorism storm...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 20
+    },
+    {
+      "statement": "The retrieved policy wording states: IMT.27. LIBILITY AND FIRE AND / OR THEFT (Not applicable for Miscellaneous and Special Types of vehicles rateable under Class –D of the Tariff for Commercial Vehicles) Notwithstanding anything to the contrary contained in the Policy it is hereby understood and agreed that Section I of the Policy the Company shall not be liable there under except in respect of loss or damage by fire explosion self ignition lightning and/or burglary housebreaking theft and riot strike malicious damage terrorism storm tempest flood inundation and earthquake perils. Subject otherwise to the terms conditions limitations and exceptions of the Policy. NB. (i) In case of Liability and Fire Risks only, the words “burglary housebreaking theft” is to be deleted. NB. (ii) In case of Liability and Theft Risks only, the words “fire explosion self ignition lightning riot strike malicious damage terrorism storm...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 39
+    },
+    {
+      "statement": "The retrieved policy wording states: MALICIOUS DAMAGE TERRORISM OR STORM TEMPEST FLOOD INUNDATION OR EARTHQUAKE PERILS. Subject otherwise to the terms exceptions conditions and limitations of this Policy. NB.1. In case of Liability Only Policies the words in CAPITALS should be deleted. NB.2. In case of policies covering Liability Only and a. Fire risks, the words “BURGLARY HOUSEBREAKING OR THEFT” are to be deleted; b. Theft risks, the words’ “FIRE EXPLOSION SELF IGNITION OR LIGHTNING” are to be deleted. c. Fire and Theft risks no part of the words in capitals are to be deleted.",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 14
+    }
+  ],
+  "exclusions_flagged": [],
+  "disclaimer": "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. Retrieved clauses are evidence only and do not guarantee coverage or settlement."
+}

@@ -11,3 +11,6 @@ venv/
 eval/cache/
 data/cardd_eval/images/
 *.zip
+
+/data/policy_docs/*.pdf
+.venv311/

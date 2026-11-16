@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contract B: Cost estimate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "currency",
+    "vehicle_age_years",
+    "line_items",
+    "totals",
+    "unpriced_parts"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "currency": {
+      "const": "INR"
+    },
+    "vehicle_age_years": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "part",
+          "action",
+          "material",
+          "part_cost",
+          "labour_cost",
+          "paint_cost",
+          "depreciation_pct",
+          "depreciation_amount",
+          "claimable_amount",
+          "price_source"
+        ],
+        "properties": {
+          "part": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "enum": [
+              "repair",
+              "replace"
+            ]
+          },
+          "material": {
+            "type": "string",
+            "minLength": 1
+          },
+          "part_cost": {
+            "type": "number",
+            "minimum": 0
+          },
+          "labour_cost": {
+            "type": "number",
+            "minimum": 0
+          },
+          "paint_cost": {
+            "type": "number",
+            "minimum": 0
+          },
+          "depreciation_pct": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "depreciation_amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "claimable_amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "price_source": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gross",
+        "depreciation",
+        "claimable"
+      ],
+      "properties": {
+        "gross": {
+          "type": "number",
+          "minimum": 0
+        },
+        "depreciation": {
+          "type": "number",
+          "minimum": 0
+        },
+        "claimable": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "unpriced_parts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  }
+}

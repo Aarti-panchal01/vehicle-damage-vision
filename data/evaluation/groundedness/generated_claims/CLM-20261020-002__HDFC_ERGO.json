@@ -1,0 +1,82 @@
+{
+  "claim_id": "CLM-20261020-002",
+  "summary": "AI-generated draft for claim CLM-20261020-002. Contract A's user-described circumstances are: 'Heard a thud from the front while parking at the mall, not sure if anything is damaged'. Contract A describes 2022 Hyundai Creta (diesel) and records: Contract A reports no visible damage. Contract B supplies no priced repair line items. Its claimable estimate total is INR 0 and is not an approval or payment commitment. Policy wording is summarized separately in cited evidence.",
+  "line_items": [],
+  "totals": {
+    "gross": 0,
+    "depreciation": 0,
+    "claimable": 0,
+    "currency": "INR",
+    "vehicle_age_years": 4,
+    "unpriced_parts": []
+  },
+  "policy_justification": [
+    {
+      "statement": "The retrieved policy wording states: IMT.19. COVER FOR VEHICLES IMPORTED WITHOUT CUSTOMS DUTY Notwithstanding anything to the contrary contained in this Policy it is hereby understood and agreed that in the event of loss or damage to the vehicle insured and/or its accessories necessitating the supply of a part not obtainable from stocks held in the country in which the vehicle insured is held for repair or in the event of the Company exercising the option under ………., * to pay in cash the amount of the loss or damage the liability of the Company in respect of any such part shall be limited to :- a) (i) the price quoted in the latest catalogue or the price list issued by the Manufacturer or his Agent for the country in which the vehicle insured is held for repair less depreciation applicable; OR (ii) if no such catalogue or price list exists the price list obtaining at the Manufacturer's Works plus the reasonable cost of...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 18
+    },
+    {
+      "statement": "The retrieved policy wording states: IMT. 11.A. Vehicle Laid Up(Lay up period declared) Notwithstanding anything to the contrary contained herein it is hereby understood and agreed that from …/ …/….. to…/ …./….. the vehicle insured is laid up in garage and not in use and during this period all liability of the insurer under this policy in respect of the vehicle insured is suspended SAVE",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 13
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text for total loss/ constructive total loss of the vehicle - the Insured's Declared Value (IDV) of the vehicle (including accessories thereon) as specified in the Schedule less the value of the wreck. b. for partial losses, i.e. losses other than Total Loss/Constructive Total Loss of the vehicle - actual and reasonable costs of repair and/or replacement of parts lost/damaged subject to depreciation as per limits specified. 4. The insured shall take all reasonable steps to safeguard the vehicle from loss or damage and to maintain it in efficient condition and the Company shall have at all times free and full access to examine the vehicle or any part thereof or any driver or employee of the insured. In the event of any accident or breakdown, the vehicle shall not be left unattended without proper precautions being taken to prevent further damage or loss and if the...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 6
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text HDFC ERGO General Insurance HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400 020. UIN: Private Car Policy- Bundled - IRDAN146RPMT0041V01202425. The Company shall not be liable to make any payment in respect of: (a) consequential loss, depreciation, wear and tear, mechanical or electrical breakdown failures or breakages; (b) damage to Tyres and Tubes unless the vehicle insured is damaged at the same time in which case the liability of the company shall be limited to 50% of the cost of replacement. And, (c) loss of or damage to accessories by burglary, housebreaking or theft unless the vehicle is stolen at the same time; and (d) any accidental loss or damage suffered whilst the insured or any person...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 2
+    },
+    {
+      "statement": "The retrieved policy wording states: IMT. 11.A. Vehicle Laid Up(Lay up period declared) Notwithstanding anything to the contrary contained herein it is hereby understood and agreed that from …/ …/….. to…/ …./….. the vehicle insured is laid up in garage and not in use and during this period all liability of the insurer under this policy in respect of the vehicle insured is suspended SAVE",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 35
+    },
+    {
+      "statement": "The retrieved policy wording states: HANDICAPPED AND MENTALLY CHALLENGED PERSONS Notwithstanding anything to the contrary contained in the Policy it is hereby understood and agreed that the vehicle insured being specially designed /modified for use of blind, handicapped and mentally challenged persons and suitable endorsement to this effect having been incorporated in the Registration Book by the Registering Authority, a discount of 50% on the Own Damage premium for the vehicle insured is hereby allowed to the Insured. Subject otherwise to the terms exceptions conditions and limitations of the Policy.",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 15
+    },
+    {
+      "statement": "The retrieved policy wording states: SECTION I : LOSS OF OR DAMAGE TO THE VEHICLE INSURED The Company will indemnify the insured against loss or damage to the vehicle insured hereunder and/or its accessories whilst thereon i. by fire explosion self ignition or lightning; ii. by burglary housebreaking or theft; iii. by riot and strike; iv. by earthquake (fire and shock damage); v. by flood typhoon hurricane storm tempest inundation cyclone hailstorm frost; vi. by accidental external means; vii. by malicious act; viii. by terrorist activity; ix. whilst in transit by road rail inland- waterway lift elevator or air; x. by landslide rockslide. Subject to a deduction for depreciation at the rates mentioned below in respect of parts replaced; 1. For all rubber/ nylon/ plastic parts, tyres, tubes and batteries and air bags - 50%",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 1
+    },
+    {
+      "statement": "The retrieved policy wording states: IMT.31. RELIABILITY TRIALS AND RALLIES (Private Cars and Motorised Two Wheelers Only) In consideration of the payment of an additional premium it is hereby understood and agreed that in the indemnity granted by this Policy is extended to apply whilst the vehicle insured is engaged in ……………………….* to be held at …………………** on or about the date of ../../…. under the auspices of …………………………….# Provided that – a) No indemnity shall be granted by this Endorsement to ……………………………….# b) This Policy does not cover use for organised racing, pace making, or speed testing. c) During the course of the ……….*, the Company shall not be liable in respect of death of or bodily injury to any person being carried in or upon or entering or getting on to or alighting from the vehicle insured at the time of the occurrence of the event out of which any claim arises. ## It is further understood and agreed that...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 22
+    },
+    {
+      "statement": "The retrieved policy wording states: IMT.26. FIRE AND/OR THEFT RISKS ONLY (Not applicable for Miscellaneous and Special Types of vehicles rateable under Class -D and Motor Trade Policies under Classes- E, F and G of the Commercial Vehicles Tariff) Notwithstanding anything to the contrary contained in the Policy it is hereby understood and agreed that Section III of the Policy is deemed to be cancelled and under Section I thereof the Company shall only be liable to indemnify the Insured against loss or damage by fire explosion self ignition lightning and/or burglary housebreaking theft and riot strike malicious damage terrorism storm tempest flood inundation and earthquake perils whilst the vehicle is laid up in garage and not in use. Subject otherwise to the terms conditions limitations and exceptions of this Policy. NB. (i) In case of Fire Risk only, the words “burglary housebreaking theft” is to be deleted. NB. (ii)...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 20
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text I/We further undertake that if this declaration is found to be incorrect, all benefits under the policy in respect of Section I of the Policy will stand forfeited.” Notwithstanding the above declaration, the insurer allowing the NCB will be obliged to write to the policy issuing office of the previous insurer by recorded delivery calling for confirmation of the entitlement and rate of NCB for the particular insured and the previous insurer shall be obliged to provide the information sought within 30 days of receipt of the letter of enquiry failing which the matter will be treated as a breach of Tariff on the part of the previous insurer. Failure of the insurer granting the NCB to write to the previous insurer within 21 days after granting the cover will also constitute a breach of the Tariff. e) If an insured vehicle is sold and not replaced immediately, or laid...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 8
+    },
+    {
+      "statement": "The retrieved policy wording states: CONDITIONS This Policy and the Schedule shall be read together and any word or expression to which a specific meaning has been attached in any part of this Policy or of the Schedule shall bear the same meaning wherever it may appear 1. Notice shall be given in writing to the Company immediately upon the occurrence of any accidental loss or damage in the event of any claim. Every letter claim writ summons and/or process or copy thereof shall be forwarded to the Company immediately on receipt by the insured. Notice shall also be given in writing to the Company immediately the insured shall have knowledge of any impending prosecution, inquest or fatal inquiry in respect of any occurrence which may give rise to a claim under this Policy. a) Condonation of delay The Company may condone delay in claim intimation/ document submission on merit, where it is proved that delay in reporting of...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 30
+    },
+    {
+      "statement": "The retrieved policy wording states: CLAIMS INTIMATION In the event of loss due to an insured event the insurance company must be informed immediately. Our contact details are as follows: Toll Free Helpline 022-6234 6234 Condonation of Delay The Company may condone delay in claim intimation/ document submission on merit, where it is proved that delay in reporting of claim or submission of claim documents, is due to reasons beyond the control of the insured. Notwithstanding the above, delay in claim intimation or submission of claim documents due to reasons beyond the control of the insured shall not be condoned where such claims would have otherwise been rejected even if reported in time. Fraud This policy shall be voidable at the option of the Company in the event of mis-representation, mis- description or non-disclosure of any material particulars by the Proposer. Any person who, knowingly and with intent to defraud...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 10
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text HDFC ERGO General Insurance HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400 020. UIN: Private Car Policy- Bundled - IRDAN146RPMT0041V01202425. 6. The surveyor shall submit a report with within 30 days to the Company. In case of any exception in terms or circumstances or any difficulty associated with replacement/reinstatement, the surveyor can seek for an extension from the Company for submission of his report. 7. Once the final survey report is furnished with all required information/documents that are relevant and necessary for settlement of claim, the Company settle the claim. 8. In case, the claim is rejected, the Company shall give the reasons for the same in writing drawing reference to the...",
+      "source": "hdfc_ergo_private_car_bundled.pdf",
+      "page": 10
+    }
+  ],
+  "exclusions_flagged": [],
+  "disclaimer": "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. Retrieved clauses are evidence only and do not guarantee coverage or settlement."
+}

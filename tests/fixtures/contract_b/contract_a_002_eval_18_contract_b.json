@@ -1,0 +1,12 @@
+{
+  "claim_id": "CLM-20261020-002",
+  "currency": "INR",
+  "vehicle_age_years": 4,
+  "line_items": [],
+  "totals": {
+    "gross": 0,
+    "depreciation": 0,
+    "claimable": 0
+  },
+  "unpriced_parts": []
+}

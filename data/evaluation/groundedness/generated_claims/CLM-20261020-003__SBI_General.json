@@ -1,0 +1,65 @@
+{
+  "claim_id": "CLM-20261020-003",
+  "summary": "AI-generated draft for claim CLM-20261020-003. Contract A's user-described circumstances are: 'Windshield smashed by a falling branch during the storm'. Contract A describes 2023 Tata Nexon (petrol) and records: windshield: severe glass_shatter. Contract B supplies windshield (replace). Its claimable estimate total is INR 12561.0 and is not an approval or payment commitment. Policy wording is summarized separately in cited evidence.",
+  "line_items": [
+    {
+      "part": "windshield",
+      "action": "replace",
+      "material": "glass",
+      "part_cost": 11311.0,
+      "labour_cost": 1250.0,
+      "paint_cost": 0.0,
+      "depreciation_pct": 0.0,
+      "depreciation_amount": 0.0,
+      "claimable_amount": 12561.0,
+      "price_source": "Part: https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/, accessed 2026-10-09; Labour: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; quoted range/value 1000-1500; midpoint used where range supplied (accessed 2026-11-10)"
+    }
+  ],
+  "totals": {
+    "gross": 12561.0,
+    "depreciation": 0.0,
+    "claimable": 12561.0,
+    "currency": "INR",
+    "vehicle_age_years": 3,
+    "unpriced_parts": []
+  },
+  "policy_justification": [
+    {
+      "statement": "The retrieved policy wording states: ACCIDENTAL LOSS OF OR DAMAGE TO THE VEHICLE INSURED 1. The Company will indemnify the insured against accidental loss or damage to the vehicle insured hereunder and / or its accessories whilst thereon i. by fire, explosion, self-ignition or lightning; ii. by burglary, housebreaking or theft ; iii. by riot and strike; iv. by earthquake (fire and shock damage); v. by flood, typhoon, hurricane, storm, tempest, inundation, cyclone, hailstorm and frost; vi. by accidental external means; vii. by malicious act; viii. by terrorist activity; ix. whilst in transit by road, rail, inland-waterway, lift, elevator or air; x. By landslide and rockslide Subject to a deduction for depreciation at the rates mentioned below in respect of parts of the vehicle replaced: (1) For all rubber/ nylon / plastic parts, tyres and tubes, batteries and air bags- 50% (2) For fibre glass components – 30% (3) For all...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 2
+    },
+    {
+      "statement": "The retrieved policy wording states: Schedule or in the cities falling under coverage network as listed b) Cost of parts or replacement charges or consumables and their transportation cost to the Repair shop/ Garage, in case the same is not available with them. c) Entire cost of Repair shop/Garage's bill, whether in part or full. d) Cost of towing the damaged vehicle beyond *** kms mentioned in the policy schedule from the spot of breakdown. e) Charges of the repairer, if the vehicle could be transferred on its own power on self-propelled basis to the nearest Repair shop/Garage without his intervention. f) Any payment to a third-party for on-spot repair/ towing/ storage/recovery by the Insured or on his behalf, unless specifically agreed by the Company. 2. Towing Assistance (Arising out of an Accident): In the event, that the insured vehicle cannot move or run on its own power on a public road due to any Accident...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 11
+    },
+    {
+      "statement": "The retrieved policy wording states: 22) Tyre/ Rim which has been used for its full specified life as per manufacturer's guideline or where unused tread depth of tyre is less than 3 mm Specific Conditions 1) If Insured make a fraudulent claim which is declined as per coverage then this Add On shall cease with immediate effect. 2) If during the Policy Period any Tyre and/ or Rim is replaced for any reason for which claim is not preferred under the coverage, cover on new Tyre and/ or Rim would not be available unless details of new Tyre and/ or Rim are informed to the Company. 3) In case of replacement of Tyre and/ or Rim for which a claim is preferred under the coverage, replaced Tyre and/ or Rim can be included by way of endorsement. 4) All claims must be made within 3 working days of damage. 5) Claim shall be admissible if the loss falls within the manufacturer recommended replacement guidelines. 6) The Insured must...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 26
+    },
+    {
+      "statement": "The retrieved policy wording states: schedule from the spot of such Accident of the insured vehicle. b) Any payment to a third-party for towing/ storage/ recovery by the Insured or on his behalf, unless specifically agreed by the Company. 3. Flat Tyre: In the event, that the insured vehicle cannot move or run on its own power on a public road, due to a flat tyre caused by puncture or damage to the tyre /tube/valve or bolts of the tyre, the Company shall arrange for a repairer to attend to the insured vehicle on the spot of such event to replace the flat tyre with the spare tyre carried in the insured vehicle. The Company shall not be liable for: a) Cost of parts or replacement elements or consumables and their transportation cost to the site of immobilization due to flat tyre in case repairs are carried out on the spot of immobilization. b) Entire cost of Tyre Repair shop/Garage's bill, and their transportation cost to...",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 11
+    },
+    {
+      "statement": "The retrieved policy wording states: 21. LIBILITY AND FIRE AND / OR THEFT Notwithstanding anything to the contrary contained in the policy it is hereby understood and agreed that Section I of the policy the Company shall not be liable there under except in respect of loss or damage to the insured vehicle by fire, explosion, self-ignition, lightning and/or burglary housebreaking, theft and riot strike malicious damage terrorism storm tempest flood inundation and earthquake perils. NB. (i) In case of Liability and Fire Risks only, the words “burglary housebreaking theft” is to be deleted. NB. (ii) In case of Liability and Theft Risks only, the words “fire explosion self-ignition lightning riot strike malicious damage terrorism storm tempest flood inundation and earthquake perils\" are to be deleted.",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 9
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text charges incurred during replacement/ repairs of damaged Tyre (s)/Rims of the insured vehicle. If damage to Tyre / tube and/ or Rim is due to Accidental damage to the insured vehicle covered under “Own Damage” section of the Policy, the Company's liability under this cover will be restricted to the difference of depreciation percentage applied under “Own Damage” section and as mentioned above basis the unused tread depth. Specific Exclusions applicable to this Add On 1) If vehicle is not repaired at Authorized Garage 2) If Tyres and Rims fitted by Non-Authorized Vehicle Manufacturer.",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 26
+    },
+    {
+      "statement": "The retrieved policy wording states: 20. FIRE AND/OR THEFT RISKS ONLY Notwithstanding anything to the contrary contained in the policy it is hereby understood and agreed that Section II of the policy is deemed to be cancelled and under Section I thereof the Company shall only be liable to indemnify the insured against loss or damage by fire, explosion, self ignition, lightning and/or burglary, housebreaking, theft and riot strike, malicious damage, terrorism, storm, tempest, flood, inundation and earthquake perils whilst the vehicle is laid up in garage and not in use. NB. (i) In case of Fire Risk only, the words “burglary housebreaking theft” is to be deleted. NB. (ii) In case of Theft Risk only, the words “fire explosion self ignition lightning riot strike malicious damage terrorism storm tempest flood inundation and earthquake perils” are to be deleted.",
+      "source": "sbi_general_private_car_long_term.pdf",
+      "page": 9
+    }
+  ],
+  "exclusions_flagged": [],
+  "disclaimer": "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. Retrieved clauses are evidence only and do not guarantee coverage or settlement."
+}

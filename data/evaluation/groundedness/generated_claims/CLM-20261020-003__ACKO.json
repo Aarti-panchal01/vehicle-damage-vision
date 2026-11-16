@@ -1,0 +1,70 @@
+{
+  "claim_id": "CLM-20261020-003",
+  "summary": "AI-generated draft for claim CLM-20261020-003. Contract A's user-described circumstances are: 'Windshield smashed by a falling branch during the storm'. Contract A describes 2023 Tata Nexon (petrol) and records: windshield: severe glass_shatter. Contract B supplies windshield (replace). Its claimable estimate total is INR 12561.0 and is not an approval or payment commitment. Policy wording is summarized separately in cited evidence.",
+  "line_items": [
+    {
+      "part": "windshield",
+      "action": "replace",
+      "material": "glass",
+      "part_cost": 11311.0,
+      "labour_cost": 1250.0,
+      "paint_cost": 0.0,
+      "depreciation_pct": 0.0,
+      "depreciation_amount": 0.0,
+      "claimable_amount": 12561.0,
+      "price_source": "Part: https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/, accessed 2026-10-09; Labour: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; quoted range/value 1000-1500; midpoint used where range supplied (accessed 2026-11-10)"
+    }
+  ],
+  "totals": {
+    "gross": 12561.0,
+    "depreciation": 0.0,
+    "claimable": 12561.0,
+    "currency": "INR",
+    "vehicle_age_years": 3,
+    "unpriced_parts": []
+  },
+  "policy_justification": [
+    {
+      "statement": "The retrieved policy wording states: 1. Any claim made solely for damage to the windshield, sunroof, or door glasses. 2. Any claim arising from theft or total loss of the Insured Vehicle, provided that You purchase a private car package policy from Us within three (3) years from the date of such theft or total loss.",
+      "source": "acko_car_package.pdf",
+      "page": 12
+    },
+    {
+      "statement": "The retrieved policy wording states: 2. Engine Protect – Accidental Leakage We will indemnify You for damage to the internal parts of the engine, gearbox or transmission parts resulting from coolant or lubricating oil leakage resulting solely from an insured peril covered under (A) (Section I) (a) (i) above. We will also pay the reasonable cost of protection, removal of the Insured Vehicle to the nearest repairer and redelivery to You subject to a maximum limit, as specified in the Policy Schedule, applied per each claim admitted by Us. Note: For loss or damage caused by flooding resulting in hydrostatic lock, coverage is excluded here and may only be provided if the Engine Protect – Flood is opted and shown in the Policy Schedule. (a) Conditions applicable under this Built-In Additional Cover: i. There is visible evidence of damage to the internal parts of the engine, gearbox or transmission parts resulting from...",
+      "source": "acko_car_package.pdf",
+      "page": 5
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text i) Any cost of repairing the puncture or tyre. ii) Any damage resulting from poor workmanship during repair (whether authorised or not) or damage resulting from manufacturing defects iii) Damage due to violation of the vehicle manufacturer’s operating instructions, including but not limited to overloading, incorrect tyre pressure, exceeding passenger capacity, racing, rallies, or unapproved modifications iv) Minor issues such as scratches, cuts, noises, vibrations, or sensations that do not impair the performance of the tyre. v) Damage due to improper storage or transportation of the tyre. vi) Routine maintenance such as alignment, balancing, or rotation of wheels/tyres/tubes vii) More than four (4) tyre or tube replacements during the Policy Period viii) Replacements carried out at non-authorised garages or service providers not approved by Us ix) Claims where We...",
+      "source": "acko_car_package.pdf",
+      "page": 18
+    },
+    {
+      "statement": "The retrieved policy wording states: 12. Roadside Assistance (a) If You have opted for this Optional Cover as stated in the Policy Schedule, then We will provide You the following emergency assistance services on Your request during the Policy Period: i) Flat Tyre: In the event the Insured Vehicle is immobilized due to a flat tyre, We will: i) arrange for a vehicle technician to replace the flat tyre with the spare tyre of the Insured Vehicle at the location of breakdown; or ii) arrange for the transportation of the flat tyre to the nearest place of repair and re-attaching the tyre to the Insured Vehicle if a spare tyre is unavailable or on-site repair is not possible. It is agreed and understood that under this assistance service , We will bear only the charges for the vehicle technician’s labour and the transportation of the flat tyre to the nearest repair facility. However, all other incidental expenses incurred in...",
+      "source": "acko_car_package.pdf",
+      "page": 15
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text Acko Car Package Policy Acko General Insurance Limited Acko General Insurance Limited, 2nd Floor, #36/5, Hustlehub One East, Somasandrapalya, 27th Main Rd, Sector 2, HSR Layout, Bengaluru, Karnataka, 560102 IRDAI Reg No: 157 | UIN: IRDAN157RPMT0013V01202526 www.acko.com/gi Toll-free: 1800 266 2256 | Mail: hello@acko.com Page 18 of 29 ii) The benefit under this Optional Cover may be availed for a maximum of four (4) tyres of the Insured Vehicle during the Policy Period. iii) We will reimburse the cost of replacing the tyr e(s) of the Insured Vehicle with new, equivalent or near-equivalent tyre(s) of similar make, model, and specifications as those fitted on the Insured Vehicle at the time of availing the Policy or at the time of the Accident. iv) If the claim under (A) (Section I) Own Damage of the Policy is admissible, then the benefit payable under this Optional...",
+      "source": "acko_car_package.pdf",
+      "page": 18
+    },
+    {
+      "statement": "The retrieved policy wording states: 1. Engine Protect – Flood (a) If You have opted for this Optional Cover as stated in the Policy Schedule, then We will reimburse You for expenses incurred towards the repair and/or replacement of the internal parts of the engine, gearbox, differential assembly, and their associated components of the Insured Vehicle, resulting from aggravated damage caused by water ingression or hydrostatic lock due to any peril covered under (A) (Section I ) Own Damage of the Policy , provided there is evidence of the Insured Vehicle being submerged or stopped in a water logged area and subject to the limits specified in the Policy Schedule. (b) Specific Exclusions applicable under this benefit: We shall not be liable to reimburse You in following cases:",
+      "source": "acko_car_package.pdf",
+      "page": 9
+    },
+    {
+      "statement": "The retrieved policy wording states: AGE OF VEHICLE DEPRECIATION RATE (a) Original proof of cancellation of the Insured Vehicle’s registration with the appropriate transport authority; or (b) Original documentary evidence of a valid statutory Motor Third-Party Liability policy covering the wreck/salvage, effective from the loss date. iv. Deductible: This Policy does not impose any mandatory deductible. Only voluntary deductibles, if selected by You, will apply and shall be as stated in Your Policy Schedule. v. No Claim Bonus (NCB): If no claim has been made or is pending under (A) (Section I) Own Damage of the Policy, then You will be entitled to a discount on the premium payable on the renewal of Your cover under (A) (Section I) Own Damage, depending on the number of consecutive claim-free Policy Years, as set out below and subject to the conditions specified:",
+      "source": "acko_car_package.pdf",
+      "page": 6
+    },
+    {
+      "statement": "The retrieved policy wording states: General Policy Text 7) any accidental loss damage and/or liability directly or indirectly or proximately or remotely occasioned by contributed to by or traceable to or arising out of or in connection with war, invasion, the act of foreign enemies, hostilities or warlike operation s (whether before or after declaration of war) civil war, mutiny rebellion, military or usurped power or by any direct or indirect consequence of any of the said occurrences and in the event of any claim hereunder You shall prove that the accidental loss damage and/or liability arose independently of and was in no way connected with or occasioned by or contributed to by or traceable to any of the said occurrences or any consequences thereof and in default of such proof, We shall not be liable to make any payment in respect of such a claim. 8) any Insured Vehicle not registered in Your name as the owner...",
+      "source": "acko_car_package.pdf",
+      "page": 24
+    }
+  ],
+  "exclusions_flagged": [],
+  "disclaimer": "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. Retrieved clauses are evidence only and do not guarantee coverage or settlement."
+}

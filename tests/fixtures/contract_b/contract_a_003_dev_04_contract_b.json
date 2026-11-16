@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-20261020-003",
+  "currency": "INR",
+  "vehicle_age_years": 3,
+  "line_items": [
+    {
+      "part": "windshield",
+      "action": "replace",
+      "material": "glass",
+      "part_cost": 11311.0,
+      "labour_cost": 1250.0,
+      "paint_cost": 0.0,
+      "depreciation_pct": 0.0,
+      "depreciation_amount": 0.0,
+      "claimable_amount": 12561.0,
+      "price_source": "Part: https://www.zigwheels.com/tata-cars/nexon-2020-2023/spare-parts-price/, accessed 2026-10-09; Labour: Garage quotation spreadsheet supplied by user; range midpoint used for deterministic calculation; quoted range/value 1000-1500; midpoint used where range supplied (accessed 2026-11-10)"
+    }
+  ],
+  "totals": {
+    "gross": 12561.0,
+    "depreciation": 0.0,
+    "claimable": 12561.0
+  },
+  "unpriced_parts": []
+}
