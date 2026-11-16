@@ -335,11 +335,44 @@ def _generate_narrative(client, model_name, contract_a, contract_b, insurer, uin
             },
         )
     except Exception as exc:
-        raise ClaimGenerationError("Gemini claim-draft request failed: {}".format(exc)) from exc
+        # Preserve the real Gemini SDK/API error so the UI can show its cause.
+        raise ClaimGenerationError(
+            "Gemini API request failed ({}): {}".format(type(exc).__name__, exc)
+        ) from exc
+
+    # Gemini can return no text when a response is blocked, truncated, or otherwise
+    # has no candidate text. Check that explicitly before attempting JSON parsing.
     try:
-        output = json.loads(response.text)
-    except (AttributeError, TypeError, json.JSONDecodeError) as exc:
-        raise ClaimGenerationError("Gemini returned malformed JSON for the claim draft.") from exc
+        response_text = response.text
+    except Exception as exc:
+        raise ClaimGenerationError(
+            "Could not read Gemini response text ({}): {}".format(type(exc).__name__, exc)
+        ) from exc
+
+    if not isinstance(response_text, str) or not response_text.strip():
+        prompt_feedback = getattr(response, "prompt_feedback", None)
+        candidates = getattr(response, "candidates", None)
+        raise ClaimGenerationError(
+            "Gemini returned an empty response. "
+            "Prompt feedback: {!r}. Candidates: {!r}".format(
+                prompt_feedback, candidates
+            )
+        )
+
+    try:
+        output = json.loads(response_text)
+    except json.JSONDecodeError as exc:
+        # Include only a short preview; never expose credentials or request payloads.
+        preview = response_text[:300].replace("\\n", " ")
+        raise ClaimGenerationError(
+            "Gemini returned malformed JSON ({} at position {}). Response preview: {!r}".format(
+                exc.msg, exc.pos, preview
+            )
+        ) from exc
+    except (AttributeError, TypeError) as exc:
+        raise ClaimGenerationError(
+            "Gemini response could not be parsed ({}): {}".format(type(exc).__name__, exc)
+        ) from exc
     if not isinstance(output, dict):
         raise ClaimGenerationError("Gemini response must be one Contract C JSON object.")
     allowed = set(NARRATIVE_FIELDS)

@@ -14,3 +14,5 @@ data/cardd_eval/images/
 
 /data/policy_docs/*.pdf
 .venv311/
+data/processed/
+data/vector_db/

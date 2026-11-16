@@ -20,7 +20,7 @@ from src.vision.vocab import SEVERITY_RANK
 
 MAX_IMAGES = 5
 DEFAULT_MAX_RETRIES = 2
-DEFAULT_PROMPT_ID = "v4_best"
+DEFAULT_PROMPT_ID = "v3_cot"
 
 
 @dataclass
