@@ -54,7 +54,7 @@ Damage-type F1 is the micro-aggregated F1 over each image's distinct damage-type
 
 ## III. Results
 
-Seven of the eight planned model/strategy configurations completed a 20-image pass. Qwen v2 stopped after six images when the Groq daily quota was exhausted. Qwen v1 + schema and v3 completed 20-image runs but include provider-error outputs.
+All eight planned model/strategy configurations completed a 20-image pass. Qwen v1 + schema and v3 completed 20-image runs but include provider-error outputs.
 
 | Model / prompt | Images | Damage-type F1 (95% CI) | Part exact (95% CI) | First-try JSON | Avg. retries | Latency (s) | Avg. tokens in/out | Cost (USD/image) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -68,13 +68,13 @@ Seven of the eight planned model/strategy configurations completed a 20-image pa
 | Qwen/Groq / v1 structured | 20 | .763 (.595–.891) | .450 (.250–.651) | 90% | 0.10 | 24.787 | 2,408 / 302 | .003133 |
 | Qwen/Groq / v1 + schema | 20 | .593 (.367–.772) | .400 (.200–.650) | 90% | 0.00 | 21.268 | 2,070 / 108 | .002086 |
 | Qwen/Groq / v3 CoT | 20 | .761 (.653–.849) | .350 (.150–.550) | 85% | 0.10 | 30.993 | 2,524 / 500 | .004018 |
-| Qwen/Groq / v2 few-shot | 6/20, partial | not run yet | not run yet | not run yet | not run yet | not run yet | not run yet | not run yet |
+| Qwen/Groq / v2 few-shot | 20 | .730 (.581–.850) | .400 (.200–.600) | 100% | 0.00 | 47.335 | 5,633 / 241 | .005469 |
 
-Gemini v4 has the highest observed damage-type F1, .925 (95% CI .866–.984), and part exact match .700 (95% CI .500–.900). It averaged 4,979 input tokens and 378 output tokens per image, 3.328 seconds latency, and $0.002439 per image. On the matched v1 runs, Gemini recorded .800 damage-type F1 and .650 part exact match at 3.702 seconds and $0.000996 per image; Qwen recorded .763 and .450 at 24.787 seconds and $0.003133 per image.
+Gemini v4 has the highest observed damage-type F1, .925 (95% CI .866–.984), and part exact match .700 (95% CI .500–.900). It averaged 4,979 input tokens and 378 output tokens per image, 3.328 seconds latency, and $0.002439 per image. On the matched v1 runs, Gemini recorded .800 damage-type F1 and .650 part exact match at 3.702 seconds and $0.000996 per image; Qwen recorded .763 and .450 at 24.787 seconds and $0.003133 per image. Qwen v2 recorded .730 damage-type F1 and .400 part exact match at 47.335 seconds and $0.005469 per image.
 
-No same-model strategy comparison has non-overlapping bootstrap intervals for damage-type F1 or part exact match. The only separated damage-type intervals among completed configurations are cross-model comparisons involving Gemini v4 and Qwen v0, Qwen v1 + schema, or Qwen v3. These do not isolate prompt effects. No part-exact intervals are disjoint. The observed score differences therefore do not establish a stable prompt improvement.
+No same-model strategy comparison has non-overlapping bootstrap intervals for damage-type F1 or part exact match. The only separated damage-type intervals among completed configurations are cross-model comparisons involving Gemini v4 and Qwen v0, Qwen v1 + schema, Qwen v2, or Qwen v3. These do not isolate prompt effects. No part-exact intervals are disjoint. The observed score differences therefore do not establish a stable prompt improvement.
 
-The v4 eval score is optimistic because v4 was selected after inspecting the same 20 eval images. On the separate, unverified dev labels, v4 damage-type F1 is .667 over 8 images and part exact is 3/8, versus .925 and 14/20 on eval. Side confusion also remains: the per-image records contain 70 expected-to-opposite-side prediction pairs across 10 completed configurations, counting repeated image/configuration cases rather than independent examples.
+The v4 eval score is optimistic because v4 was selected after inspecting the same 20 eval images. On the separate, unverified dev labels, v4 damage-type F1 is .667 over 8 images and part exact is 3/8, versus .925 and 14/20 on eval. Side confusion also remains: the per-image records contain 73 expected-to-opposite-side prediction pairs across 11 completed configurations, counting repeated image/configuration cases rather than independent examples.
 
 ![Evaluation metric panels](../../eval/results/metrics_by_config.png)
 
@@ -82,7 +82,7 @@ The v4 eval score is optimistic because v4 was selected after inspecting the sam
 
 ### Limitations
 
-The scored sample contains only 20 images, much smaller than the planned dataset scale. The dev labels, including both few-shot examples, are unverified. Qwen v2 is incomplete at 6/20, and two full Qwen configurations include provider errors. Gemini v4 was tuned after inspecting the same eval set used for its score. Left/right part errors persist across completed configurations. The confidence intervals are wide, and the measurements do not establish generalization, insurance readiness, or a robust ranking between models. Any final paper should keep the partial Qwen v2 result and these limitations visible.
+The scored sample contains only 20 images, much smaller than the planned dataset scale. The dev labels, including both few-shot examples, are unverified. All eight planned configurations completed 20-image runs, but Qwen v1 + schema and v3 include provider-error outputs. Gemini v4 was tuned after inspecting the same eval set used for its score. Left/right part errors persist across completed configurations. The confidence intervals are wide, and the measurements do not establish generalization, insurance readiness, or a robust ranking between models. Any final paper should keep these limitations visible.
 
 ## References
 

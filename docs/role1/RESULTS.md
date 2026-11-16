@@ -24,9 +24,9 @@ The runner records predictions and per-image outcomes under `eval/results/`. The
 | Qwen/Groq / v1 structured | 20 | .763 (.595–.891) | .450 (.250–.651) | 90% | 0.10 | 24.787 | 2,408 / 302 | .003133 |
 | Qwen/Groq / v1 + schema | 20 | .593 (.367–.772) | .400 (.200–.650) | 90% | 0.00 | 21.268 | 2,070 / 108 | .002086 |
 | Qwen/Groq / v3 CoT | 20 | .761 (.653–.849) | .350 (.150–.550) | 85% | 0.10 | 30.993 | 2,524 / 500 | .004018 |
-| Qwen/Groq / v2 few-shot | 6/20, partial | — | — | — | — | — | — | — |
+| Qwen/Groq / v2 few-shot | 20 | .730 (.581–.850) | .400 (.200–.600) | 100% | 0.00 | 47.335 | 5,633 / 241 | .005469 |
 
-The planned eight-way matrix has seven complete configurations. Qwen v2 stopped at `eval_07` when quota was exhausted; six predictions were recorded. Its summary row marks the run partial and leaves its metrics blank, so no metrics are reported here. Qwen v4 is an extra configuration and was not run.
+All eight planned model/strategy configurations completed a 20-image pass. Qwen v4 is an extra configuration and was not run.
 
 ## Metrics and interpretation
 
@@ -36,15 +36,15 @@ The planned eight-way matrix has seven complete configurations. Qwen v2 stopped 
 - **Average retries:** mean repair attempts per image. Latency and token counts are the per-image means recorded by the runner. Cost is calculated by `eval/run_eval.py` from its configured model rates and recorded token counts.
 - **Bootstrap CIs:** image-level resampling, not independent damage-region resampling. With 20 images, one image is 5 percentage points of exact-set accuracy.
 
-No same-model strategy comparison has non-overlapping damage-type or part-exact bootstrap intervals. Across all completed rows, the only non-overlapping damage-type intervals are Gemini v4 versus Qwen v0, Qwen v1 + schema, and Qwen v3. These are cross-model comparisons; they do not isolate a prompt-strategy effect. No part-exact intervals are disjoint. Therefore, the observed score differences are not evidence of a stable improvement across this small sample. Changes no larger than one image are especially not treated as improvements.
+No same-model strategy comparison has non-overlapping damage-type or part-exact bootstrap intervals. Across all completed rows, the only non-overlapping damage-type intervals are Gemini v4 versus Qwen v0, Qwen v1 + schema, Qwen v2, and Qwen v3. These are cross-model comparisons; they do not isolate a prompt-strategy effect. No part-exact intervals are disjoint. Therefore, the observed score differences are not evidence of a stable improvement across this small sample. Changes no larger than one image are especially not treated as improvements.
 
 Gemini v4 has the highest observed damage-type F1, but it was selected after inspecting these same eval images, so that score is optimistic. The separate Gemini dev check does not confirm the same result: v4 damage-type F1 is .667 on 8 dev images versus .925 on eval, and exact part-set match is 3/8 versus 14/20. The dev labels are unverified, so this check is indicative only.
 
 ## Failure modes and operational trade-offs
 
-The per-image files contain 70 expected-to-opposite-side prediction pairs across the 10 complete configurations. This count repeats the same image when it is evaluated under different prompts; it is not 70 independent images. Side errors persist even in v4 and in CoT. In the `dev_05` mock, the image and label show the car's left side, while the incident text says “driver side”; those conflict for an India right-hand-drive car. The visual-side label is not evidence that the model reversed left and right.
+The per-image files contain 73 expected-to-opposite-side prediction pairs across the 11 complete configurations. This count repeats the same image when it is evaluated under different prompts; it is not 73 independent images. Side errors persist even in v4 and in CoT. In the `dev_05` mock, the image and label show the car's left side, while the incident text says “driver side”; those conflict for an India right-hand-drive car. The visual-side label is not evidence that the model reversed left and right.
 
-Qwen is identified as a 27B model in `docs/role1/DECISIONS.md`; a Gemini parameter count is not reported in this repo. On the matched v1 runs, Qwen averaged 24.787 seconds and $0.003133 per image, versus Gemini's 3.702 seconds and $0.000996. The comparison reflects these recorded runs, not a general model ranking. Qwen v2 has only a partial run and cannot be compared.
+Qwen is identified as a 27B model in `docs/role1/DECISIONS.md`; a Gemini parameter count is not reported in this repo. On the matched v1 runs, Qwen averaged 24.787 seconds and $0.003133 per image, versus Gemini's 3.702 seconds and $0.000996. Qwen v2 recorded .730 damage-type F1 and .400 part exact at 47.335 seconds and $0.005469 per image. These comparisons reflect the recorded runs, not a general model ranking.
 
 ![Evaluation metric panels](../../eval/results/metrics_by_config.png)
 
@@ -54,7 +54,7 @@ Qwen is identified as a 27B model in `docs/role1/DECISIONS.md`; a Gemini paramet
 
 - The eval set is only 20 images; the plan discussed a larger set, but that has not been run.
 - v4 was selected after inspecting the same eval set used for its score.
-- Qwen v2 is incomplete at 6/20; the other three planned Qwen configurations completed 20-image passes. Qwen v1 + schema and v3 include provider-error outputs.
+- All eight planned configurations completed 20-image passes. Qwen v1 + schema and v3 include provider-error outputs.
 - All 10 dev labels are unverified, including both few-shot examples. The 20 eval labels are marked `aarti_verified`.
 - The dev check is small and uses unverified labels. Confidence intervals are wide and overlapping; they do not establish generalization.
 - Qwen v4 is an extra, not-run configuration.
