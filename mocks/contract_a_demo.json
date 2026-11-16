@@ -1,0 +1,24 @@
+{
+    "claim_id":  "CLM-DEMO-001",
+    "vehicle":  {
+                    "make":  "Maruti Suzuki",
+                    "model":  "Swift",
+                    "year":  2021,
+                    "fuel":  "petrol"
+                },
+    "damages":  [
+                    {
+                        "part":  "front_bumper",
+                        "damage_type":  "dent",
+                        "severity":  "moderate",
+                        "confidence":  0.9,
+                        "image_index":  0
+                    }
+                ],
+    "image_quality_flags":  [
+
+                            ],
+    "model_used":  "test-fixture",
+    "prompt_strategy":  "test-fixture",
+    "user_description":  "Scraped a parking pillar while turning out of the basement"
+}

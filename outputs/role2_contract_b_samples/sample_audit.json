@@ -1,0 +1,82 @@
+{
+  "reference_year": 2026,
+  "contract_b_schema": "schemas/contract_b.schema.json",
+  "status_note": "Integration outputs only. A sample with non-empty unpriced_parts is incomplete and must not be treated as a final repair estimate.",
+  "samples": [
+    {
+      "input_file": "contract_a_001_dev_01.json",
+      "output_file": "outputs/role2_contract_b_samples/contract_a_001_dev_01_contract_b.json",
+      "claim_id": "CLM-20261020-001",
+      "damage_observations": 3,
+      "priced_line_items": 2,
+      "contract_b_schema_valid": true,
+      "unpriced_parts": [],
+      "totals": {
+        "gross": 12850.0,
+        "depreciation": 1937.5,
+        "claimable": 10912.5
+      },
+      "warnings": []
+    },
+    {
+      "input_file": "contract_a_002_eval_18.json",
+      "output_file": "outputs/role2_contract_b_samples/contract_a_002_eval_18_contract_b.json",
+      "claim_id": "CLM-20261020-002",
+      "damage_observations": 0,
+      "priced_line_items": 0,
+      "contract_b_schema_valid": true,
+      "unpriced_parts": [],
+      "totals": {
+        "gross": 0,
+        "depreciation": 0,
+        "claimable": 0
+      },
+      "warnings": []
+    },
+    {
+      "input_file": "contract_a_003_dev_04.json",
+      "output_file": "outputs/role2_contract_b_samples/contract_a_003_dev_04_contract_b.json",
+      "claim_id": "CLM-20261020-003",
+      "damage_observations": 1,
+      "priced_line_items": 1,
+      "contract_b_schema_valid": true,
+      "unpriced_parts": [],
+      "totals": {
+        "gross": 12561.0,
+        "depreciation": 0.0,
+        "claimable": 12561.0
+      },
+      "warnings": []
+    },
+    {
+      "input_file": "contract_a_004_dev_05.json",
+      "output_file": "outputs/role2_contract_b_samples/contract_a_004_dev_05_contract_b.json",
+      "claim_id": "CLM-20261020-004",
+      "damage_observations": 4,
+      "priced_line_items": 2,
+      "contract_b_schema_valid": true,
+      "unpriced_parts": [],
+      "totals": {
+        "gross": 31006.0,
+        "depreciation": 7168.65,
+        "claimable": 23837.35
+      },
+      "warnings": []
+    },
+    {
+      "input_file": "contract_a_005_dev_09.json",
+      "output_file": "outputs/role2_contract_b_samples/contract_a_005_dev_09_contract_b.json",
+      "claim_id": "CLM-20261020-005",
+      "damage_observations": 1,
+      "priced_line_items": 1,
+      "contract_b_schema_valid": true,
+      "unpriced_parts": [],
+      "totals": {
+        "gross": 9200.0,
+        "depreciation": 775.0,
+        "claimable": 8425.0
+      },
+      "warnings": []
+    }
+  ]
+}
