@@ -7,8 +7,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src" / "cost"))
-import cost_engine
-from jsonschema import Draft202012Validator
+import cost_engine  # noqa: E402
+from jsonschema import Draft202012Validator  # noqa: E402
 
 INPUT_DIR = ROOT / "role1_mocks"
 OUTPUT_DIR = ROOT / "outputs" / "role2_contract_b_samples"

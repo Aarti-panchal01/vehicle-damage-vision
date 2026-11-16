@@ -9,7 +9,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 COST_FOLDER = PROJECT_ROOT / "src" / "cost"
 sys.path.insert(0, str(COST_FOLDER))
 
-from cost_engine import (
+from cost_engine import (  # noqa: E402
     choose_action,
     get_depreciation_pct,
     get_metal_depreciation,

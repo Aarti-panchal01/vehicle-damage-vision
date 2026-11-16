@@ -10,7 +10,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 COST_FOLDER = PROJECT_ROOT / "src" / "cost"
 sys.path.insert(0, str(COST_FOLDER))
 
-import cost_engine
+import cost_engine  # noqa: E402
 
 
 @pytest.fixture
