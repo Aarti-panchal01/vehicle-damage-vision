@@ -39,6 +39,16 @@ No exclusion flags were produced. Therefore there are no generated exclusion sta
 
 The human worksheet has **186 rows**, one per policy justification, and leaves support and over-interpretation judgments as **Pending**. Any exclusion-specific review fields are also Pending. A reviewer must assess each statement and any later exclusion flags before relying on these drafts.
 
+## Preliminary AI-assisted triage
+
+This screening pass does not replace human review and does not change any worksheet verdict. On 2026-11-16, the four official insurer PDFs listed in `data/policy_docs/sources.csv` were downloaded temporarily and compared with the cited excerpts. Each downloaded PDF contained the insurer UIN recorded in the source manifest.
+
+- The normalized first 80 characters of the stored excerpt matched the cited PDF page for **131 of 186** rows: ACKO 48/48, HDFC ERGO 47/47, TATA AIG 14/49, and SBI General 22/42.
+- The exact-prefix check did not match for the other **55** rows: TATA AIG 35 and SBI General 20. All 55 still had at least 92.86% distinct-token overlap with their cited page. Treat these as extraction or formatting differences to verify, not confirmed citation errors.
+- A page-text match does not show that a clause applies to a particular loss. The statements mostly repeat retrieved policy wording, and Contract A/B do not establish the real insurer, UIN, schedule, or endorsements for these claims.
+
+Triage priority: first verify the 55 exact-prefix mismatches against the intended policy version and page; then review all 186 statements for relevance to the claim facts, missing conditions, and over-interpretation. Keep `supports_statement`, `over_interpreted`, and the exclusion-review fields `Pending` until a human signs them off. The temporary PDF copies were not added to the repository.
+
 ## Limitations and next steps
 
 1. The 20 runs are synthetic policy assignments using real claim inputs. The source records do not identify which insurer/UIN actually covers any claim. Obtain that identity from the claim/customer source before counting insurer-specific claims as genuine.
@@ -59,7 +69,7 @@ The human worksheet has **186 rows**, one per policy justification, and leaves s
 
 The groundedness artifacts were already present before this continuation. A read-only audit confirmed 20 saved Contract C outputs across five claim IDs, with each input paired against four insurer policies. All 20 saved outputs passed Contract C validation, exact top-level key checks, manifest insurer/UIN and cited source/page traceability checks, and Contract B estimate-field equality checks. These remain 20 synthetic policy-conditioned scenarios over **5 distinct claim pairs**, not 20 distinct genuine insurer-linked claims.
 
-No new generation calls were made during this continuation: `GEMINI_API_KEY` was unavailable and `GEMINI_MODEL` was unset in the active process. The existing manifest does not record a model identifier or per-call execution time, so those details cannot be verified or reported. The five genuine A/B pairs were therefore not regenerated as insurer-linked drafts. Do not count the pre-existing synthetic variants toward the 20-claim target.
+The preliminary triage above does not regenerate the 20 saved drafts or establish their provider provenance. The existing manifest does not record a model identifier or per-call execution time, so those details cannot be verified or reported. The five A/B pairs still do not identify the actual insurer/UIN for each claim; do not count their synthetic policy assignments toward the 20-claim target.
 
 An LLM-as-judge comparison was not run because no Gemini configuration was available in this process. Human review remains Pending for all 186 justification rows. To complete a genuine insurer-conditioned evaluation, obtain the policy insurer/UIN for each claim from the claim source and at least 15 additional distinct matching Contract A/Contract B pairs from Roles 1 and 2. Then run and record one generation per genuine pair, including model identifier and duration.
 

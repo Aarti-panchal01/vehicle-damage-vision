@@ -118,13 +118,13 @@ The adapter was tested against five Contract B fixture outputs. The tests verify
 
 ### D. Human groundedness review
 
-Human groundedness review was performed on 20 insurer-conditioned claim drafts generated from five distinct Contract A and Contract B pairs. The drafts contained 186 policy-justification statements. Each statement was checked against its cited policy evidence and surrounding policy wording. The review considered whether the complete statement was supported, only partly supported, unsupported, incorrectly cited or required additional context.
+The human groundedness review is **not complete**. The saved artifacts contain 20 policy-conditioned outputs based on five distinct Contract A and Contract B pairs; these are synthetic policy assignments, not 20 genuine insurer-linked claims. The outputs contain 186 policy-justification statements, and the human review worksheet still marks their support and over-interpretation judgments as `Pending`.
 
-The completed review worksheet and the detailed groundedness evaluation artifacts are retained under `data/evaluation/groundedness/`. The item-level review is the basis for the groundedness assessment. The 20 drafts should be understood as insurer-conditioned versions of five underlying input pairs, not as 20 independent claim scenarios. The aggregate verdict counts should be read from the completed worksheet and its accompanying evaluation summary; they are not reproduced here because the final tally was not available when this report file was prepared.
+Automated checks confirm source and page traceability for the saved outputs, but text overlap does not establish semantic support. No human groundedness verdict counts are reported. The worksheet and automated evaluation artifacts are retained under `data/evaluation/groundedness/`; the pending rows must be reviewed before claiming groundedness.
 
 ### E. Software tests
 
-The Role 3 implementation includes tests for document processing, policy-scope classification, chunking, retrieval evaluation, claim generation and Contract B to Contract C validation. The latest recorded full test-suite run during cleanup completed with 177 passing tests. These tests verify software behaviour and interface preservation; they do not replace the manual review of policy-statement meaning.
+The Role 3 implementation includes tests for document processing, policy-scope classification, chunking, retrieval evaluation, claim generation and Contract B to Contract C validation. At this revision, the full project test suite completed with 299 passing tests. These tests verify software behaviour and interface preservation; they do not replace the manual review of policy-statement meaning.
 
 ## Limitations
 
@@ -132,7 +132,7 @@ The retrieval evaluation contains 30 manually annotated questions and covers fou
 
 The 10-document corpus does not represent every applicable IRDAI circular or a complete standalone motor-tariff depreciation reference. Some planned regulatory sources could not be obtained from the available official links, and these gaps are recorded in the corpus inventory. Results should therefore be interpreted within the documents actually collected.
 
-The human groundedness review covers 186 statements across 20 insurer-conditioned drafts, but those drafts are based on only five distinct Contract A and Contract B input pairs. It is not equivalent to testing 20 independent claim scenarios. The evaluation is manual, and no separate LLM-as-a-judge comparison is claimed. Policy interpretation can also depend on the complete policy schedule, endorsements and claim-specific facts, which may not all be represented in a retrieved excerpt.
+The pending human groundedness review covers 186 statements across 20 insurer-conditioned drafts, but those drafts are based on only five distinct Contract A and Contract B input pairs. It is not equivalent to testing 20 independent claim scenarios. No human verdicts or separate LLM-as-a-judge results are available. Policy interpretation can also depend on the complete policy schedule, endorsements and claim-specific facts, which may not all be represented in a retrieved excerpt.
 
 The current module produces a preliminary, evidence-supported claim draft. It does not make a binding coverage decision, guarantee claim acceptance or replace review by an insurer or qualified surveyor.
 

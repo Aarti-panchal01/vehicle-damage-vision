@@ -1,75 +1,69 @@
-# Vehicle Damage Claim Generator
+# Vehicle Damage Vision
 
 [![Project CI](https://github.com/Aarti-panchal01/vehicle-damage-vision/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Aarti-panchal01/vehicle-damage-vision/actions/workflows/ci.yml)
 
-This is the shared project repository for a four-person team building a vehicle-damage claim workflow. It accepts vehicle photos and claim context, produces a validated damage report, and provides an integration point for the team's remaining claim-processing components. The checked-in implementation currently contains the vision and prompting pipeline, its Contract A interface, and evaluation artifacts; teammate modules are being integrated here.
+**A team-built prototype for turning vehicle photos and policy wording into a structured, reviewable claim draft.**
 
-## Project flow
+[Open the app](https://vehicle-damage-vision.vercel.app)
 
-```text
-Vehicle photos + claim details
-              |
-              v
-Vision damage assessment -> Contract A -> claim-processing components -> reviewed claim
+The app assesses visible damage, prepares an indicative repair estimate, and drafts a policy-evidence-linked explanation. It does not decide coverage, approve claims, or replace an insurer, repair professional, or human reviewer.
+
+## How it works
+
+1. Add vehicle and incident details, photos, and a policy wording PDF.
+2. The vision pipeline returns a structured damage assessment; the cost engine estimates repairs from available price and rate data.
+3. Policy retrieval uses the PDF supplied for that request to prepare a cited claim explanation.
+4. Review the assessment, estimate, and citations before using or sharing the draft.
+
+The output uses the project's [Contract A, B, and C schemas](schemas/). The language model does not recalculate the structured repair estimate.
+
+## Try it
+
+The app is hosted on Vercel and has no login or access password. Anyone with the URL can submit a request and use the deployment's Gemini quota. Do not upload personal or claim-sensitive documents unless you have permission and accept the processing described in the consent prompt. Use Vercel Deployment Protection if access should be restricted.
+
+The app does not save uploads. Photos, claim details, and retrieved policy excerpts are sent to Google Gemini only after consent. The policy PDF must contain extractable text; scanned PDFs need OCR. The app does not verify that the uploaded PDF matches the insurer or UIN entered, and its policy citations and estimates need human review.
+
+## Run locally
+
+Use Python 3.12, matching the Vercel runtime. Create `.env` from [`.env.example`](.env.example), then set the credentials you need:
+
+```dotenv
+GEMINI_API_KEY=your-key
+GEMINI_MODEL=your-supported-gemini-model
+GROQ_API_KEY=your-key
 ```
 
-The vision component reports visible exterior damage only. It does not infer hidden damage, estimate repair prices, or determine policy coverage. Those outputs must come from the corresponding team components.
-
-## What is in this repository
-
-- **Vision pipeline** (`src/vision/`): image handling, Gemini and Qwen/Groq providers, versioned prompts, output validation, bounded repair retries, damage merging, and a byte-oriented adapter.
-- **Contract A** (`schemas/contract_a.schema.json`, `src/vision/schema.py`): the machine-readable handoff between the vision component and the rest of the application.
-- **Prompt evaluation** (`eval/`): cached evaluation records, metrics, charts, and the evaluation runner.
-- **Examples and fixtures** (`mocks/`): Contract A and structured error examples.
-- **Team documents** (`docs/`): project plan, interface notes, evaluation findings, and report input.
-
-See [`docs/role1/OUTPUT_CONTRACT.md`](docs/role1/OUTPUT_CONTRACT.md) for the existing interface details and [`docs/role1/RESULTS.md`](docs/role1/RESULTS.md) for the full evaluation and limitations.
-
-## Quick start
-
-Use Python 3.13 or a compatible version supported by the pinned packages. Python 3.9.6 has not been runtime-tested.
+Never commit `.env` or real credentials.
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt
+python -m uvicorn app:app --reload
 ```
 
-Create a local `.env` file and configure `GEMINI_API_KEY` and/or `GROQ_API_KEY` for live providers. Do not commit credentials. A Gemini key can be created in [Google AI Studio](https://aistudio.google.com/app/apikey). The `.env.example` contains blank values.
+Open `http://127.0.0.1:8000`. The app accepts up to five JPEG, PNG, or WebP photos and one text-based PDF up to 2.5 MB and 300 pages. The full request must fit Vercel's 4 MB limit; photos are resized in the browser. `GEMINI_API_KEY` and `GEMINI_MODEL` are required for the integrated app. `GROQ_API_KEY` is used by Groq vision/evaluation runs.
 
-The few-shot prompts, including the default `v4_best` adapter prompt, use local `dev_03.jpg` and `dev_10.jpg` images. Images are not included in this repository. Rebuild the permitted dataset files as described in [`data/cardd_eval/README.md`](data/cardd_eval/README.md) before using those prompts.
-
-## Use the vision interface
-
-For uploaded photo bytes, use the adapter. It returns either a Contract A dictionary or a `VisionError` dictionary:
-
-```python
-from src.vision.adapter import run_vision
-
-result = run_vision(
-    photo_bytes_list=[uploaded_bytes],
-    vehicle={"make": "Maruti Suzuki", "model": "Swift", "year": 2021, "fuel": "petrol"},
-    description="Scraped a parking pillar while turning out of the basement",
-    claim_id="CLM-20261020-001",
-)
-
-if "error_code" not in result:
-    contract_a = result
-else:
-    error = result
-```
-
-For photos on disk, `load_image` accepts a file path and `assess_damage` returns an assessment result object. See [`src/vision/__init__.py`](src/vision/__init__.py) and [`docs/role1/OUTPUT_CONTRACT.md`](docs/role1/OUTPUT_CONTRACT.md).
-
-Run the demo from the repository root:
+The standalone photo demo is available with:
 
 ```powershell
 python -m streamlit run src/vision/demo_app.py
 ```
 
-## Evaluation snapshot
+## Deploy on Vercel
 
-The table below is copied from [`docs/role1/RESULTS.md`](docs/role1/RESULTS.md). Scores are exploratory, not a claim of general model superiority.
+Set `GEMINI_API_KEY` and `GEMINI_MODEL` in the Vercel project environment, then deploy:
+
+```powershell
+vercel
+vercel --prod
+```
+
+`/api/health` reports whether the required settings are present; it does not verify that Gemini accepts the key. A successful claim submission is the end-to-end credential check.
+
+## Evaluation
+
+The table below is rounded from [`eval/results/summary_with_ci.csv`](eval/results/summary_with_ci.csv). These are exploratory results on a small image set, not evidence that a model is generally better for insurance claims. Confidence intervals are 95% image-level bootstrap intervals.
 
 | Model / prompt | Images | Damage-type F1 (95% CI) | Part exact (95% CI) | First-try JSON | Avg. retries | Latency (s) | Avg. tokens in/out | Cost (USD/image) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -82,35 +76,29 @@ The table below is copied from [`docs/role1/RESULTS.md`](docs/role1/RESULTS.md).
 | Qwen/Groq / v0 baseline (extra) | 20 | .658 (.535–.753) | .300 (.100–.500) | 0% | 1.05 | 35.591 | 2,576 / 747 | .005048 |
 | Qwen/Groq / v1 structured | 20 | .763 (.595–.891) | .450 (.250–.651) | 90% | 0.10 | 24.787 | 2,408 / 302 | .003133 |
 | Qwen/Groq / v1 + schema | 20 | .593 (.367–.772) | .400 (.200–.650) | 90% | 0.00 | 21.268 | 2,070 / 108 | .002086 |
-| Qwen/Groq / v3 CoT | 20 | .761 (.653–.849) | .350 (.150–.550) | 85% | 0.10 | 30.993 | 2,524 / 500 | .004018 |
 | Qwen/Groq / v2 few-shot | 20 | .730 (.581–.850) | .400 (.200–.600) | 100% | 0.00 | 47.335 | 5,633 / 241 | .005469 |
+| Qwen/Groq / v3 CoT | 20 | .761 (.653–.849) | .350 (.150–.550) | 85% | 0.10 | 30.993 | 2,524 / 500 | .004018 |
 
-### Limitations
+### What the results do not establish
 
-- The scored evaluation set contains 20 images; a larger set has not been run.
-- The v4 prompt was selected after inspecting the same evaluation set, so its score is optimistic.
-- All eight planned configurations completed 20-image runs. Qwen v1 + schema and v3 include provider-error outputs.
-- All 10 dev labels are unverified. The 20 eval labels are marked `aarti_verified`.
-- Left/right part confusion remains a failure mode. Dataset images are not distributed with this repository.
-
-## Contributing
-
-This is the shared repository for the team. Add your component in a focused branch, document its interface, include tests, and open a pull request against `main`. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before changing shared contracts or evaluation data.
-
-## Repository layout
-
-```text
-src/vision/                 image-to-Contract-A pipeline and providers
-tests/                      automated unit tests
-prompts/vision/             versioned prompt templates and examples
-schemas/                    shared JSON Schema
-mocks/                      interface examples
-eval/                       runner, metrics, charts, and result records
-data/cardd_eval/            labels and data notes; images are not included
-docs/role1/                 existing interface, evaluation, and report notes
-scripts/                    dataset builder and schema/mock helpers
-```
+- The scored evaluation uses 20 images. The 10 dev-image labels, including the few-shot examples, are unverified.
+- The v4 prompt was selected after inspecting the same scored images, so its score is optimistic. Left/right part confusion remains a known failure mode.
+- Some Qwen/Groq runs contain provider-error outputs; inspect the per-image results before interpreting their scores.
+- Pricing data is incomplete: some parts or labour/paint rates remain unpriced, and the available garage quote contains assumptions that still need confirmation. See the [pricing audit](data/prices/DATA_QUALITY_AUDIT.md).
+- The policy groundedness worksheet has 186 statements awaiting human review across five distinct Contract A/B pairs. The insurer assignments are synthetic; they are not five verified insurer-linked claims. See the [groundedness report](docs/role3/groundedness_evaluation_report.md).
 
 ## Team
 
-The repository is owned by Aarti Panchal (`@Aarti-panchal01`). Invitations with push access have been sent to `@gaganaraj`, `@nakshathira200-svg`, and `@jyothika-aiml`; each person must accept their invitation before pushing. Please document actual contributions in the final report rather than inferring them from repository access.
+This was a team project led primarily by **Aarti Panchal**, who carried the bulk of the implementation and integration: the vision pipeline and evaluation, the end-to-end app, and its Vercel deployment. **Jyothika-aiml** contributed the deterministic cost engine and its tests. **Nakshathira B** contributed policy-document collection, retrieval, claim writing, and the related evaluation. These credits reflect code, commits, and project reports in the repository; they do not imply equal workload or hours.
+
+## Development
+
+Run the test suite and lint checks from the repository root:
+
+```powershell
+python -m pytest -q
+ruff check --line-length 120 src/vision eval scripts tests
+python -m scripts.export_contract_schema --check
+```
+
+Useful references: [vision results](docs/role1/RESULTS.md), [cost-engine handoff](docs/role2/ROLE2_HANDOFF_STATUS.md), [policy-draft report](docs/role3/REPORT.md), and [dataset instructions](data/cardd_eval/README.md).
