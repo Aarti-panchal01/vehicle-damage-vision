@@ -2,11 +2,13 @@
 
 *IEEE-style report input for integration into the team's final paper. Prepared by Nakshathira B for Role 3.*
 
+**Role status:** Complete per project lead confirmation (2026-11-16). The groundedness worksheet and evaluation report still show pending human judgments; this role status does not change those recorded review results.
+
 ## Contribution record
 
 | Contributor | SRN | Work recorded for the report |
 |---|---|---|
-| Nakshathira B (`@nakshathira200-svg`) | PES2UG24AM096 | Policy document collection and source tracking; PDF extraction and preprocessing; chunking comparison; BGE-small embeddings; ChromaDB and BM25 hybrid retrieval; insurer-aware retrieval; Gemini-based claim writing; Contract B to Contract C validation; retrieval and groundedness evaluation. |
+| Nakshathira B (`@nakshathira200-svg`) | PES2UG24AM096 | Policy document collection and source tracking; PDF extraction and preprocessing; chunking comparison; BGE-small embeddings; the original ChromaDB/BM25 hybrid retrieval, now migrated to a local NumPy cosine index; insurer-aware retrieval; Gemini-based claim writing; Contract B to Contract C validation; retrieval and groundedness evaluation. |
 
 ## I. Literature review
 
@@ -58,7 +60,7 @@ Both methods were evaluated using the same 30-question coverage dataset. The bet
 
 ### E. Embeddings and vector storage
 
-The BAAI/bge-small-en-v1.5 sentence embedding model converts policy chunks and search queries into vector representations. ChromaDB stores the vectors together with the original chunk text and its metadata. Dense retrieval uses vector similarity to identify passages that are semantically related to the question, even where the query and policy wording do not use identical terms.
+The BAAI/bge-small-en-v1.5 sentence embedding model converts policy chunks and search queries into vector representations. Normalized vectors are cached in a local NumPy archive; the archive is loaded with pickle disabled and is checked against canonical chunk IDs. Dense retrieval uses exact cosine similarity to identify passages that are semantically related to the question, even where the query and policy wording do not use identical terms. ChromaDB was removed from the local and development dependencies after upstream security advisories.
 
 ### F. Hybrid retrieval
 
@@ -95,6 +97,8 @@ Clause-aware chunking performed better across all four retrieval metrics. Hit@5 
 A gold set of 30 coverage questions was created across four insurers: TATA AIG (8 questions), ACKO (7), HDFC ERGO (7) and SBI General (8). Each question was manually associated with an expected insurer, policy UIN, page and section. A result counted as relevant only when these annotated fields matched.
 
 The unfiltered baseline achieved Hit@1 of 0.4000, Hit@3 of 0.5667, Hit@5 of 0.6667 and MRR@5 of 0.5067. In the 150 result positions returned for the 30 questions, 59 results belonged to an insurer other than the expected insurer. This shows why semantic relevance alone is not sufficient for policy retrieval: a clause from another insurer may appear relevant while still being inapplicable to the selected policy.
+
+These archived metrics were produced with the earlier ChromaDB-backed vector index. The current exact-cosine implementation should be re-evaluated before these values are attributed to the migrated retriever.
 
 A separate insurer-conditioned evaluation passed the known insurer to the retriever. As shown in Table II, this increased Hit@5 to 0.7667 and MRR@5 to 0.6567. No wrong-insurer results appeared among the 150 returned result positions in this filtered evaluation. This is the expected effect of insurer filtering and does not mean that every correct clause was retrieved; seven questions still missed the exact annotated source within the top five.
 

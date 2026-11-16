@@ -1,12 +1,24 @@
-# Vehicle Damage Vision
+# ClaimFrame
+
+*A clearer first draft for every vehicle claim.*
 
 [![Project CI](https://github.com/Aarti-panchal01/vehicle-damage-vision/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Aarti-panchal01/vehicle-damage-vision/actions/workflows/ci.yml)
 
-**A team-built prototype for turning vehicle photos and policy wording into a structured, reviewable claim draft.**
+**ClaimFrame is a team-built prototype for turning vehicle photos and policy wording into a structured, reviewable claim draft.**
 
 [Open the app](https://vehicle-damage-vision.vercel.app)
 
 The app assesses visible damage, prepares an indicative repair estimate, and drafts a policy-evidence-linked explanation. It does not decide coverage, approve claims, or replace an insurer, repair professional, or human reviewer.
+
+## Role completion
+
+| Role | Workstream | Status |
+|---|---|---|
+| 1 | Vehicle vision and evaluation | Complete |
+| 2 | Repair-cost engine | Complete |
+| 3 | Policy retrieval and claim drafting | Complete |
+
+These roles are marked complete per the project lead's confirmation. The evaluation, pricing, and human-review caveats below remain part of the project's documented limitations; role completion does not turn them into verified results.
 
 ## How it works
 
@@ -60,6 +72,10 @@ vercel --prod
 ```
 
 `/api/health` reports whether the required settings are present; it does not verify that Gemini accepts the key. A successful claim submission is the end-to-end credential check.
+
+## Dependency security
+
+The RAG workflow uses BGE embeddings, exact NumPy cosine similarity, and BM25. ChromaDB has been removed from the local and development dependencies; vector caches are stored as NumPy archives and loaded with pickle disabled. The Vercel claim path does not use this local cache.
 
 ## Evaluation
 

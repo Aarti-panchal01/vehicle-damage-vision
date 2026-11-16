@@ -15,6 +15,7 @@ from pypdf.generic import DecodedStreamObject, DictionaryObject, NameObject
 
 import app as vercel_app
 from src.app import service
+from src.rag import claim_writer
 from src.rag.claim_writer import validate_contract_c
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -183,13 +184,24 @@ def test_vercel_app_serves_ui_and_static_assets():
 
     home = client.get("/")
     stylesheet = client.get("/static/styles.css")
+    app_script = client.get("/static/app.js")
+    favicon = client.get("/static/favicon.svg")
 
     assert home.status_code == 200
-    assert "Prepare a claim draft" in home.text
+    assert "ClaimFrame" in home.text
+    assert "A clearer first draft" in home.text
+    assert "DRAFT PREPARED FOR HUMAN REVIEW" in home.text
+    assert "A HUMAN-REVIEWED PROCESS" not in home.text
+    assert 'property="og:url" content="https://vehicle-damage-vision.vercel.app"' in home.text
     assert "Before you begin" not in home.text
     assert "App access password" not in home.text
     assert stylesheet.status_code == 200
     assert "--green-dark" in stylesheet.text
+    assert app_script.status_code == 200
+    assert "After-deduction estimate" in app_script.text
+    assert "not claimable or payable amounts" in app_script.text
+    assert favicon.status_code == 200
+    assert "<svg" in favicon.text
 
 
 def test_vercel_runtime_import_does_not_require_local_static_directory():
@@ -270,3 +282,52 @@ def test_vercel_claim_endpoint_passes_valid_uploads_to_workflow(monkeypatch):
     assert captured["policy_pdf_bytes"].startswith(b"%PDF")
     assert captured["insurer"] == "Test Insurer"
     assert captured["policy_uin"] == "TEST-UIN-001"
+
+
+def test_claim_endpoint_completes_full_pipeline_with_stubbed_providers(monkeypatch):
+    monkeypatch.setenv("VERCEL", "1")
+    monkeypatch.setenv("GEMINI_API_KEY", "test-key")
+    monkeypatch.setenv("GEMINI_MODEL", "test-model")
+    contract_a = _sample_contract_a()
+    monkeypatch.setattr(
+        service,
+        "run_vision",
+        lambda *_args: copy.deepcopy(contract_a),
+    )
+    monkeypatch.setattr(
+        claim_writer,
+        "_gemini_client",
+        lambda: FakeGeminiClient(),
+    )
+
+    response = TestClient(vercel_app.app).post(
+        "/api/claims",
+        data={
+            "vehicle_make": contract_a["vehicle"]["make"],
+            "vehicle_model": contract_a["vehicle"]["model"],
+            "vehicle_year": str(contract_a["vehicle"]["year"]),
+            "vehicle_fuel": contract_a["vehicle"]["fuel"],
+            "description": contract_a["user_description"],
+            "insurer": "Test Insurer",
+            "policy_uin": "TEST-UIN-001",
+            "confirm_external_processing": "true",
+        },
+        files=[
+            ("photos", ("photo.jpg", _jpeg_bytes(), "image/jpeg")),
+            ("policy_pdf", ("policy.pdf", _text_policy_pdf(), "application/pdf")),
+        ],
+    )
+
+    assert response.status_code == 200
+    result = response.json()
+    assert result["status"] in {"draft_ready", "incomplete_estimate"}
+    assert result["contract_a"]["claim_id"] == result["claim_id"]
+    assert result["contract_b"]["line_items"] == result["contract_c"]["line_items"]
+    assert result["contract_c"]["totals"] == result["contract_b"]["totals"] | {
+        "currency": result["contract_b"]["currency"],
+        "vehicle_age_years": result["contract_b"]["vehicle_age_years"],
+        "unpriced_parts": result["contract_b"]["unpriced_parts"],
+    }
+    assert result["contract_c"]["policy_justification"][0]["source"] == "policy.pdf"
+    assert result["contract_c"]["policy_justification"][0]["page"] == "1"
+    validate_contract_c(result["contract_c"])
