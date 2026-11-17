@@ -5,8 +5,9 @@ from __future__ import annotations
 import logging
 import time
 from abc import ABC, abstractmethod
+from collections.abc import Callable
 from dataclasses import asdict, dataclass, field
-from typing import Callable, TypeVar, Union
+from typing import TypeVar
 
 RETRIABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 
@@ -23,7 +24,7 @@ class ImageInput:
     mime_type: str = "image/jpeg"
 
 
-ContentPart = Union[str, ImageInput]
+ContentPart = str | ImageInput
 
 
 @dataclass
@@ -43,7 +44,7 @@ class ProviderReply:
         return asdict(self)
 
     @classmethod
-    def from_dict(cls, data: dict) -> "ProviderReply":
+    def from_dict(cls, data: dict) -> ProviderReply:
         return cls(**data)
 
 

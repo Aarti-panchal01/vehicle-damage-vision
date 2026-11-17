@@ -9,26 +9,26 @@ Usage:
     python -m eval.run_eval --providers groq --limit 3
 """
 
-from __future__ import annotations
+from __future__ import annotations 
 
 import argparse
 import csv
 import json
 import sys
-from dataclasses import dataclass
+from dataclasses import dataclass 
 from pathlib import Path
 
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from eval.metrics import ImageOutcome, summarise  # noqa: E402
-from src.vision.assess import assess_damage  # noqa: E402
-from src.vision.providers import make_provider  # noqa: E402
-from src.vision.providers.cache import CachedProvider  # noqa: E402
-from src.vision.providers.base import ImageInput  # noqa: E402
+from eval.metrics import ImageOutcome, summarise # noqa: E402
+from src.vision.assess import assess_damage # noqa: E402
+from src.vision.providers import make_provider # noqa: E402
+from src.vision.providers.base import ImageInput # noqa: E402
+from src.vision.providers.cache import CachedProvider # noqa: E402
 
 LABELS_PATH = REPO_ROOT / "data" / "cardd_eval" / "labels.json"
 IMAGES_DIR = REPO_ROOT / "data" / "cardd_eval" / "images"
@@ -180,8 +180,7 @@ def write_outputs(summaries: list[dict], per_image_rows: list[dict], records_by_
     predictions_dir.mkdir(exist_ok=True)
     for name, records in records_by_config.items():
         with open(predictions_dir / f"{name}.jsonl", "w", encoding="utf-8") as handle:
-            for record in records:
-                handle.write(json.dumps(record) + "\n")
+            handle.writelines(json.dumps(record) + "\n" for record in records)
 
 
 def per_image_row(config: EvalConfig, outcome: ImageOutcome) -> dict:
