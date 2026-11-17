@@ -2,11 +2,13 @@
 
 *IEEE-style report input for integration into the team's final paper. Prepared by Nakshathira B for Role 3.*
 
+**Role status:** Complete per project lead confirmation (2026-11-16). The groundedness worksheet and evaluation report still show pending human judgments; this role status does not change those recorded review results.
+
 ## Contribution record
 
 | Contributor | SRN | Work recorded for the report |
 |---|---|---|
-| Nakshathira B (`@nakshathira200-svg`) | PES2UG24AM096 | Policy document collection and source tracking; PDF extraction and preprocessing; chunking comparison; BGE-small embeddings; ChromaDB and BM25 hybrid retrieval; insurer-aware retrieval; Gemini-based claim writing; Contract B to Contract C validation; retrieval and groundedness evaluation. |
+| Nakshathira B (`@nakshathira200-svg`) | PES2UG24AM096 | Policy document collection and source tracking; PDF extraction and preprocessing; chunking comparison; BGE-small embeddings; the original ChromaDB/BM25 hybrid retrieval, now migrated to a local NumPy cosine index; insurer-aware retrieval; Gemini-based claim writing; Contract B to Contract C validation; retrieval and groundedness evaluation. |
 
 ## I. Literature review
 
@@ -58,7 +60,7 @@ Both methods were evaluated using the same 30-question coverage dataset. The bet
 
 ### E. Embeddings and vector storage
 
-The BAAI/bge-small-en-v1.5 sentence embedding model converts policy chunks and search queries into vector representations. ChromaDB stores the vectors together with the original chunk text and its metadata. Dense retrieval uses vector similarity to identify passages that are semantically related to the question, even where the query and policy wording do not use identical terms.
+The BAAI/bge-small-en-v1.5 sentence embedding model converts policy chunks and search queries into vector representations. Normalized vectors are cached in a local NumPy archive; the archive is loaded with pickle disabled and is checked against canonical chunk IDs. Dense retrieval uses exact cosine similarity to identify passages that are semantically related to the question, even where the query and policy wording do not use identical terms. ChromaDB was removed from the local and development dependencies after upstream security advisories.
 
 ### F. Hybrid retrieval
 
@@ -96,6 +98,8 @@ A gold set of 30 coverage questions was created across four insurers: TATA AIG (
 
 The unfiltered baseline achieved Hit@1 of 0.4000, Hit@3 of 0.5667, Hit@5 of 0.6667 and MRR@5 of 0.5067. In the 150 result positions returned for the 30 questions, 59 results belonged to an insurer other than the expected insurer. This shows why semantic relevance alone is not sufficient for policy retrieval: a clause from another insurer may appear relevant while still being inapplicable to the selected policy.
 
+These archived metrics were produced with the earlier ChromaDB-backed vector index. The current exact-cosine implementation should be re-evaluated before these values are attributed to the migrated retriever.
+
 A separate insurer-conditioned evaluation passed the known insurer to the retriever. As shown in Table II, this increased Hit@5 to 0.7667 and MRR@5 to 0.6567. No wrong-insurer results appeared among the 150 returned result positions in this filtered evaluation. This is the expected effect of insurer filtering and does not mean that every correct clause was retrieved; seven questions still missed the exact annotated source within the top five.
 
 **TABLE II. UNFILTERED AND INSURER-CONDITIONED RETRIEVAL**
@@ -118,13 +122,13 @@ The adapter was tested against five Contract B fixture outputs. The tests verify
 
 ### D. Human groundedness review
 
-Human groundedness review was performed on 20 insurer-conditioned claim drafts generated from five distinct Contract A and Contract B pairs. The drafts contained 186 policy-justification statements. Each statement was checked against its cited policy evidence and surrounding policy wording. The review considered whether the complete statement was supported, only partly supported, unsupported, incorrectly cited or required additional context.
+The human groundedness review is **not complete**. The saved artifacts contain 20 policy-conditioned outputs based on five distinct Contract A and Contract B pairs; these are synthetic policy assignments, not 20 genuine insurer-linked claims. The outputs contain 186 policy-justification statements, and the human review worksheet still marks their support and over-interpretation judgments as `Pending`.
 
-The completed review worksheet and the detailed groundedness evaluation artifacts are retained under `data/evaluation/groundedness/`. The item-level review is the basis for the groundedness assessment. The 20 drafts should be understood as insurer-conditioned versions of five underlying input pairs, not as 20 independent claim scenarios. The aggregate verdict counts should be read from the completed worksheet and its accompanying evaluation summary; they are not reproduced here because the final tally was not available when this report file was prepared.
+Automated checks confirm source and page traceability for the saved outputs, but text overlap does not establish semantic support. No human groundedness verdict counts are reported. The worksheet and automated evaluation artifacts are retained under `data/evaluation/groundedness/`; the pending rows must be reviewed before claiming groundedness.
 
 ### E. Software tests
 
-The Role 3 implementation includes tests for document processing, policy-scope classification, chunking, retrieval evaluation, claim generation and Contract B to Contract C validation. The latest recorded full test-suite run during cleanup completed with 177 passing tests. These tests verify software behaviour and interface preservation; they do not replace the manual review of policy-statement meaning.
+The Role 3 implementation includes tests for document processing, policy-scope classification, chunking, retrieval evaluation, claim generation and Contract B to Contract C validation. At this revision, the full project test suite completed with 299 passing tests. These tests verify software behaviour and interface preservation; they do not replace the manual review of policy-statement meaning.
 
 ## Limitations
 
@@ -132,7 +136,7 @@ The retrieval evaluation contains 30 manually annotated questions and covers fou
 
 The 10-document corpus does not represent every applicable IRDAI circular or a complete standalone motor-tariff depreciation reference. Some planned regulatory sources could not be obtained from the available official links, and these gaps are recorded in the corpus inventory. Results should therefore be interpreted within the documents actually collected.
 
-The human groundedness review covers 186 statements across 20 insurer-conditioned drafts, but those drafts are based on only five distinct Contract A and Contract B input pairs. It is not equivalent to testing 20 independent claim scenarios. The evaluation is manual, and no separate LLM-as-a-judge comparison is claimed. Policy interpretation can also depend on the complete policy schedule, endorsements and claim-specific facts, which may not all be represented in a retrieved excerpt.
+The pending human groundedness review covers 186 statements across 20 insurer-conditioned drafts, but those drafts are based on only five distinct Contract A and Contract B input pairs. It is not equivalent to testing 20 independent claim scenarios. No human verdicts or separate LLM-as-a-judge results are available. Policy interpretation can also depend on the complete policy schedule, endorsements and claim-specific facts, which may not all be represented in a retrieved excerpt.
 
 The current module produces a preliminary, evidence-supported claim draft. It does not make a binding coverage decision, guarantee claim acceptance or replace review by an insurer or qualified surveyor.
 

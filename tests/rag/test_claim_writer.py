@@ -343,7 +343,8 @@ def test_estimate_values_and_incomplete_depreciation_disclosures(contract_a, con
     for key, value in original_totals.items():
         assert result["totals"][key] == value
     assert result["line_items"] == original_items
-    assert "depreciation assumptions originate from a Shriram policy" in result["disclaimer"]
+    assert "depreciation uses a Shriram policy reference" in result["disclaimer"]
+    assert "must not be treated as claimable or payable amounts" in result["disclaimer"]
     assert result["totals"]["unpriced_parts"] == contract_b["unpriced_parts"]
     if contract_b["unpriced_parts"]:
         assert "estimate is incomplete" in result["disclaimer"]

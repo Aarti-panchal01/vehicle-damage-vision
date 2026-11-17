@@ -3,7 +3,7 @@ Hybrid insurance-policy retriever.
 
 Components:
 - BGE-small semantic embeddings
-- Persistent ChromaDB vector index
+- Local NumPy cosine-similarity index
 - BM25 lexical retrieval
 - Reciprocal Rank Fusion (RRF)
 - Insurer and UIN metadata filtering
@@ -13,12 +13,14 @@ Python 3.9 compatible.
 """
 
 import json
+import os
 import re
+import tempfile
+import zipfile
 from pathlib import Path
 from typing import Optional, List, Dict, Any
-from collections import defaultdict
 
-import chromadb
+import numpy as np
 from rank_bm25 import BM25Okapi
 from sentence_transformers import SentenceTransformer
 
@@ -27,8 +29,7 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 
 CHUNK_PATH = ROOT_DIR / "data" / "processed" / "clause_aware_chunks.jsonl"
 VECTOR_DB_PATH = ROOT_DIR / "data" / "vector_db"
-
-COLLECTION_NAME = "vehicle_insurance_policies"
+VECTOR_INDEX_FILENAME = "policy_embeddings.npz"
 
 EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 
@@ -138,15 +139,10 @@ class HybridPolicyRetriever:
 
         self.model = SentenceTransformer(model_name)
 
-        self.client = chromadb.PersistentClient(
-            path=str(self.db_path)
-        )
-
-        self.collection = None
-
         self.documents: List[str] = []
         self.metadatas: List[Dict[str, Any]] = []
         self.ids: List[str] = []
+        self.embeddings: Optional[np.ndarray] = None
 
         self.bm25 = None
         self.bm25_tokens: List[List[str]] = []
@@ -219,85 +215,96 @@ class HybridPolicyRetriever:
 
         return chunks
 
+    def set_chunks(self, chunks: List[Dict[str, Any]]) -> None:
+        """Set the canonical documents, metadata, and IDs used by both indexes."""
+        self.documents = [chunk["text"] for chunk in chunks]
+        self.metadatas = [
+            dict(chunk["metadata"]) for chunk in chunks
+        ]
+        self.ids = [
+            str(chunk["metadata"]["chunk_id"]) for chunk in chunks
+        ]
+
+    @property
+    def vector_index_path(self) -> Path:
+        return self.db_path / VECTOR_INDEX_FILENAME
+
     @staticmethod
-    def chroma_metadata(metadata: Dict[str, Any]) -> Dict[str, Any]:
-        """Convert metadata to Chroma-compatible scalar values."""
-        output = {}
+    def normalize_embeddings(embeddings: np.ndarray) -> np.ndarray:
+        """Validate and normalize dense vectors for cosine similarity."""
+        matrix = np.asarray(embeddings, dtype=np.float32)
+        if matrix.ndim != 2 or not matrix.shape[0] or not matrix.shape[1]:
+            raise ValueError("Embedding matrix must be a non-empty 2D array.")
+        if not np.isfinite(matrix).all():
+            raise ValueError("Embedding matrix contains non-finite values.")
 
-        for key, value in metadata.items():
-            if value is None:
-                continue
+        norms = np.linalg.norm(matrix, axis=1)
+        if np.any(norms == 0):
+            raise ValueError("Embedding matrix contains a zero-length vector.")
+        return matrix / norms[:, np.newaxis]
 
-            if isinstance(value, (str, int, float, bool)):
-                output[key] = value
+    def save_vector_index(self) -> None:
+        """Persist normalized vectors in a non-pickle NumPy archive."""
+        if self.embeddings is None:
+            raise RuntimeError("Cannot save an unbuilt vector index.")
 
-            elif isinstance(value, list):
-                output[key] = ", ".join(
-                    str(item) for item in value
+        self.db_path.mkdir(parents=True, exist_ok=True)
+        temporary_path = None
+        try:
+            with tempfile.NamedTemporaryFile(
+                dir=self.db_path,
+                prefix="policy-embeddings-",
+                suffix=".npz.tmp",
+                delete=False,
+            ) as temporary_file:
+                temporary_path = Path(temporary_file.name)
+                np.savez_compressed(
+                    temporary_file,
+                    ids=np.asarray(self.ids, dtype=np.str_),
+                    embeddings=self.embeddings,
                 )
+                temporary_file.flush()
+                os.fsync(temporary_file.fileno())
 
-            else:
-                output[key] = str(value)
-
-        return output
+            os.replace(temporary_path, self.vector_index_path)
+        finally:
+            if temporary_path is not None and temporary_path.exists():
+                temporary_path.unlink()
 
     def rebuild_index(self) -> int:
         """
         Rebuild the vector index from the canonical JSONL chunks.
 
-        This intentionally replaces the existing collection.
+        Vectors are written as an atomic local NumPy archive.
         """
         chunks = self.load_chunks()
-
-        try:
-            self.client.delete_collection(COLLECTION_NAME)
-        except Exception:
-            pass
-
-        self.collection = self.client.create_collection(
-            name=COLLECTION_NAME,
-            metadata={"hnsw:space": "cosine"},
-        )
-
-        self.documents = [
-            c["text"] for c in chunks
-        ]
-
-        self.metadatas = [
-            self.chroma_metadata(c["metadata"])
-            for c in chunks
-        ]
-
-        self.ids = [
-            str(c["metadata"]["chunk_id"])
-            for c in chunks
-        ]
+        self.set_chunks(chunks)
 
         print("Building BGE embeddings...")
 
+        embedding_batches = []
         for start in range(0, len(chunks), BATCH_SIZE):
             end = min(start + BATCH_SIZE, len(chunks))
 
             batch_texts = self.documents[start:end]
-
-            embeddings = self.model.encode(
+            embeddings = np.asarray(self.model.encode(
                 batch_texts,
                 batch_size=BATCH_SIZE,
                 normalize_embeddings=True,
                 show_progress_bar=False,
-            )
-
-            self.collection.add(
-                ids=self.ids[start:end],
-                documents=batch_texts,
-                metadatas=self.metadatas[start:end],
-                embeddings=embeddings.tolist(),
-            )
+            ), dtype=np.float32)
+            if embeddings.ndim != 2 or embeddings.shape[0] != len(batch_texts):
+                raise ValueError("Embedding model returned an invalid batch shape.")
+            embedding_batches.append(embeddings)
 
             print(
                 "Indexed {}/{} chunks".format(end, len(chunks))
             )
 
+        self.embeddings = self.normalize_embeddings(
+            np.concatenate(embedding_batches, axis=0)
+        )
+        self.save_vector_index()
         self.build_bm25()
 
         self.initialized = True
@@ -315,41 +322,36 @@ class HybridPolicyRetriever:
 
     def load_existing_index(self) -> bool:
         """
-        Load an existing Chroma collection and rebuild BM25
-        from the canonical chunk file.
+        Load a safe NumPy vector cache and rebuild BM25 from canonical chunks.
         """
-        try:
-            self.collection = self.client.get_collection(
-                COLLECTION_NAME
-            )
-        except Exception:
+        index_path = self.vector_index_path
+        if not index_path.is_file():
             return False
 
         chunks = self.load_chunks()
+        self.set_chunks(chunks)
 
-        self.documents = [
-            c["text"] for c in chunks
-        ]
+        try:
+            with np.load(index_path, allow_pickle=False) as stored:
+                stored_ids = stored["ids"].tolist()
+                embeddings = stored["embeddings"]
+        except (OSError, ValueError, KeyError, EOFError, zipfile.BadZipFile) as exc:
+            print("Vector cache is invalid ({}); rebuilding.".format(exc))
+            return False
 
-        self.metadatas = [
-            self.chroma_metadata(c["metadata"])
-            for c in chunks
-        ]
+        if stored_ids != self.ids:
+            print("Vector cache IDs do not match canonical chunks; rebuilding.")
+            return False
 
-        self.ids = [
-            str(c["metadata"]["chunk_id"])
-            for c in chunks
-        ]
+        try:
+            self.embeddings = self.normalize_embeddings(embeddings)
+        except ValueError as exc:
+            print("Vector cache is invalid ({}); rebuilding.".format(exc))
+            return False
 
-        stored_count = self.collection.count()
-
-        if stored_count != len(self.ids):
-            print(
-                "Vector index has {} records, but JSONL has {}. "
-                "Rebuild required.".format(
-                    stored_count, len(self.ids)
-                )
-            )
+        if self.embeddings.shape[0] != len(self.ids):
+            self.embeddings = None
+            print("Vector cache size does not match canonical chunks; rebuilding.")
             return False
 
         self.build_bm25()
@@ -452,46 +454,29 @@ class HybridPolicyRetriever:
             for rank, index in enumerate(bm25_ranked, start=1)
         }
 
-        query_embedding = self.model.encode(
+        query_embedding = np.asarray(self.model.encode(
             ["Represent this sentence for searching relevant passages: " + expanded_query],
             normalize_embeddings=True,
-        )[0]
+        )[0], dtype=np.float32).reshape(-1)
+        if self.embeddings is None:
+            raise RuntimeError("Vector index is missing. Rebuild the index.")
+        if self.embeddings.shape[1] != query_embedding.size:
+            raise ValueError("Query and document embedding dimensions do not match.")
 
-        where = None
+        query_norm = np.linalg.norm(query_embedding)
+        if not np.isfinite(query_norm) or query_norm == 0:
+            raise ValueError("Query embedding is not a valid vector.")
+        query_embedding /= query_norm
 
-        conditions = []
-
-        if insurer:
-            conditions.append({"insurer": insurer})
-
-        if uin:
-            conditions.append({"uin": uin})
-
-        if len(conditions) == 1:
-            where = conditions[0]
-        elif len(conditions) > 1:
-            where = {"$and": conditions}
-
-        vector_results = self.collection.query(
-            query_embeddings=[query_embedding.tolist()],
-            n_results=min(
-                VECTOR_CANDIDATES, len(eligible_indices)
-            ),
-            where=where,
-            include=[
-                "documents",
-                "metadatas",
-                "distances",
-            ],
-        )
-
-        vector_ids = vector_results.get("ids", [[]])[0]
+        similarities = self.embeddings @ query_embedding
+        vector_ranked = sorted(
+            eligible_indices,
+            key=lambda i: (-float(similarities[i]), self.ids[i]),
+        )[:min(VECTOR_CANDIDATES, len(eligible_indices))]
 
         vector_rank = {
-            chunk_id: rank
-            for rank, chunk_id in enumerate(
-                vector_ids, start=1
-            )
+            self.ids[index]: rank
+            for rank, index in enumerate(vector_ranked, start=1)
         }
 
         index_by_id = {
@@ -502,7 +487,7 @@ class HybridPolicyRetriever:
         candidate_ids = set(
             self.ids[i] for i in bm25_ranked
         )
-        candidate_ids.update(vector_ids)
+        candidate_ids.update(vector_rank)
 
         desired_scope = query_policy_scope(query)
         fused = []

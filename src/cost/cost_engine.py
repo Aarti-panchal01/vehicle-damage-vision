@@ -353,7 +353,6 @@ def calculate_estimate(contract_a, reference_year=None):
         decisions = [choose_action(d["damage_type"], d["severity"], material) for d in damages]
         # Replacement dominates repair for the same physical part, preventing duplicate part charges.
         action = "replace" if "replace" in decisions else "repair"
-        severity = max((d["severity"] for d in damages), key=lambda s: SEVERITY_RANK[s])
         damage_types = sorted({d["damage_type"] for d in damages})
 
         labour = get_labour_cost(vehicle["model"], part, action, rates)

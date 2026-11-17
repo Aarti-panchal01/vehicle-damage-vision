@@ -8,11 +8,13 @@ venv/
 .ruff_cache/
 .mypy_cache/
 .gstack/
+.vercel/
 eval/cache/
 data/cardd_eval/images/
 *.zip
 
 /data/policy_docs/*.pdf
+/data/vector_db/
 .venv311/
 data/processed/
 data/vector_db/

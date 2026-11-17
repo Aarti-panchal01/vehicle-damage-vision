@@ -8,7 +8,6 @@ from pathlib import Path
 from typing import Any, Dict
 
 from jsonschema import Draft202012Validator
-from src.rag.retriever import HybridPolicyRetriever
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -174,7 +173,10 @@ def retrieve_policy_evidence(contract_a, contract_b, insurer, uin, retriever=Non
         raise ClaimDraftError("Selected insurer is required.")
     if not isinstance(uin, str) or not uin.strip():
         raise ClaimDraftError("Selected policy UIN is required.")
-    retriever = retriever or HybridPolicyRetriever()
+    if retriever is None:
+        from src.rag.retriever import HybridPolicyRetriever
+
+        retriever = HybridPolicyRetriever()
     if not retriever.initialized:
         retriever.initialize()
     candidates = {}
@@ -417,7 +419,8 @@ def generate_claim_draft(contract_a, contract_b, insurer, uin, retriever=None, t
         estimate = build_contract_c_estimate_fields(contract_a, contract_b)
         required_disclaimer = (
             "This is an AI-generated draft, not an insurer coverage decision. Coverage and settlement require insurer verification. "
-            "Role 2 depreciation assumptions originate from a Shriram policy and must be checked against the selected policy. "
+            "Role 2 depreciation uses a Shriram policy reference, not a verified rate for the selected policy. "
+            "After-deduction figures are illustrative and must not be treated as claimable or payable amounts. "
             "Retrieved clauses are evidence only and do not guarantee coverage or settlement."
         )
         if contract_b["unpriced_parts"]:

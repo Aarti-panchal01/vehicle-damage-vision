@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f5ef">
+    <meta name="description" content="ClaimFrame helps you prepare a clearer first draft of a vehicle claim, with photo assessment and policy evidence for human review.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ClaimFrame">
+    <meta property="og:title" content="ClaimFrame — A clearer first draft for every vehicle claim">
+    <meta property="og:description" content="Prepare an indicative vehicle claim draft with photo assessment and policy evidence for human review.">
+    <meta property="og:url" content="https://vehicle-damage-vision.vercel.app">
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <title>ClaimFrame — A clearer first draft for every vehicle claim</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="ClaimFrame home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-name">ClaimFrame</span>
+      </a>
+      <div class="topbar-context">
+        <span class="current-page">New claim</span>
+        <span class="draft-tag"><span aria-hidden="true"></span>Draft only</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <p class="eyebrow">MOTOR CLAIM WORKSPACE <span aria-hidden="true">/</span> 01</p>
+        <h1>A clearer first draft<br class="desktop-break"> for every vehicle claim.</h1>
+        <p class="hero-copy">Bring the incident, vehicle photos, and policy wording together. We’ll prepare an indicative draft for a person to review.</p>
+      </section>
+
+      <div id="health-banner" class="health-banner hidden" role="status" aria-live="polite"></div>
+
+      <div class="workspace">
+        <section class="form-workspace" aria-labelledby="workspace-title">
+          <div class="workspace-heading">
+            <div>
+              <p class="eyebrow">NEW DRAFT</p>
+              <h2 id="workspace-title">Claim details</h2>
+            </div>
+            <span class="required-note"><span aria-hidden="true">*</span> Required</span>
+          </div>
+
+          <form id="claim-form" class="claim-form">
+            <section class="form-section">
+              <div class="section-heading">
+                <span class="section-number">01</span>
+                <div>
+                  <h3>Vehicle and incident</h3>
+                  <p>Start with the vehicle and what happened.</p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <label>
+                  Vehicle make
+                  <input name="vehicle_make" autocomplete="organization" placeholder="e.g. Maruti Suzuki" required maxlength="80">
+                </label>
+                <label>
+                  Vehicle model
+                  <input name="vehicle_model" placeholder="e.g. Swift" required maxlength="80">
+                </label>
+                <label>
+                  Manufacturing year
+                  <input name="vehicle_year" type="number" min="1980" max="2100" value="2021" required>
+                </label>
+                <label>
+                  Fuel type
+                  <select name="vehicle_fuel" required>
+                    <option value="petrol">Petrol</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="cng">CNG</option>
+                    <option value="electric">Electric</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="other">Other</option>
+                  </select>
+                </label>
+                <label class="field-wide">
+                  What happened?
+                  <textarea name="description" rows="3" maxlength="2000" required placeholder="Describe the incident and any known details. Avoid guessing about hidden damage."></textarea>
+                </label>
+                <label class="field-wide">
+                  Claim ID <span class="optional">(optional)</span>
+                  <input name="claim_id" pattern="CLM-[0-9]{8}-[0-9]{3}" placeholder="CLM-YYYYMMDD-NNN">
+                  <small>Leave blank to have the vision module generate one.</small>
+                </label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-heading">
+                <span class="section-number">02</span>
+                <div>
+                  <h3>Vehicle photos</h3>
+                  <p>Clear views help make the first assessment more useful.</p>
+                </div>
+              </div>
+              <label class="upload-zone" for="photos">
+                <span class="upload-symbol" aria-hidden="true">＋</span>
+                <strong>Choose vehicle photos</strong>
+                <span>Up to five JPEG, PNG, or WebP images. Resized before upload.</span>
+                <input id="photos" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple required>
+              </label>
+              <div id="photo-preview" class="photo-preview" aria-live="polite"></div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-heading">
+                <span class="section-number">03</span>
+                <div>
+                  <h3>Policy wording</h3>
+                  <p>Use the exact insurer and UIN shown on your document.</p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <label>
+                  Insurer
+                  <input name="insurer" placeholder="Exact insurer name" required maxlength="120">
+                </label>
+                <label>
+                  Policy UIN
+                  <input name="policy_uin" placeholder="UIN printed on the policy" required maxlength="100">
+                </label>
+                <label class="field-wide">
+                  Policy wording PDF
+                  <input id="policy-pdf" name="policy_pdf" type="file" accept="application/pdf,.pdf" required>
+                  <small>Text-based PDF only, up to 2.5 MB and 300 pages. Check that the insurer and UIN above match this document.</small>
+                </label>
+              </div>
+              <div class="notice notice-warm">
+                The document is not identity-verified. Policy evidence and coverage require human review.
+              </div>
+            </section>
+
+            <section class="form-section consent-section">
+              <div class="section-heading">
+                <span class="section-number">04</span>
+                <div>
+                  <h3>Privacy and consent</h3>
+                  <p>Files are processed for this request and not saved by the app.</p>
+                </div>
+              </div>
+              <label class="consent-row">
+                <input name="confirm_external_processing" type="checkbox" required>
+                <span>
+                  I have permission to share these files. I understand photos, claim details, and policy excerpts are sent to Google Gemini to prepare this draft.
+                </span>
+              </label>
+            </section>
+
+            <div class="form-actions">
+              <button id="submit-button" class="button button-primary" type="submit">
+                <span>Prepare claim draft</span>
+                <span aria-hidden="true">→</span>
+              </button>
+              <p class="form-footnote">Indicative estimate only. No coverage decision is made.</p>
+            </div>
+          </form>
+        </section>
+
+        <aside class="review-rail" aria-label="What happens next">
+          <p class="eyebrow">DRAFT PREPARED FOR HUMAN REVIEW</p>
+          <h2>What happens next</h2>
+          <ol class="process-list">
+            <li><span>01</span><p><strong>Photo assessment</strong>Visible damage is identified from your images.</p></li>
+            <li><span>02</span><p><strong>Indicative estimate</strong>Repair items and available rates are assembled.</p></li>
+            <li><span>03</span><p><strong>Policy evidence</strong>Relevant wording is cited for a person to review.</p></li>
+          </ol>
+          <div class="review-note">
+            <span class="review-note-mark" aria-hidden="true">!</span>
+            <p><strong>A draft, not a decision.</strong> Estimates may be incomplete. This tool does not verify identity, determine coverage, or approve claims.</p>
+          </div>
+          <p class="rail-footnote">Only share files you have permission to provide. Your selected details and excerpts are sent to Google Gemini for this request.</p>
+        </aside>
+      </div>
+
+      <section id="progress" class="progress-panel hidden" role="status" aria-live="polite">
+        <span class="spinner" aria-hidden="true"></span>
+        <div>
+          <strong>Preparing your claim draft</strong>
+          <p>Photo assessment and policy drafting use live Gemini requests. Keep this page open.</p>
+        </div>
+      </section>
+
+      <section id="error-panel" class="error-panel hidden" role="alert"></section>
+      <section id="results" class="results hidden" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      <span>ClaimFrame <span class="footer-divider">·</span> Human review required</span>
+      <span>No coverage decision or claim approval</span>
+    </footer>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
