@@ -9,26 +9,26 @@ Usage:
     python -m eval.run_eval --providers groq --limit 3
 """
 
-from __future__ import annotations
+from __future__ import annotations 
 
 import argparse
 import csv
 import json
 import sys
-from dataclasses import dataclass
+from dataclasses import dataclass 
 from pathlib import Path
 
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from eval.metrics import ImageOutcome, summarise
-from src.vision.assess import assess_damage
-from src.vision.providers import make_provider
-from src.vision.providers.base import ImageInput
-from src.vision.providers.cache import CachedProvider
+from eval.metrics import ImageOutcome, summarise # noqa: E402
+from src.vision.assess import assess_damage # noqa: E402
+from src.vision.providers import make_provider # noqa: E402
+from src.vision.providers.base import ImageInput # noqa: E402
+from src.vision.providers.cache import CachedProvider # noqa: E402
 
 LABELS_PATH = REPO_ROOT / "data" / "cardd_eval" / "labels.json"
 IMAGES_DIR = REPO_ROOT / "data" / "cardd_eval" / "images"

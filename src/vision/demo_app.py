@@ -14,13 +14,13 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-import streamlit as st
-from dotenv import load_dotenv
+import streamlit as st # noqa: E402
+from dotenv import load_dotenv # noqa: E402
 
-from src.vision import ImageInput, assess_damage, make_provider
-from src.vision.assess import DEFAULT_PROMPT_ID, MAX_IMAGES
-from src.vision.prompts import list_prompt_versions
-from src.vision.providers import MockProvider
+from src.vision import ImageInput, assess_damage, make_provider # noqa: E402
+from src.vision.assess import DEFAULT_PROMPT_ID, MAX_IMAGES # noqa: E402
+from src.vision.prompts import list_prompt_versions # noqa: E402
+from src.vision.providers import MockProvider # noqa: E402
 
 SAMPLE_REPLY = json.dumps(
     {
